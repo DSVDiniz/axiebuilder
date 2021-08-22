@@ -1,0 +1,13 @@
+{
+  "partStats": {
+    "AQUATIC": { "hp": 1, "speed": 3, "skill": 0, "morale": 0 },
+    "BEAST": { "hp": 0, "speed": 1, "skill": 0, "morale": 3 },
+    "BIRD": { "hp": 0, "speed": 3, "skill": 0, "morale": 1 },
+    "BUG": { "hp": 1, "speed": 0, "skill": 0, "morale": 3 },
+    "DAWN": { "hp": 0, "speed": 0, "skill": 0, "morale": 0 },
+    "DUSK": { "hp": 0, "speed": 0, "skill": 0, "morale": 0 },
+    "MECH": { "hp": 0, "speed": 0, "skill": 0, "morale": 0 },
+    "PLANT": { "hp": 3, "speed": 0, "skill": 0, "morale": 1 },
+    "REPTILE": { "hp": 3, "speed": 1, "skill": 0, "morale": 0 }
+  }
+}

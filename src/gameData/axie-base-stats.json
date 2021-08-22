@@ -1,0 +1,85 @@
+{
+  "axieTypeBaseStats": [
+    {
+      "type": "AQUATIC",
+      "hp": 39,
+      "speed": 39,
+      "skill": 35,
+      "morale": 27,
+      "disadvantage": ["REPTILE", "PLANT", "DUSK"],
+      "advantage": ["BEAST", "BUG", "MECH"]
+    },
+    {
+      "type": "BIRD",
+      "hp": 27,
+      "speed": 43,
+      "skill": 35,
+      "morale": 35,
+      "disadvantage": ["REPTILE", "PLANT", "DUSK"],
+      "advantage": ["BEAST", "BUG", "MECH"]
+    },
+    {
+      "type": "DAWN",
+      "hp": 35,
+      "speed": 35,
+      "skill": 39,
+      "morale": 31,
+      "disadvantage": ["REPTILE", "PLANT", "DUSK"],
+      "advantage": ["BEAST", "BUG", "MECH"]
+    },
+    {
+      "type": "DUSK",
+      "hp": 43,
+      "speed": 39,
+      "skill": 27,
+      "morale": 31,
+      "disadvantage": ["BEAST", "BUG", "MECH"],
+      "advantage": ["AQUATIC", "BIRD", "DAWN"]
+    },
+    {
+      "type": "REPTILE",
+      "hp": 39,
+      "speed": 35,
+      "skill": 31,
+      "morale": 35,
+      "disadvantage": ["BEAST", "BUG", "MECH"],
+      "advantage": ["AQUATIC", "BIRD", "DAWN"]
+    },
+    {
+      "type": "PLANT",
+      "hp": 43,
+      "speed": 31,
+      "skill": 31,
+      "morale": 35,
+      "disadvantage": ["BEAST", "BUG", "MECH"],
+      "advantage": ["AQUATIC", "BIRD", "DAWN"]
+    },
+    {
+      "type": "MECH",
+      "hp": 31,
+      "speed": 39,
+      "skill": 43,
+      "morale": 27,
+      "disadvantage": ["AQUATIC", "BIRD", "DAWN"],
+      "advantage": ["REPTILE", "PLANT", "DUSK"]
+    },
+    {
+      "type": "BUG",
+      "hp": 35,
+      "speed": 31,
+      "skill": 35,
+      "morale": 39,
+      "disadvantage": ["AQUATIC", "BIRD", "DAWN"],
+      "advantage": ["REPTILE", "PLANT", "DUSK"]
+    },
+    {
+      "type": "BEAST",
+      "hp": 31,
+      "speed": 35,
+      "skill": 31,
+      "morale": 43,
+      "disadvantage": ["AQUATIC", "BIRD", "DAWN"],
+      "advantage": ["REPTILE", "PLANT", "DUSK"]
+    }
+  ]
+}

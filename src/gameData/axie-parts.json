@@ -1,0 +1,1675 @@
+{
+  "partList": [
+    {
+      "id": 1,
+      "part": "eye",
+      "type": "PLANT",
+      "name": "Blossom",
+      "card": null
+    },
+    { "id": 2, "part": "eye", "type": "BUG", "name": "Bookworm", "card": null },
+    {
+      "id": 3,
+      "part": "eye",
+      "type": "BUG",
+      "name": "Broken Bookworm",
+      "card": null
+    },
+    {
+      "id": 4,
+      "part": "eye",
+      "type": "BEAST",
+      "name": "Calico Zeal",
+      "card": null
+    },
+    { "id": 5, "part": "eye", "type": "BEAST", "name": "Chubby", "card": null },
+    {
+      "id": 6,
+      "part": "eye",
+      "type": "AQUATIC",
+      "name": "Clear",
+      "card": null
+    },
+    {
+      "id": 7,
+      "part": "eye",
+      "type": "PLANT",
+      "name": "Confused",
+      "card": null
+    },
+    {
+      "id": 8,
+      "part": "eye",
+      "type": "REPTILE",
+      "name": "Crimson Gecko",
+      "card": null
+    },
+    {
+      "id": 9,
+      "part": "eye",
+      "type": "PLANT",
+      "name": "Cucumber Slice",
+      "card": null
+    },
+    {
+      "id": 10,
+      "part": "eye",
+      "type": "REPTILE",
+      "name": "Dokuganryu",
+      "card": null
+    },
+    {
+      "id": 11,
+      "part": "eye",
+      "type": "PLANT",
+      "name": "Dreamy Papi",
+      "card": null
+    },
+    {
+      "id": 12,
+      "part": "eye",
+      "type": "REPTILE",
+      "name": "Gecko",
+      "card": null
+    },
+    {
+      "id": 13,
+      "part": "eye",
+      "type": "AQUATIC",
+      "name": "Gero",
+      "card": null
+    },
+    {
+      "id": 14,
+      "part": "eye",
+      "type": "BIRD",
+      "name": "Icy Gaze",
+      "card": null
+    },
+    {
+      "id": 15,
+      "part": "eye",
+      "type": "AQUATIC",
+      "name": "Insomnia",
+      "card": null
+    },
+    {
+      "id": 16,
+      "part": "eye",
+      "type": "REPTILE",
+      "name": "Kabuki",
+      "card": null
+    },
+    { "id": 17, "part": "eye", "type": "BUG", "name": "Kotaro", "card": null },
+    {
+      "id": 18,
+      "part": "eye",
+      "type": "BIRD",
+      "name": "Little Owl",
+      "card": null
+    },
+    {
+      "id": 19,
+      "part": "eye",
+      "type": "BEAST",
+      "name": "Little Peas",
+      "card": null
+    },
+    { "id": 20, "part": "eye", "type": "BIRD", "name": "Lucas", "card": null },
+    { "id": 21, "part": "eye", "type": "BIRD", "name": "Mavis", "card": null },
+    { "id": 22, "part": "eye", "type": "BUG", "name": "Neo", "card": null },
+    { "id": 23, "part": "eye", "type": "BUG", "name": "Nerdy", "card": null },
+    { "id": 24, "part": "eye", "type": "PLANT", "name": "Papi", "card": null },
+    { "id": 25, "part": "eye", "type": "BEAST", "name": "Puppy", "card": null },
+    { "id": 26, "part": "eye", "type": "BIRD", "name": "Robin", "card": null },
+    {
+      "id": 27,
+      "part": "eye",
+      "type": "REPTILE",
+      "name": "Scar",
+      "card": null
+    },
+    {
+      "id": 28,
+      "part": "eye",
+      "type": "BIRD",
+      "name": "Sky Mavis",
+      "card": null
+    },
+    {
+      "id": 29,
+      "part": "eye",
+      "type": "AQUATIC",
+      "name": "Sleepless",
+      "card": null
+    },
+    {
+      "id": 30,
+      "part": "eye",
+      "type": "BEAST",
+      "name": "Snowflakes",
+      "card": null
+    },
+    {
+      "id": 31,
+      "part": "eye",
+      "type": "AQUATIC",
+      "name": "Telescope",
+      "card": null
+    },
+    {
+      "id": 32,
+      "part": "eye",
+      "type": "REPTILE",
+      "name": "Topaz",
+      "card": null
+    },
+    {
+      "id": 33,
+      "part": "eye",
+      "type": "REPTILE",
+      "name": "Tricky",
+      "card": null
+    },
+    { "id": 34, "part": "eye", "type": "AQUATIC", "name": "Yen", "card": null },
+    { "id": 35, "part": "eye", "type": "BEAST", "name": "Zeal", "card": null },
+    {
+      "id": 36,
+      "part": "ear",
+      "type": "BUG",
+      "name": "Beetle Spike",
+      "card": null
+    },
+    {
+      "id": 37,
+      "part": "ear",
+      "type": "BEAST",
+      "name": "Belieber",
+      "card": null
+    },
+    {
+      "id": 38,
+      "part": "ear",
+      "type": "AQUATIC",
+      "name": "Bubblemaker",
+      "card": null
+    },
+    {
+      "id": 39,
+      "part": "ear",
+      "type": "PLANT",
+      "name": "Clover",
+      "card": null
+    },
+    { "id": 40, "part": "ear", "type": "BIRD", "name": "Curly", "card": null },
+    {
+      "id": 41,
+      "part": "ear",
+      "type": "REPTILE",
+      "name": "Curved Spine",
+      "card": null
+    },
+    {
+      "id": 42,
+      "part": "ear",
+      "type": "REPTILE",
+      "name": "Deadly Pogona",
+      "card": null
+    },
+    {
+      "id": 43,
+      "part": "ear",
+      "type": "BUG",
+      "name": "Ear Breathing",
+      "card": null
+    },
+    {
+      "id": 44,
+      "part": "ear",
+      "type": "BIRD",
+      "name": "Early Bird",
+      "card": null
+    },
+    { "id": 45, "part": "ear", "type": "BUG", "name": "Earwing", "card": null },
+    {
+      "id": 46,
+      "part": "ear",
+      "type": "REPTILE",
+      "name": "Friezard",
+      "card": null
+    },
+    {
+      "id": 47,
+      "part": "ear",
+      "type": "AQUATIC",
+      "name": "Gill",
+      "card": null
+    },
+    {
+      "id": 48,
+      "part": "ear",
+      "type": "BIRD",
+      "name": "Heart Cheek",
+      "card": null
+    },
+    {
+      "id": 49,
+      "part": "ear",
+      "type": "PLANT",
+      "name": "Hollow",
+      "card": null
+    },
+    {
+      "id": 50,
+      "part": "ear",
+      "type": "AQUATIC",
+      "name": "Inkling",
+      "card": null
+    },
+    {
+      "id": 51,
+      "part": "ear",
+      "type": "BEAST",
+      "name": "Innocent Lamb",
+      "card": null
+    },
+    {
+      "id": 52,
+      "part": "ear",
+      "type": "BIRD",
+      "name": "Karimata",
+      "card": null
+    },
+    { "id": 53, "part": "ear", "type": "BUG", "name": "Larva", "card": null },
+    {
+      "id": 54,
+      "part": "ear",
+      "type": "BUG",
+      "name": "Leaf Bug",
+      "card": null
+    },
+    { "id": 55, "part": "ear", "type": "PLANT", "name": "Leafy", "card": null },
+    { "id": 56, "part": "ear", "type": "PLANT", "name": "Lotus", "card": null },
+    { "id": 57, "part": "ear", "type": "PLANT", "name": "Maiko", "card": null },
+    {
+      "id": 58,
+      "part": "ear",
+      "type": "BEAST",
+      "name": "Merry Lamb",
+      "card": null
+    },
+    { "id": 59, "part": "ear", "type": "BUG", "name": "Mon", "card": null },
+    {
+      "id": 60,
+      "part": "ear",
+      "type": "AQUATIC",
+      "name": "Nimo",
+      "card": null
+    },
+    {
+      "id": 61,
+      "part": "ear",
+      "type": "BEAST",
+      "name": "Nut Cracker",
+      "card": null
+    },
+    { "id": 62, "part": "ear", "type": "BEAST", "name": "Nyan", "card": null },
+    { "id": 63, "part": "ear", "type": "BIRD", "name": "Owl", "card": null },
+    {
+      "id": 64,
+      "part": "ear",
+      "type": "BIRD",
+      "name": "Peace Maker",
+      "card": null
+    },
+    {
+      "id": 65,
+      "part": "ear",
+      "type": "PLANT",
+      "name": "Pinecones",
+      "card": null
+    },
+    {
+      "id": 66,
+      "part": "ear",
+      "type": "BIRD",
+      "name": "Pink Cheek",
+      "card": null
+    },
+    {
+      "id": 67,
+      "part": "ear",
+      "type": "REPTILE",
+      "name": "Pogona",
+      "card": null
+    },
+    {
+      "id": 68,
+      "part": "ear",
+      "type": "BEAST",
+      "name": "Pointy Nyan",
+      "card": null
+    },
+    { "id": 69, "part": "ear", "type": "BEAST", "name": "Puppy", "card": null },
+    {
+      "id": 70,
+      "part": "ear",
+      "type": "AQUATIC",
+      "name": "Red Nimo",
+      "card": null
+    },
+    {
+      "id": 71,
+      "part": "ear",
+      "type": "BIRD",
+      "name": "Risky Bird",
+      "card": null
+    },
+    { "id": 72, "part": "ear", "type": "PLANT", "name": "Rosa", "card": null },
+    {
+      "id": 73,
+      "part": "ear",
+      "type": "PLANT",
+      "name": "Sakura",
+      "card": null
+    },
+    {
+      "id": 74,
+      "part": "ear",
+      "type": "AQUATIC",
+      "name": "Seaslug",
+      "card": null
+    },
+    {
+      "id": 75,
+      "part": "ear",
+      "type": "REPTILE",
+      "name": "Sidebarb",
+      "card": null
+    },
+    {
+      "id": 76,
+      "part": "ear",
+      "type": "REPTILE",
+      "name": "Small Frill",
+      "card": null
+    },
+    {
+      "id": 77,
+      "part": "ear",
+      "type": "REPTILE",
+      "name": "Swirl",
+      "card": null
+    },
+    { "id": 78, "part": "ear", "type": "BUG", "name": "Tassels", "card": null },
+    {
+      "id": 79,
+      "part": "ear",
+      "type": "PLANT",
+      "name": "The Last Leaf",
+      "card": null
+    },
+    {
+      "id": 80,
+      "part": "ear",
+      "type": "AQUATIC",
+      "name": "Tiny Fan",
+      "card": null
+    },
+    { "id": 81, "part": "ear", "type": "BUG", "name": "Vector", "card": null },
+    { "id": 82, "part": "ear", "type": "BEAST", "name": "Zen", "card": null },
+    {
+      "id": 83,
+      "part": "mouth",
+      "type": "BEAST",
+      "name": "Axie Kiss",
+      "card": "Death Mark"
+    },
+    {
+      "id": 84,
+      "part": "mouth",
+      "type": "AQUATIC",
+      "name": "Catfish",
+      "card": "Swallow"
+    },
+    {
+      "id": 85,
+      "part": "mouth",
+      "type": "BEAST",
+      "name": "Confident",
+      "card": "Self Rally"
+    },
+    {
+      "id": 86,
+      "part": "mouth",
+      "type": "BUG",
+      "name": "Cute Bunny",
+      "card": "Terror Chomp"
+    },
+    {
+      "id": 87,
+      "part": "mouth",
+      "type": "REPTILE",
+      "name": "Dango",
+      "card": "Chomp"
+    },
+    {
+      "id": 88,
+      "part": "mouth",
+      "type": "BIRD",
+      "name": "Doubletalk",
+      "card": "Soothing Song"
+    },
+    {
+      "id": 89,
+      "part": "mouth",
+      "type": "BUG",
+      "name": "Feasting Mosquito",
+      "card": "Blood Taste"
+    },
+    {
+      "id": 90,
+      "part": "mouth",
+      "type": "AQUATIC",
+      "name": "Geisha",
+      "card": "Crimson Water"
+    },
+    {
+      "id": 91,
+      "part": "mouth",
+      "type": "BEAST",
+      "name": "Goda",
+      "card": "Piercing Sound"
+    },
+    {
+      "id": 92,
+      "part": "mouth",
+      "type": "PLANT",
+      "name": "Herbivore",
+      "card": "Vegan Diet"
+    },
+    {
+      "id": 93,
+      "part": "mouth",
+      "type": "PLANT",
+      "name": "Humorless",
+      "card": "Vegetal Bite"
+    },
+    {
+      "id": 94,
+      "part": "mouth",
+      "type": "BIRD",
+      "name": "Hungry Bird",
+      "card": "Insectivore"
+    },
+    {
+      "id": 95,
+      "part": "mouth",
+      "type": "BUG",
+      "name": "Kawaii",
+      "card": "Terror Chomp"
+    },
+    {
+      "id": 96,
+      "part": "mouth",
+      "type": "REPTILE",
+      "name": "Kotaro",
+      "card": "Kotaro bite"
+    },
+    {
+      "id": 97,
+      "part": "mouth",
+      "type": "AQUATIC",
+      "name": "Lam",
+      "card": "Angry Lam"
+    },
+    {
+      "id": 98,
+      "part": "mouth",
+      "type": "AQUATIC",
+      "name": "Lam Handsome",
+      "card": "Angry Lam"
+    },
+    {
+      "id": 99,
+      "part": "mouth",
+      "type": "BIRD",
+      "name": "Little Owl",
+      "card": "Dark Swoop"
+    },
+    {
+      "id": 100,
+      "part": "mouth",
+      "type": "BUG",
+      "name": "Mosquito",
+      "card": "Blood Taste"
+    },
+    {
+      "id": 101,
+      "part": "mouth",
+      "type": "BIRD",
+      "name": "Mr. Doubletalk",
+      "card": "Soothing Song"
+    },
+    {
+      "id": 102,
+      "part": "mouth",
+      "type": "BEAST",
+      "name": "Nut Cracker",
+      "card": "Nut Crack"
+    },
+    {
+      "id": 103,
+      "part": "mouth",
+      "type": "BIRD",
+      "name": "Peace Maker",
+      "card": "Peace Treaty"
+    },
+    {
+      "id": 104,
+      "part": "mouth",
+      "type": "BUG",
+      "name": "Pincer",
+      "card": "Sunder Claw"
+    },
+    {
+      "id": 105,
+      "part": "mouth",
+      "type": "AQUATIC",
+      "name": "Piranha",
+      "card": "Crimson Water"
+    },
+    {
+      "id": 106,
+      "part": "mouth",
+      "type": "REPTILE",
+      "name": "Razor Bite",
+      "card": "Why So Serious"
+    },
+    {
+      "id": 107,
+      "part": "mouth",
+      "type": "AQUATIC",
+      "name": "Risky Fish",
+      "card": "Fish Hook"
+    },
+    {
+      "id": 108,
+      "part": "mouth",
+      "type": "PLANT",
+      "name": "Rudolph",
+      "card": "Drain Bite"
+    },
+    {
+      "id": 109,
+      "part": "mouth",
+      "type": "PLANT",
+      "name": "Serious",
+      "card": "Vegetal Bite"
+    },
+    {
+      "id": 110,
+      "part": "mouth",
+      "type": "PLANT",
+      "name": "Silence Whisper",
+      "card": "Forest Spirit"
+    },
+    {
+      "id": 111,
+      "part": "mouth",
+      "type": "BEAST",
+      "name": "Skull Cracker",
+      "card": "Nut Crack"
+    },
+    {
+      "id": 112,
+      "part": "mouth",
+      "type": "BUG",
+      "name": "Square Teeth",
+      "card": "Mite Bite"
+    },
+    {
+      "id": 113,
+      "part": "mouth",
+      "type": "REPTILE",
+      "name": "Tiny Carrot",
+      "card": "Chomp"
+    },
+    {
+      "id": 114,
+      "part": "mouth",
+      "type": "REPTILE",
+      "name": "Tiny Turtle",
+      "card": "Chomp"
+    },
+    {
+      "id": 115,
+      "part": "mouth",
+      "type": "REPTILE",
+      "name": "Toothless Bite",
+      "card": "Sneaky Raid"
+    },
+    {
+      "id": 116,
+      "part": "mouth",
+      "type": "REPTILE",
+      "name": "Venom Bite",
+      "card": "Sneaky Raid"
+    },
+    {
+      "id": 117,
+      "part": "mouth",
+      "type": "PLANT",
+      "name": "Zigzag",
+      "card": "Drain Bite"
+    },
+    {
+      "id": 118,
+      "part": "horn",
+      "type": "AQUATIC",
+      "name": "5H04L-5T4R",
+      "card": "Star Shuriken"
+    },
+    {
+      "id": 119,
+      "part": "horn",
+      "type": "AQUATIC",
+      "name": "Anemone",
+      "card": "Aquaponics"
+    },
+    {
+      "id": 120,
+      "part": "horn",
+      "type": "BUG",
+      "name": "Antenna",
+      "card": "Bug Signal"
+    },
+    {
+      "id": 121,
+      "part": "horn",
+      "type": "BEAST",
+      "name": "Arco",
+      "card": "Acrobatic"
+    },
+    {
+      "id": 122,
+      "part": "horn",
+      "type": "AQUATIC",
+      "name": "Babylonia",
+      "card": "Shell Jab"
+    },
+    {
+      "id": 123,
+      "part": "horn",
+      "type": "PLANT",
+      "name": "Bamboo Shoot",
+      "card": "Bamboo Clan"
+    },
+    {
+      "id": 124,
+      "part": "horn",
+      "type": "PLANT",
+      "name": "Beech",
+      "card": "Wooden Stab"
+    },
+    {
+      "id": 125,
+      "part": "horn",
+      "type": "REPTILE",
+      "name": "Bumpy",
+      "card": "Overgrow Keratin"
+    },
+    {
+      "id": 126,
+      "part": "horn",
+      "type": "PLANT",
+      "name": "Cactus",
+      "card": "Prickly Trap"
+    },
+    {
+      "id": 127,
+      "part": "horn",
+      "type": "AQUATIC",
+      "name": "Candy Babylonia",
+      "card": "Shell Jab"
+    },
+    {
+      "id": 128,
+      "part": "horn",
+      "type": "BUG",
+      "name": "Caterpillars",
+      "card": "Grub Surprise"
+    },
+    {
+      "id": 129,
+      "part": "horn",
+      "type": "REPTILE",
+      "name": "Cerastes",
+      "card": "Surprise Invasion"
+    },
+    {
+      "id": 130,
+      "part": "horn",
+      "type": "AQUATIC",
+      "name": "Clamshell",
+      "card": "Clam Slash"
+    },
+    {
+      "id": 131,
+      "part": "horn",
+      "type": "BIRD",
+      "name": "Cuckoo",
+      "card": "Cockadoodledoo"
+    },
+    {
+      "id": 132,
+      "part": "horn",
+      "type": "BEAST",
+      "name": "Dual Blade",
+      "card": "Sinister Strike"
+    },
+    {
+      "id": 133,
+      "part": "horn",
+      "type": "BIRD",
+      "name": "Eggshell",
+      "card": "Eggbomb"
+    },
+    {
+      "id": 134,
+      "part": "horn",
+      "type": "BIRD",
+      "name": "Feather Spear",
+      "card": "Feather Lunge"
+    },
+    {
+      "id": 135,
+      "part": "horn",
+      "type": "PLANT",
+      "name": "Golden Bamboo Shoot",
+      "card": "Bamboo Clan"
+    },
+    {
+      "id": 136,
+      "part": "horn",
+      "type": "BIRD",
+      "name": "Golden Shell",
+      "card": "Eggbomb"
+    },
+    {
+      "id": 137,
+      "part": "horn",
+      "type": "BEAST",
+      "name": "Imp",
+      "card": "Ivory Stab"
+    },
+    {
+      "id": 138,
+      "part": "horn",
+      "type": "REPTILE",
+      "name": "Incisor",
+      "card": "Disarm"
+    },
+    {
+      "id": 139,
+      "part": "horn",
+      "type": "BEAST",
+      "name": "Kendama",
+      "card": "Ivory Stab"
+    },
+    {
+      "id": 140,
+      "part": "horn",
+      "type": "BIRD",
+      "name": "Kestrel",
+      "card": "Headshot"
+    },
+    {
+      "id": 141,
+      "part": "horn",
+      "type": "BUG",
+      "name": "Lagging",
+      "card": "Mystic Rush"
+    },
+    {
+      "id": 142,
+      "part": "horn",
+      "type": "BUG",
+      "name": "Laggingggggg",
+      "card": "Mystic Rush"
+    },
+    {
+      "id": 143,
+      "part": "horn",
+      "type": "BUG",
+      "name": "Leaf Bug",
+      "card": "Disguise"
+    },
+    {
+      "id": 144,
+      "part": "horn",
+      "type": "BEAST",
+      "name": "Little Branch",
+      "card": "Branch Charge"
+    },
+    {
+      "id": 145,
+      "part": "horn",
+      "type": "BEAST",
+      "name": "Merry",
+      "card": "Merry Legion"
+    },
+    {
+      "id": 146,
+      "part": "horn",
+      "type": "AQUATIC",
+      "name": "Oranda",
+      "card": "Hero's Bane"
+    },
+    {
+      "id": 147,
+      "part": "horn",
+      "type": "BUG",
+      "name": "P4R451T3",
+      "card": "Third Glance"
+    },
+    {
+      "id": 148,
+      "part": "horn",
+      "type": "BUG",
+      "name": "Parasite",
+      "card": "Third Glance"
+    },
+    {
+      "id": 149,
+      "part": "horn",
+      "type": "REPTILE",
+      "name": "Pinku Unko",
+      "card": "Poo Fling"
+    },
+    {
+      "id": 150,
+      "part": "horn",
+      "type": "BUG",
+      "name": "Pliers",
+      "card": "Dull Grip"
+    },
+    {
+      "id": 151,
+      "part": "horn",
+      "type": "BEAST",
+      "name": "Pocky",
+      "card": "Sugar Rush"
+    },
+    {
+      "id": 152,
+      "part": "horn",
+      "type": "PLANT",
+      "name": "Rose Bud",
+      "card": "Healing Aroma"
+    },
+    {
+      "id": 153,
+      "part": "horn",
+      "type": "PLANT",
+      "name": "Santa's Gift",
+      "card": "Prickly Trap"
+    },
+    {
+      "id": 154,
+      "part": "horn",
+      "type": "REPTILE",
+      "name": "Scaly Spear",
+      "card": "Scaly Lunge"
+    },
+    {
+      "id": 155,
+      "part": "horn",
+      "type": "REPTILE",
+      "name": "Scaly Spoon",
+      "card": "Tiny Catapult"
+    },
+    {
+      "id": 156,
+      "part": "horn",
+      "type": "AQUATIC",
+      "name": "Shoal Star",
+      "card": "Star Shuriken"
+    },
+    {
+      "id": 157,
+      "part": "horn",
+      "type": "BIRD",
+      "name": "Spruce Spear",
+      "card": "Feather Lunge"
+    },
+    {
+      "id": 158,
+      "part": "horn",
+      "type": "PLANT",
+      "name": "Strawberry Shortcake",
+      "card": "Sweet Party"
+    },
+    {
+      "id": 159,
+      "part": "horn",
+      "type": "AQUATIC",
+      "name": "Teal Shell",
+      "card": "Deep Sea Gore"
+    },
+    {
+      "id": 160,
+      "part": "horn",
+      "type": "BIRD",
+      "name": "Trump",
+      "card": "Air Force One"
+    },
+    {
+      "id": 161,
+      "part": "horn",
+      "type": "BEAST",
+      "name": "Umaibo",
+      "card": "Sugar Rush"
+    },
+    {
+      "id": 162,
+      "part": "horn",
+      "type": "REPTILE",
+      "name": "Unko",
+      "card": "Poo Fling"
+    },
+    {
+      "id": 163,
+      "part": "horn",
+      "type": "PLANT",
+      "name": "Watermelon",
+      "card": "Seed Bullet"
+    },
+    {
+      "id": 164,
+      "part": "horn",
+      "type": "BIRD",
+      "name": "Wing Horn",
+      "card": "Smart Shot"
+    },
+    {
+      "id": 165,
+      "part": "horn",
+      "type": "BEAST",
+      "name": "Winter Branch",
+      "card": "Branch Charge"
+    },
+    {
+      "id": 166,
+      "part": "horn",
+      "type": "PLANT",
+      "name": "Yorishiro",
+      "card": "Wooden Stab"
+    },
+    {
+      "id": 167,
+      "part": "back",
+      "type": "REPTILE",
+      "name": "1ND14N-5T4R",
+      "card": "Bulkwark"
+    },
+    {
+      "id": 168,
+      "part": "back",
+      "type": "AQUATIC",
+      "name": "Anemone",
+      "card": "Aqua Vitality"
+    },
+    {
+      "id": 169,
+      "part": "back",
+      "type": "BIRD",
+      "name": "Balloon",
+      "card": "Balloon Pop"
+    },
+    {
+      "id": 170,
+      "part": "back",
+      "type": "PLANT",
+      "name": "Bidens",
+      "card": "Cleanse Scent"
+    },
+    {
+      "id": 171,
+      "part": "back",
+      "type": "AQUATIC",
+      "name": "Blue Moon",
+      "card": "Scale Dart"
+    },
+    {
+      "id": 172,
+      "part": "back",
+      "type": "REPTILE",
+      "name": "Bone Sail",
+      "card": "Ivory Chop"
+    },
+    {
+      "id": 173,
+      "part": "back",
+      "type": "BUG",
+      "name": "Buzz Buzz",
+      "card": "Bug Noise"
+    },
+    {
+      "id": 174,
+      "part": "back",
+      "type": "BUG",
+      "name": "Candy Canes",
+      "card": "Barb Strike"
+    },
+    {
+      "id": 175,
+      "part": "back",
+      "type": "REPTILE",
+      "name": "Croc",
+      "card": "Nile Strike"
+    },
+    {
+      "id": 176,
+      "part": "back",
+      "type": "AQUATIC",
+      "name": "Crystal Hermit",
+      "card": "Shelter"
+    },
+    {
+      "id": 177,
+      "part": "back",
+      "type": "BIRD",
+      "name": "Cupid",
+      "card": "Heart Break"
+    },
+    {
+      "id": 178,
+      "part": "back",
+      "type": "REPTILE",
+      "name": "Frozen Bucket",
+      "card": "Bulkwark"
+    },
+    {
+      "id": 179,
+      "part": "back",
+      "type": "BEAST",
+      "name": "Furball",
+      "card": "Juggling Balls"
+    },
+    {
+      "id": 180,
+      "part": "back",
+      "type": "BUG",
+      "name": "Garish Worm",
+      "card": "Barb Strike"
+    },
+    {
+      "id": 181,
+      "part": "back",
+      "type": "AQUATIC",
+      "name": "Goldfish",
+      "card": "Swift Escape"
+    },
+    {
+      "id": 182,
+      "part": "back",
+      "type": "REPTILE",
+      "name": "Green Thorns",
+      "card": "Vine Dagger"
+    },
+    {
+      "id": 183,
+      "part": "back",
+      "type": "BEAST",
+      "name": "Hamaya",
+      "card": "Revenge Arrow"
+    },
+    {
+      "id": 184,
+      "part": "back",
+      "type": "BEAST",
+      "name": "Hasagi",
+      "card": "Single Combat"
+    },
+    {
+      "id": 185,
+      "part": "back",
+      "type": "AQUATIC",
+      "name": "Hermit",
+      "card": "Shelter"
+    },
+    {
+      "id": 186,
+      "part": "back",
+      "type": "BEAST",
+      "name": "Hero",
+      "card": "Heroic Reward"
+    },
+    {
+      "id": 187,
+      "part": "back",
+      "type": "REPTILE",
+      "name": "Indian Star",
+      "card": "Bulkwark"
+    },
+    {
+      "id": 188,
+      "part": "back",
+      "type": "BEAST",
+      "name": "Jaguar",
+      "card": "Nitro Leap"
+    },
+    {
+      "id": 189,
+      "part": "back",
+      "type": "BIRD",
+      "name": "Kingfisher",
+      "card": "Patient Hunter"
+    },
+    {
+      "id": 190,
+      "part": "back",
+      "type": "PLANT",
+      "name": "Mint",
+      "card": "Refresh"
+    },
+    {
+      "id": 191,
+      "part": "back",
+      "type": "BIRD",
+      "name": "Origami",
+      "card": "Heart Break"
+    },
+    {
+      "id": 192,
+      "part": "back",
+      "type": "AQUATIC",
+      "name": "Perch",
+      "card": "Spinal Tap"
+    },
+    {
+      "id": 193,
+      "part": "back",
+      "type": "BIRD",
+      "name": "Pigeon Post",
+      "card": "Blackmail"
+    },
+    {
+      "id": 194,
+      "part": "back",
+      "type": "PLANT",
+      "name": "Pink Turnip",
+      "card": "Turnip Rocket"
+    },
+    {
+      "id": 195,
+      "part": "back",
+      "type": "PLANT",
+      "name": "Pumpkin",
+      "card": "October Treat"
+    },
+    {
+      "id": 196,
+      "part": "back",
+      "type": "BIRD",
+      "name": "Raven",
+      "card": "Ill-omened"
+    },
+    {
+      "id": 197,
+      "part": "back",
+      "type": "REPTILE",
+      "name": "Red Ear",
+      "card": "Slippery Shield"
+    },
+    {
+      "id": 198,
+      "part": "back",
+      "type": "BEAST",
+      "name": "Risky Beast",
+      "card": "Revenge Arrow"
+    },
+    {
+      "id": 199,
+      "part": "back",
+      "type": "BEAST",
+      "name": "Ronin",
+      "card": "Single Combat"
+    },
+    {
+      "id": 200,
+      "part": "back",
+      "type": "REPTILE",
+      "name": "Rugged Sail",
+      "card": "Ivory Chop"
+    },
+    {
+      "id": 201,
+      "part": "back",
+      "type": "BUG",
+      "name": "Sandal",
+      "card": "Bug Splat"
+    },
+    {
+      "id": 202,
+      "part": "back",
+      "type": "BUG",
+      "name": "Scarab",
+      "card": "Scarab Curse"
+    },
+    {
+      "id": 203,
+      "part": "back",
+      "type": "PLANT",
+      "name": "Shiitake",
+      "card": "Shroom's Grace"
+    },
+    {
+      "id": 204,
+      "part": "back",
+      "type": "BUG",
+      "name": "Snail Shell",
+      "card": "Sticky Goo"
+    },
+    {
+      "id": 205,
+      "part": "back",
+      "type": "BUG",
+      "name": "Spiky Wing",
+      "card": "Buzzing Wind"
+    },
+    {
+      "id": 206,
+      "part": "back",
+      "type": "AQUATIC",
+      "name": "Sponge",
+      "card": "Shipwreck"
+    },
+    {
+      "id": 207,
+      "part": "back",
+      "type": "BIRD",
+      "name": "Starry Balloon",
+      "card": "Balloon Pop"
+    },
+    {
+      "id": 208,
+      "part": "back",
+      "type": "BUG",
+      "name": "Starry Shell",
+      "card": "Sticky Goo"
+    },
+    {
+      "id": 209,
+      "part": "back",
+      "type": "BEAST",
+      "name": "Timber",
+      "card": "Woodman Power"
+    },
+    {
+      "id": 210,
+      "part": "back",
+      "type": "BIRD",
+      "name": "Tri Feather",
+      "card": "Triple Threat"
+    },
+    {
+      "id": 211,
+      "part": "back",
+      "type": "REPTILE",
+      "name": "Tri Spikes",
+      "card": "Spike Throw"
+    },
+    {
+      "id": 212,
+      "part": "back",
+      "type": "PLANT",
+      "name": "Turnip",
+      "card": "Turnip Rocket"
+    },
+    {
+      "id": 213,
+      "part": "back",
+      "type": "PLANT",
+      "name": "Watering Can",
+      "card": "Aqua Stock"
+    },
+    {
+      "id": 214,
+      "part": "back",
+      "type": "PLANT",
+      "name": "Yakitori",
+      "card": "Shroom's Grace"
+    },
+    {
+      "id": 215,
+      "part": "tail",
+      "type": "BUG",
+      "name": "Ant",
+      "card": "Chemical Warfare"
+    },
+    {
+      "id": 216,
+      "part": "tail",
+      "type": "PLANT",
+      "name": "Carrot",
+      "card": "Carrot Hammer"
+    },
+    {
+      "id": 217,
+      "part": "tail",
+      "type": "PLANT",
+      "name": "Cattail",
+      "card": "Cattail Slap"
+    },
+    {
+      "id": 218,
+      "part": "tail",
+      "type": "BIRD",
+      "name": "Cloud",
+      "card": "Puffy Smack"
+    },
+    {
+      "id": 219,
+      "part": "tail",
+      "type": "BEAST",
+      "name": "Cottontail",
+      "card": "Luna Absorb"
+    },
+    {
+      "id": 220,
+      "part": "tail",
+      "type": "REPTILE",
+      "name": "December Surprise",
+      "card": "Jar Barrage"
+    },
+    {
+      "id": 221,
+      "part": "tail",
+      "type": "REPTILE",
+      "name": "Escaped Gecko",
+      "card": "Critical Escape"
+    },
+    {
+      "id": 222,
+      "part": "tail",
+      "type": "BIRD",
+      "name": "Feather Fan",
+      "card": "Sunder Armor"
+    },
+    {
+      "id": 223,
+      "part": "tail",
+      "type": "REPTILE",
+      "name": "Fir Trunk",
+      "card": "Tiny Swing"
+    },
+    {
+      "id": 224,
+      "part": "tail",
+      "type": "BUG",
+      "name": "Fire Ant",
+      "card": "Chemical Warfare"
+    },
+    {
+      "id": 225,
+      "part": "tail",
+      "type": "BUG",
+      "name": "Fish Snack",
+      "card": "Anesthetic Bait"
+    },
+    {
+      "id": 226,
+      "part": "tail",
+      "type": "BEAST",
+      "name": "Gerbil",
+      "card": "Gerbil Jump"
+    },
+    {
+      "id": 227,
+      "part": "tail",
+      "type": "REPTILE",
+      "name": "Gila",
+      "card": "Neuro Toxin"
+    },
+    {
+      "id": 228,
+      "part": "tail",
+      "type": "BIRD",
+      "name": "Granma's Fan",
+      "card": "Cool Breeze"
+    },
+    {
+      "id": 229,
+      "part": "tail",
+      "type": "REPTILE",
+      "name": "Grass Snake",
+      "card": "Venom Spray"
+    },
+    {
+      "id": 230,
+      "part": "tail",
+      "type": "BUG",
+      "name": "Gravel Ant",
+      "card": "Numbing Lecretion"
+    },
+    {
+      "id": 231,
+      "part": "tail",
+      "type": "BEAST",
+      "name": "Hare",
+      "card": "Hare Dagger"
+    },
+    {
+      "id": 232,
+      "part": "tail",
+      "type": "PLANT",
+      "name": "Hatsune",
+      "card": "Leek Leak"
+    },
+    {
+      "id": 233,
+      "part": "tail",
+      "type": "PLANT",
+      "name": "Hot Butt",
+      "card": "Spicy Surprise"
+    },
+    {
+      "id": 234,
+      "part": "tail",
+      "type": "REPTILE",
+      "name": "Iguana",
+      "card": "Scale Dart"
+    },
+    {
+      "id": 235,
+      "part": "tail",
+      "type": "AQUATIC",
+      "name": "Koi",
+      "card": "Upstream Swim"
+    },
+    {
+      "id": 236,
+      "part": "tail",
+      "type": "AQUATIC",
+      "name": "Koinobori",
+      "card": "Upstream Swim"
+    },
+    {
+      "id": 237,
+      "part": "tail",
+      "type": "AQUATIC",
+      "name": "Kuro Koi",
+      "card": "Upstream Swim"
+    },
+    {
+      "id": 238,
+      "part": "tail",
+      "type": "BUG",
+      "name": "Maki",
+      "card": "Anesthetic Bait"
+    },
+    {
+      "id": 239,
+      "part": "tail",
+      "type": "PLANT",
+      "name": "Namek Carrot",
+      "card": "Carrot Hammer"
+    },
+    {
+      "id": 240,
+      "part": "tail",
+      "type": "AQUATIC",
+      "name": "Navaga",
+      "card": "Flanking Smack"
+    },
+    {
+      "id": 241,
+      "part": "tail",
+      "type": "AQUATIC",
+      "name": "Nimo",
+      "card": "Tail Slap"
+    },
+    {
+      "id": 242,
+      "part": "tail",
+      "type": "BEAST",
+      "name": "Nut Cracker",
+      "card": "Nut Throw"
+    },
+    {
+      "id": 243,
+      "part": "tail",
+      "type": "BIRD",
+      "name": "Omatsuri",
+      "card": "Cool Breeze"
+    },
+    {
+      "id": 244,
+      "part": "tail",
+      "type": "BIRD",
+      "name": "Post Fight",
+      "card": "All-out Shot"
+    },
+    {
+      "id": 245,
+      "part": "tail",
+      "type": "PLANT",
+      "name": "Potato Leaf",
+      "card": "Aqua Deflect"
+    },
+    {
+      "id": 246,
+      "part": "tail",
+      "type": "BUG",
+      "name": "Pupae",
+      "card": "Grub Explode"
+    },
+    {
+      "id": 247,
+      "part": "tail",
+      "type": "AQUATIC",
+      "name": "Ranchu",
+      "card": "Water Sphere"
+    },
+    {
+      "id": 248,
+      "part": "tail",
+      "type": "BEAST",
+      "name": "Rice",
+      "card": "Night Steal"
+    },
+    {
+      "id": 249,
+      "part": "tail",
+      "type": "BEAST",
+      "name": "Sakura Cottontail",
+      "card": "Luna Absorb"
+    },
+    {
+      "id": 250,
+      "part": "tail",
+      "type": "BEAST",
+      "name": "Shiba",
+      "card": "Rampant Howl"
+    },
+    {
+      "id": 251,
+      "part": "tail",
+      "type": "AQUATIC",
+      "name": "Shrimp",
+      "card": "Chitin Jump"
+    },
+    {
+      "id": 252,
+      "part": "tail",
+      "type": "REPTILE",
+      "name": "Snake Jar",
+      "card": "Jar Barrage"
+    },
+    {
+      "id": 253,
+      "part": "tail",
+      "type": "BIRD",
+      "name": "Snowy Swallow",
+      "card": "Early Bird"
+    },
+    {
+      "id": 254,
+      "part": "tail",
+      "type": "BIRD",
+      "name": "Swallow",
+      "card": "Early Bird"
+    },
+    {
+      "id": 255,
+      "part": "tail",
+      "type": "AQUATIC",
+      "name": "Tadpole",
+      "card": "Black Bubble"
+    },
+    {
+      "id": 256,
+      "part": "tail",
+      "type": "BIRD",
+      "name": "The Last One",
+      "card": "Risky Feather"
+    },
+    {
+      "id": 257,
+      "part": "tail",
+      "type": "BUG",
+      "name": "Thorny Caterpillar",
+      "card": "Allergic Reaction"
+    },
+    {
+      "id": 258,
+      "part": "tail",
+      "type": "REPTILE",
+      "name": "Tiny Dino",
+      "card": "Tiny Swing"
+    },
+    {
+      "id": 259,
+      "part": "tail",
+      "type": "BUG",
+      "name": "Twin Tail",
+      "card": "Twin Needle"
+    },
+    {
+      "id": 260,
+      "part": "tail",
+      "type": "REPTILE",
+      "name": "Wall Gecko",
+      "card": "Critical Escape"
+    },
+    {
+      "id": 261,
+      "part": "tail",
+      "type": "PLANT",
+      "name": "Yam",
+      "card": "Gas Unleash"
+    }
+  ]
+}
