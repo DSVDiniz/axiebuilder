@@ -85,15 +85,13 @@ export default class AxieClass {
   }
   addPartsAndCardsStats() {
     this.setType(this.type);
-    let newParts = [];
-    for (let i = 0; i < this.cards.length; i++) {
-      let partElementType = this.cards[i].parts[0].type;
-      newParts.push(this.cards[i].parts[0]);
+    for (let card of Object.values(this.cards)) {
+      let partElementType = card.parts[0].type;
       let stats = AxiePartBaseStats[partElementType];
       this.addStats(stats);
     }
-    for (let i = 0; i < this.parts.length; i++) {
-      let partElementType = this.parts[i].type;
+    for (let part of Object.values(this.parts)) {
+      let partElementType = part.type;
       let stats = AxiePartBaseStats[partElementType];
       this.addStats(stats);
     }
