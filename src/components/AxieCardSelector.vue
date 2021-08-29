@@ -12,6 +12,7 @@
         return-object
         counter="4"
         v-on:input="change"
+        hint="Example: COST:1 NAME:Shelter ATK:0 DEF:115 ATKTYPE:MELEE DESCRIPTION:Disable ELEMENT:aquatic PART:hermit"
       >
         <template v-slot:selection="data">
           <v-chip
@@ -64,7 +65,7 @@ export default {
       let elementName = AxieTypeSelect[item.element].text;
       let attackType = Object.keys(CardAttackType)[item.attackType];
       return (
-        `${item.cost}x$${item.name}ATK:${item.dmg}DEF:${item.shield}ATKTYPE:${attackType}${item.description}ELEMENT:${elementName}${partsNames}`
+        `COST:${item.cost}$NAME:${item.name}ATK:${item.dmg}DEF:${item.shield}ATKTYPE:${attackType}DESCRIPTION:${item.description}ELEMENT:${elementName}PART:${partsNames}`
           .toLocaleLowerCase()
           .indexOf(queryText.toLocaleLowerCase()) > -1
       );

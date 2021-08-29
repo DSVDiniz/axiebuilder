@@ -1,8 +1,10 @@
 <template>
+<v-container>
   <div class="home">
     <TeamCreator />
     <!-- <CardList/> -->
   </div>
+</v-container>
 </template>
 
 <script>

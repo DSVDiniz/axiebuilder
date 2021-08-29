@@ -1,35 +1,37 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col cols="12">
-        <v-text-field
-          label="Marketplace link"
-          v-model="internalAxie.marketplaceLink"
-        ></v-text-field
-      ></v-col>
-      <v-col><AxieDetailedStats :axie="internalAxie"/></v-col>
-      <v-col>
-        <AxieTypeSelector :axie="internalAxie" v-on:change="changeAxieType" />
-        <AxieAttributes :axie="internalAxie" />
-        <AxiePositionSelector
-          :axie="internalAxie"
-          v-on:change="changeAxiePosition"
-        />
-      </v-col>
-    </v-row>
-    <v-row>
-      <AxieCardSelector :axie="internalAxie" v-on:change="changeCards" />
-      <AxiePartsSelector :axie="internalAxie" v-on:change="changeParts" />
-    </v-row>
-    <v-row>
-      <v-col
-        v-for="(card, index) in internalAxie.cards"
-        :key="internalAxie.id + '-' + index"
-      >
-        <AxieCard :card="card" />
-      </v-col>
-    </v-row>
-  </v-container>
+  <v-card>
+    <v-container>
+      <v-row>
+        <v-col cols="12">
+          <v-text-field
+            label="Marketplace link"
+            v-model="internalAxie.marketplaceLink"
+          ></v-text-field
+        ></v-col>
+        <v-col><AxieDetailedStats :axie="internalAxie"/></v-col>
+        <v-col>
+          <AxieTypeSelector :axie="internalAxie" v-on:change="changeAxieType" />
+          <AxieAttributes :axie="internalAxie" />
+          <AxiePositionSelector
+            :axie="internalAxie"
+            v-on:change="changeAxiePosition"
+          />
+        </v-col>
+      </v-row>
+      <v-row>
+        <AxieCardSelector :axie="internalAxie" v-on:change="changeCards" />
+        <AxiePartsSelector :axie="internalAxie" v-on:change="changeParts" />
+      </v-row>
+      <v-row>
+        <v-col
+          v-for="(card, index) in internalAxie.cards"
+          :key="internalAxie.id + '-' + index"
+        >
+          <AxieCard :card="card" />
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-card>
 </template>
 <style scoped></style>
 <script>
@@ -72,7 +74,7 @@ export default {
     },
     change() {
       this.$emit("change", this.internalAxie);
-    }
+    },
   },
   created() {
     this.internalAxie = this.axie;
