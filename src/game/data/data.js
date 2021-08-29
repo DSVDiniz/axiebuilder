@@ -1,4 +1,4 @@
-import Card from "../card";
+export const MarketplaceLink = "https://marketplace.axieinfinity.com/";
 export const AxieTypeEnum = {
   AQUATIC: 0,
   BEAST: 1,
@@ -171,1828 +171,1828 @@ export const AxiePartType = {
 export const Parts = {
   "1": {
     id: 1,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.PLANT,
     name: "Blossom",
     card: null,
   },
   "2": {
     id: 2,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.BUG,
     name: "Bookworm",
     card: null,
   },
   "3": {
     id: 3,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.BUG,
     name: "Broken Bookworm",
     card: null,
   },
   "4": {
     id: 4,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.BEAST,
     name: "Calico Zeal",
     card: null,
   },
   "5": {
     id: 5,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.BEAST,
     name: "Chubby",
     card: null,
   },
   "6": {
     id: 6,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Clear",
     card: null,
   },
   "7": {
     id: 7,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.PLANT,
     name: "Confused",
     card: null,
   },
   "8": {
     id: 8,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Crimson Gecko",
     card: null,
   },
   "9": {
     id: 9,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.PLANT,
     name: "Cucumber Slice",
     card: null,
   },
   "10": {
     id: 10,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Dokuganryu",
     card: null,
   },
   "11": {
     id: 11,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.PLANT,
     name: "Dreamy Papi",
     card: null,
   },
   "12": {
     id: 12,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Gecko",
     card: null,
   },
   "13": {
     id: 13,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Gero",
     card: null,
   },
   "14": {
     id: 14,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.BIRD,
     name: "Icy Gaze",
     card: null,
   },
   "15": {
     id: 15,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Insomnia",
     card: null,
   },
   "16": {
     id: 16,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Kabuki",
     card: null,
   },
   "17": {
     id: 17,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.BUG,
     name: "Kotaro",
     card: null,
   },
   "18": {
     id: 18,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.BIRD,
     name: "Little Owl",
     card: null,
   },
   "19": {
     id: 19,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.BEAST,
     name: "Little Peas",
     card: null,
   },
   "20": {
     id: 20,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.BIRD,
     name: "Lucas",
     card: null,
   },
   "21": {
     id: 21,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.BIRD,
     name: "Mavis",
     card: null,
   },
   "22": {
     id: 22,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.BUG,
     name: "Neo",
     card: null,
   },
   "23": {
     id: 23,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.BUG,
     name: "Nerdy",
     card: null,
   },
   "24": {
     id: 24,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.PLANT,
     name: "Papi",
     card: null,
   },
   "25": {
     id: 25,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.BEAST,
     name: "Puppy",
     card: null,
   },
   "26": {
     id: 26,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.BIRD,
     name: "Robin",
     card: null,
   },
   "27": {
     id: 27,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Scar",
     card: null,
   },
   "28": {
     id: 28,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.BIRD,
     name: "Sky Mavis",
     card: null,
   },
   "29": {
     id: 29,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Sleepless",
     card: null,
   },
   "30": {
     id: 30,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.BEAST,
     name: "Snowflakes",
     card: null,
   },
   "31": {
     id: 31,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Telescope",
     card: null,
   },
   "32": {
     id: 32,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Topaz",
     card: null,
   },
   "33": {
     id: 33,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Tricky",
     card: null,
   },
   "34": {
     id: 34,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Yen",
     card: null,
   },
   "35": {
     id: 35,
-    part: AxiePartType.EYES,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.EYES,
+    axieType: AxieTypeEnum.BEAST,
     name: "Zeal",
     card: null,
   },
   "36": {
     id: 36,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BUG,
     name: "Beetle Spike",
     card: null,
   },
   "37": {
     id: 37,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BEAST,
     name: "Belieber",
     card: null,
   },
   "38": {
     id: 38,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Bubblemaker",
     card: null,
   },
   "39": {
     id: 39,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.PLANT,
     name: "Clover",
     card: null,
   },
   "40": {
     id: 40,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BIRD,
     name: "Curly",
     card: null,
   },
   "41": {
     id: 41,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Curved Spine",
     card: null,
   },
   "42": {
     id: 42,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Deadly Pogona",
     card: null,
   },
   "43": {
     id: 43,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BUG,
     name: "Ear Breathing",
     card: null,
   },
   "44": {
     id: 44,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BIRD,
     name: "Early Bird",
     card: null,
   },
   "45": {
     id: 45,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BUG,
     name: "Earwing",
     card: null,
   },
   "46": {
     id: 46,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Friezard",
     card: null,
   },
   "47": {
     id: 47,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Gill",
     card: null,
   },
   "48": {
     id: 48,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BIRD,
     name: "Heart Cheek",
     card: null,
   },
   "49": {
     id: 49,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.PLANT,
     name: "Hollow",
     card: null,
   },
   "50": {
     id: 50,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Inkling",
     card: null,
   },
   "51": {
     id: 51,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BEAST,
     name: "Innocent Lamb",
     card: null,
   },
   "52": {
     id: 52,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BIRD,
     name: "Karimata",
     card: null,
   },
   "53": {
     id: 53,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BUG,
     name: "Larva",
     card: null,
   },
   "54": {
     id: 54,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BUG,
     name: "Leaf Bug",
     card: null,
   },
   "55": {
     id: 55,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.PLANT,
     name: "Leafy",
     card: null,
   },
   "56": {
     id: 56,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.PLANT,
     name: "Lotus",
     card: null,
   },
   "57": {
     id: 57,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.PLANT,
     name: "Maiko",
     card: null,
   },
   "58": {
     id: 58,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BEAST,
     name: "Merry Lamb",
     card: null,
   },
   "59": {
     id: 59,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BUG,
     name: "Mon",
     card: null,
   },
   "60": {
     id: 60,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Nimo",
     card: null,
   },
   "61": {
     id: 61,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BEAST,
     name: "Nut Cracker",
     card: null,
   },
   "62": {
     id: 62,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BEAST,
     name: "Nyan",
     card: null,
   },
   "63": {
     id: 63,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BIRD,
     name: "Owl",
     card: null,
   },
   "64": {
     id: 64,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BIRD,
     name: "Peace Maker",
     card: null,
   },
   "65": {
     id: 65,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.PLANT,
     name: "Pinecones",
     card: null,
   },
   "66": {
     id: 66,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BIRD,
     name: "Pink Cheek",
     card: null,
   },
   "67": {
     id: 67,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Pogona",
     card: null,
   },
   "68": {
     id: 68,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BEAST,
     name: "Pointy Nyan",
     card: null,
   },
   "69": {
     id: 69,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BEAST,
     name: "Puppy",
     card: null,
   },
   "70": {
     id: 70,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Red Nimo",
     card: null,
   },
   "71": {
     id: 71,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BIRD,
     name: "Risky Bird",
     card: null,
   },
   "72": {
     id: 72,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.PLANT,
     name: "Rosa",
     card: null,
   },
   "73": {
     id: 73,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.PLANT,
     name: "Sakura",
     card: null,
   },
   "74": {
     id: 74,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Seaslug",
     card: null,
   },
   "75": {
     id: 75,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Sidebarb",
     card: null,
   },
   "76": {
     id: 76,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Small Frill",
     card: null,
   },
   "77": {
     id: 77,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Swirl",
     card: null,
   },
   "78": {
     id: 78,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BUG,
     name: "Tassels",
     card: null,
   },
   "79": {
     id: 79,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.PLANT,
     name: "The Last Leaf",
     card: null,
   },
   "80": {
     id: 80,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Tiny Fan",
     card: null,
   },
   "81": {
     id: 81,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BUG,
     name: "Vector",
     card: null,
   },
   "82": {
     id: 82,
-    part: AxiePartType.EARS,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.EARS,
+    axieType: AxieTypeEnum.BEAST,
     name: "Zen",
     card: null,
   },
   "83": {
     id: 83,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.BEAST,
     name: "Axie Kiss",
     card: 37,
   },
   "84": {
     id: 84,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Catfish",
     card: 14,
   },
   "85": {
     id: 85,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.BEAST,
     name: "Confident",
     card: 38,
   },
   "86": {
     id: 86,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.BUG,
     name: "Cute Bunny",
     card: 81,
   },
   "87": {
     id: 87,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Dango",
     card: 126,
   },
   "88": {
     id: 88,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.BIRD,
     name: "Doubletalk",
     card: 57,
   },
   "89": {
     id: 89,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.BUG,
     name: "Feasting Mosquito",
     card: 79,
   },
   "90": {
     id: 90,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Geisha",
     card: 16,
   },
   "91": {
     id: 91,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.BEAST,
     name: "Goda",
     card: 36,
   },
   "92": {
     id: 92,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.PLANT,
     name: "Herbivore",
     card: 103,
   },
   "93": {
     id: 93,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.PLANT,
     name: "Humorless",
     card: 101,
   },
   "94": {
     id: 94,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.BIRD,
     name: "Hungry Bird",
     card: 59,
   },
   "95": {
     id: 95,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.BUG,
     name: "Kawaii",
     card: 81,
   },
   "96": {
     id: 96,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Kotaro",
     card: 124,
   },
   "97": {
     id: 97,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Lam",
     card: 13,
   },
   "98": {
     id: 98,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Lam Handsome",
     card: 13,
   },
   "99": {
     id: 99,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.BIRD,
     name: "Little Owl",
     card: 60,
   },
   "100": {
     id: 100,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.BUG,
     name: "Mosquito",
     card: 79,
   },
   "101": {
     id: 101,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.BIRD,
     name: "Mr. Doubletalk",
     card: 57,
   },
   "102": {
     id: 102,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.BEAST,
     name: "Nut Cracker",
     card: 35,
   },
   "103": {
     id: 103,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.BIRD,
     name: "Peace Maker",
     card: 58,
   },
   "104": {
     id: 104,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.BUG,
     name: "Pincer",
     card: 80,
   },
   "105": {
     id: 105,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Piranha",
     card: 16,
   },
   "106": {
     id: 106,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Razor Bite",
     card: 125,
   },
   "107": {
     id: 107,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Risky Fish",
     card: 15,
   },
   "108": {
     id: 108,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.PLANT,
     name: "Rudolph",
     card: 102,
   },
   "109": {
     id: 109,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.PLANT,
     name: "Serious",
     card: 101,
   },
   "110": {
     id: 110,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.PLANT,
     name: "Silence Whisper",
     card: 104,
   },
   "111": {
     id: 111,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.BEAST,
     name: "Skull Cracker",
     card: 35,
   },
   "112": {
     id: 112,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.BUG,
     name: "Square Teeth",
     card: 82,
   },
   "113": {
     id: 113,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Tiny Carrot",
     card: 126,
   },
   "114": {
     id: 114,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Tiny Turtle",
     card: 126,
   },
   "115": {
     id: 115,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Toothless Bite",
     card: 123,
   },
   "116": {
     id: 116,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Venom Bite",
     card: 123,
   },
   "117": {
     id: 117,
-    part: AxiePartType.MOUTH,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.MOUTH,
+    axieType: AxieTypeEnum.PLANT,
     name: "Zigzag",
     card: 102,
   },
   "118": {
     id: 118,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "5H04L-5T4R",
     card: 12,
   },
   "119": {
     id: 119,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Anemone",
     card: 10,
   },
   "120": {
     id: 120,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BUG,
     name: "Antenna",
     card: 74,
   },
   "121": {
     id: 121,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BEAST,
     name: "Arco",
     card: 34,
   },
   "122": {
     id: 122,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Babylonia",
     card: 7,
   },
   "123": {
     id: 123,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.PLANT,
     name: "Bamboo Shoot",
     card: 95,
   },
   "124": {
     id: 124,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.PLANT,
     name: "Beech",
     card: 96,
   },
   "125": {
     id: 125,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Bumpy",
     card: 122,
   },
   "126": {
     id: 126,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.PLANT,
     name: "Cactus",
     card: 99,
   },
   "127": {
     id: 127,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Candy Babylonia",
     card: 7,
   },
   "128": {
     id: 128,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BUG,
     name: "Caterpillars",
     card: 75,
   },
   "129": {
     id: 129,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Cerastes",
     card: 119,
   },
   "130": {
     id: 130,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Clamshell",
     card: 9,
   },
   "131": {
     id: 131,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BIRD,
     name: "Cuckoo",
     card: 52,
   },
   "132": {
     id: 132,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BEAST,
     name: "Dual Blade",
     card: 33,
   },
   "133": {
     id: 133,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BIRD,
     name: "Eggshell",
     card: 51,
   },
   "134": {
     id: 134,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BIRD,
     name: "Feather Spear",
     card: 56,
   },
   "135": {
     id: 135,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.PLANT,
     name: "Golden Bamboo Shoot",
     card: 95,
   },
   "136": {
     id: 136,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BIRD,
     name: "Golden Shell",
     card: 51,
   },
   "137": {
     id: 137,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BEAST,
     name: "Imp",
     card: 30,
   },
   "138": {
     id: 138,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Incisor",
     card: 121,
   },
   "139": {
     id: 139,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BEAST,
     name: "Kendama",
     card: 30,
   },
   "140": {
     id: 140,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BIRD,
     name: "Kestrel",
     card: 54,
   },
   "141": {
     id: 141,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BUG,
     name: "Lagging",
     card: 73,
   },
   "142": {
     id: 142,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BUG,
     name: "Laggingggggg",
     card: 73,
   },
   "143": {
     id: 143,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BUG,
     name: "Leaf Bug",
     card: 78,
   },
   "144": {
     id: 144,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BEAST,
     name: "Little Branch",
     card: 29,
   },
   "145": {
     id: 145,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BEAST,
     name: "Merry",
     card: 31,
   },
   "146": {
     id: 146,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Oranda",
     card: 11,
   },
   "147": {
     id: 147,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BUG,
     name: "P4R451T3",
     card: 77,
   },
   "148": {
     id: 148,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BUG,
     name: "Parasite",
     card: 77,
   },
   "149": {
     id: 149,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Pinku Unko",
     card: 117,
   },
   "150": {
     id: 150,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BUG,
     name: "Pliers",
     card: 76,
   },
   "151": {
     id: 151,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BEAST,
     name: "Pocky",
     card: 32,
   },
   "152": {
     id: 152,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.PLANT,
     name: "Rose Bud",
     card: 97,
   },
   "153": {
     id: 153,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.PLANT,
     name: "Santa's Gift",
     card: 99,
   },
   "154": {
     id: 154,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Scaly Spear",
     card: 118,
   },
   "155": {
     id: 155,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Scaly Spoon",
     card: 120,
   },
   "156": {
     id: 156,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Shoal Star",
     card: 12,
   },
   "157": {
     id: 157,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BIRD,
     name: "Spruce Spear",
     card: 56,
   },
   "158": {
     id: 158,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.PLANT,
     name: "Strawberry Shortcake",
     card: 98,
   },
   "159": {
     id: 159,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Teal Shell",
     card: 8,
   },
   "160": {
     id: 160,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BIRD,
     name: "Trump",
     card: 53,
   },
   "161": {
     id: 161,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BEAST,
     name: "Umaibo",
     card: 32,
   },
   "162": {
     id: 162,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Unko",
     card: 117,
   },
   "163": {
     id: 163,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.PLANT,
     name: "Watermelon",
     card: 100,
   },
   "164": {
     id: 164,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BIRD,
     name: "Wing Horn",
     card: 55,
   },
   "165": {
     id: 165,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.BEAST,
     name: "Winter Branch",
     card: 29,
   },
   "166": {
     id: 166,
-    part: AxiePartType.HORN,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.HORN,
+    axieType: AxieTypeEnum.PLANT,
     name: "Yorishiro",
     card: 96,
   },
   "167": {
     id: 167,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.REPTILE,
     name: "1ND14N-5T4R",
     card: 114,
   },
   "168": {
     id: 168,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Anemone",
     card: 5,
   },
   "169": {
     id: 169,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BIRD,
     name: "Balloon",
     card: 45,
   },
   "170": {
     id: 170,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.PLANT,
     name: "Bidens",
     card: 91,
   },
   "171": {
     id: 171,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Blue Moon",
     card: 2,
   },
   "172": {
     id: 172,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Bone Sail",
     card: 111,
   },
   "173": {
     id: 173,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BUG,
     name: "Buzz Buzz",
     card: 69,
   },
   "174": {
     id: 174,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BUG,
     name: "Candy Canes",
     card: 68,
   },
   "175": {
     id: 175,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Croc",
     card: 116,
   },
   "176": {
     id: 176,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Crystal Hermit",
     card: 1,
   },
   "177": {
     id: 177,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BIRD,
     name: "Cupid",
     card: 46,
   },
   "178": {
     id: 178,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Frozen Bucket",
     card: 114,
   },
   "179": {
     id: 179,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BEAST,
     name: "Furball",
     card: 28,
   },
   "180": {
     id: 180,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BUG,
     name: "Garish Worm",
     card: 68,
   },
   "181": {
     id: 181,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Goldfish",
     card: "Swift Escape",
   },
   "182": {
     id: 182,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Green Thorns",
     card: 113,
   },
   "183": {
     id: 183,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BEAST,
     name: "Hamaya",
     card: 26,
   },
   "184": {
     id: 184,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BEAST,
     name: "Hasagi",
     card: 23,
   },
   "185": {
     id: 185,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Hermit",
     card: 1,
   },
   "186": {
     id: 186,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BEAST,
     name: "Hero",
     card: 24,
   },
   "187": {
     id: 187,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Indian Star",
     card: 114,
   },
   "188": {
     id: 188,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BEAST,
     name: "Jaguar",
     card: 25,
   },
   "189": {
     id: 189,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BIRD,
     name: "Kingfisher",
     card: 49,
   },
   "190": {
     id: 190,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.PLANT,
     name: "Mint",
     card: 93,
   },
   "191": {
     id: 191,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BIRD,
     name: "Origami",
     card: 46,
   },
   "192": {
     id: 192,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Perch",
     card: 6,
   },
   "193": {
     id: 193,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BIRD,
     name: "Pigeon Post",
     card: 48,
   },
   "194": {
     id: 194,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.PLANT,
     name: "Pink Turnip",
     card: 89,
   },
   "195": {
     id: 195,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.PLANT,
     name: "Pumpkin",
     card: 94,
   },
   "196": {
     id: 196,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BIRD,
     name: "Raven",
     card: 47,
   },
   "197": {
     id: 197,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Red Ear",
     card: 115,
   },
   "198": {
     id: 198,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BEAST,
     name: "Risky Beast",
     card: 26,
   },
   "199": {
     id: 199,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BEAST,
     name: "Ronin",
     card: 23,
   },
   "200": {
     id: 200,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Rugged Sail",
     card: 111,
   },
   "201": {
     id: 201,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BUG,
     name: "Sandal",
     card: 70,
   },
   "202": {
     id: 202,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BUG,
     name: "Scarab",
     card: 71,
   },
   "203": {
     id: 203,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.PLANT,
     name: "Shiitake",
     card: 90,
   },
   "204": {
     id: 204,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BUG,
     name: "Snail Shell",
     card: 67,
   },
   "205": {
     id: 205,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BUG,
     name: "Spiky Wing",
     card: 72,
   },
   "206": {
     id: 206,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Sponge",
     card: "Shipwreck",
   },
   "207": {
     id: 207,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BIRD,
     name: "Starry Balloon",
     card: 45,
   },
   "208": {
     id: 208,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BUG,
     name: "Starry Shell",
     card: 67,
   },
   "209": {
     id: 209,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BEAST,
     name: "Timber",
     card: 27,
   },
   "210": {
     id: 210,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.BIRD,
     name: "Tri Feather",
     card: 50,
   },
   "211": {
     id: 211,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Tri Spikes",
     card: 112,
   },
   "212": {
     id: 212,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.PLANT,
     name: "Turnip",
     card: 89,
   },
   "213": {
     id: 213,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.PLANT,
     name: "Watering Can",
     card: 92,
   },
   "214": {
     id: 214,
-    part: AxiePartType.BACK,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.BACK,
+    axieType: AxieTypeEnum.PLANT,
     name: "Yakitori",
     card: 90,
   },
   "215": {
     id: 215,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BUG,
     name: "Ant",
     card: 83,
   },
   "216": {
     id: 216,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.PLANT,
     name: "Carrot",
     card: 105,
   },
   "217": {
     id: 217,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.PLANT,
     name: "Cattail",
     card: 106,
   },
   "218": {
     id: 218,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BIRD,
     name: "Cloud",
     card: 64,
   },
   "219": {
     id: 219,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BEAST,
     name: "Cottontail",
     card: 39,
   },
   "220": {
     id: 220,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.REPTILE,
     name: "December Surprise",
     card: 130,
   },
   "221": {
     id: 221,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Escaped Gecko",
     card: 127,
   },
   "222": {
     id: 222,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BIRD,
     name: "Feather Fan",
     card: 62,
   },
   "223": {
     id: 223,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Fir Trunk",
     card: 129,
   },
   "224": {
     id: 224,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BUG,
     name: "Fire Ant",
     card: 83,
   },
   "225": {
     id: 225,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BUG,
     name: "Fish Snack",
     card: 85,
   },
   "226": {
     id: 226,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BEAST,
     name: "Gerbil",
     card: 44,
   },
   "227": {
     id: 227,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Gila",
     card: 131,
   },
   "228": {
     id: 228,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BIRD,
     name: "Granma's Fan",
     card: 65,
   },
   "229": {
     id: 229,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Grass Snake",
     card: 132,
   },
   "230": {
     id: 230,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BUG,
     name: "Gravel Ant",
     card: 86,
   },
   "231": {
     id: 231,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BEAST,
     name: "Hare",
     card: 42,
   },
   "232": {
     id: 232,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.PLANT,
     name: "Hatsune",
     card: 107,
   },
   "233": {
     id: 233,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.PLANT,
     name: "Hot Butt",
     card: 110,
   },
   "234": {
     id: 234,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Iguana",
     card: 128,
   },
   "236": {
     id: 236,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Koinobori",
     card: 17,
   },
   "237": {
     id: 237,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Kuro Koi",
     card: 17,
   },
   "238": {
     id: 238,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BUG,
     name: "Maki",
     card: 85,
   },
   "239": {
     id: 239,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.PLANT,
     name: "Namek Carrot",
     card: 105,
   },
   "240": {
     id: 240,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Navaga",
     card: 21,
   },
   "241": {
     id: 241,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Nimo",
     card: 18,
   },
   "242": {
     id: 242,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BEAST,
     name: "Nut Cracker",
     card: 43,
   },
   "243": {
     id: 243,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BIRD,
     name: "Omatsuri",
     card: 65,
   },
   "244": {
     id: 244,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BIRD,
     name: "Post Fight",
     card: 66,
   },
   "245": {
     id: 245,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.PLANT,
     name: "Potato Leaf",
     card: 109,
   },
   "246": {
     id: 246,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BUG,
     name: "Pupae",
     card: 87,
   },
   "247": {
     id: 247,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Ranchu",
     card: 20,
   },
   "248": {
     id: 248,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BEAST,
     name: "Rice",
     card: 40,
   },
   "249": {
     id: 249,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BEAST,
     name: "Sakura Cottontail",
     card: 39,
   },
   "250": {
     id: 250,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BEAST,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BEAST,
     name: "Shiba",
     card: 41,
   },
   "251": {
     id: 251,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Shrimp",
     card: 22,
   },
   "252": {
     id: 252,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Snake Jar",
     card: 130,
   },
   "253": {
     id: 253,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BIRD,
     name: "Snowy Swallow",
     card: 61,
   },
   "254": {
     id: 254,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BIRD,
     name: "Swallow",
     card: 61,
   },
   "255": {
     id: 255,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.AQUATIC,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.AQUATIC,
     name: "Tadpole",
     card: 19,
   },
   "256": {
     id: 256,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BIRD,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BIRD,
     name: "The Last One",
     card: 63,
   },
   "257": {
     id: 257,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BUG,
     name: "Thorny Caterpillar",
     card: 88,
   },
   "258": {
     id: 258,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Tiny Dino",
     card: 129,
   },
   "259": {
     id: 259,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.BUG,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.BUG,
     name: "Twin Tail",
     card: 84,
   },
   "260": {
     id: 260,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.REPTILE,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.REPTILE,
     name: "Wall Gecko",
     card: 127,
   },
   "261": {
     id: 261,
-    part: AxiePartType.TAIL,
-    type: AxieTypeEnum.PLANT,
+    type: AxiePartType.TAIL,
+    axieType: AxieTypeEnum.PLANT,
     name: "Yam",
     card: 108,
   },
 };
 
 export const Cards = {
-  "1": new Card({
+  "1": {
     id: 1,
     parts: [
       {
@@ -2018,8 +2018,8 @@ export const Cards = {
     shield: 115,
     description: "Disable critical strikes on this Axie during this round.",
     image: "1.png",
-  }),
-  "2": new Card({
+  },
+  "2": {
     id: 2,
     parts: [
       {
@@ -2038,8 +2038,8 @@ export const Cards = {
     shield: 30,
     description: "Draw a card if target is in Last Stand.",
     image: "2.png",
-  }),
-  "3": new Card({
+  },
+  "3": {
     id: 3,
     parts: [
       {
@@ -2058,8 +2058,8 @@ export const Cards = {
     shield: 20,
     description: "Apply Speed+ to this Axie for 2 rounds when attacked.",
     image: "3.png",
-  }),
-  "4": new Card({
+  },
+  "4": {
     id: 4,
     parts: [
       {
@@ -2078,8 +2078,8 @@ export const Cards = {
     shield: 90,
     description: "Apply Attack+ to this Axie if its shield breaks.",
     image: "4.png",
-  }),
-  "5": new Card({
+  },
+  "5": {
     id: 5,
     parts: [
       {
@@ -2099,8 +2099,8 @@ export const Cards = {
     description:
       "Successful attacks restore 50 HP for each Anemone part this Axie posseses.",
     image: "5.png",
-  }),
-  "6": new Card({
+  },
+  "6": {
     id: 6,
     parts: [
       {
@@ -2120,8 +2120,8 @@ export const Cards = {
     description:
       "Prioritize idle target when comboed with at least 2 additional cards.",
     image: "6.png",
-  }),
-  "7": new Card({
+  },
+  "7": {
     id: 7,
     parts: [
       {
@@ -2147,8 +2147,8 @@ export const Cards = {
     shield: 50,
     description: "Deal 130% damage when attacking an idle target.",
     image: "7.png",
-  }),
-  "8": new Card({
+  },
+  "8": {
     id: 8,
     parts: [
       {
@@ -2167,8 +2167,8 @@ export const Cards = {
     shield: 80,
     description: "Add 30% to this Axie's shield when attacking.",
     image: "8.png",
-  }),
-  "9": new Card({
+  },
+  "9": {
     id: 9,
     parts: [
       {
@@ -2188,8 +2188,8 @@ export const Cards = {
     description:
       "Apply Attack+ to this Axie when attacking Beast, Bug, or Mech targets.",
     image: "9.png",
-  }),
-  "10": new Card({
+  },
+  "10": {
     id: 10,
     parts: [
       {
@@ -2209,8 +2209,8 @@ export const Cards = {
     description:
       "Successful attacks restore 50 HP for each Anemone part this Axie posseses.",
     image: "10.png",
-  }),
-  "11": new Card({
+  },
+  "11": {
     id: 11,
     parts: [
       {
@@ -2229,8 +2229,8 @@ export const Cards = {
     shield: 30,
     description: "End target's Last Stand.",
     image: "11.png",
-  }),
-  "12": new Card({
+  },
+  "12": {
     id: 12,
     parts: [
       {
@@ -2257,8 +2257,8 @@ export const Cards = {
     description:
       "Target cannot enter Last Stand if this card brings its HP to zero.",
     image: "12.png",
-  }),
-  "13": new Card({
+  },
+  "13": {
     id: 13,
     parts: [
       {
@@ -2284,8 +2284,8 @@ export const Cards = {
     shield: 40,
     description: "Deal 120% damage if this Axie's HP is below 50%.",
     image: "13.png",
-  }),
-  "14": new Card({
+  },
+  "14": {
     id: 14,
     parts: [
       {
@@ -2304,8 +2304,8 @@ export const Cards = {
     shield: 30,
     description: "Heal this Axie by the damage inflicted with this card.",
     image: "14.png",
-  }),
-  "15": new Card({
+  },
+  "15": {
     id: 15,
     parts: [
       {
@@ -2325,8 +2325,8 @@ export const Cards = {
     description:
       "Apply Attack+ to this Axie when attacking Plant, Reptile, or Dusk targets.",
     image: "15.png",
-  }),
-  "16": new Card({
+  },
+  "16": {
     id: 16,
     parts: [
       {
@@ -2352,8 +2352,8 @@ export const Cards = {
     shield: 20,
     description: "Target injured enemy if this Axie's HP is below 50%.",
     image: "16.png",
-  }),
-  "17": new Card({
+  },
+  "17": {
     id: 17,
     parts: [
       {
@@ -2380,8 +2380,8 @@ export const Cards = {
     description:
       "Apply Speed+ to this Axie for 2 rounds when comboed with another Aquatic class card.",
     image: "17.png",
-  }),
-  "18": new Card({
+  },
+  "18": {
     id: 18,
     parts: [
       {
@@ -2400,8 +2400,8 @@ export const Cards = {
     shield: 0,
     description: "Gain 1 energy when comboed with another card.",
     image: "18.png",
-  }),
-  "19": new Card({
+  },
+  "19": {
     id: 19,
     parts: [
       {
@@ -2420,8 +2420,8 @@ export const Cards = {
     shield: 40,
     description: "Apply Jinx to target for 2 rounds.",
     image: "19.png",
-  }),
-  "20": new Card({
+  },
+  "20": {
     id: 20,
     parts: [
       {
@@ -2440,8 +2440,8 @@ export const Cards = {
     shield: 30,
     description: "Apply Chill to target for 2 rounds.",
     image: "20.png",
-  }),
-  "21": new Card({
+  },
+  "21": {
     id: 21,
     parts: [
       {
@@ -2460,8 +2460,8 @@ export const Cards = {
     shield: 40,
     description: "Deal 120% damage if this Axie attacks first.",
     image: "21.png",
-  }),
-  "22": new Card({
+  },
+  "22": {
     id: 22,
     parts: [
       {
@@ -2480,8 +2480,8 @@ export const Cards = {
     shield: 30,
     description: "Prioritizes furthest target",
     image: "22.png",
-  }),
-  "23": new Card({
+  },
+  "23": {
     id: 23,
     parts: [
       {
@@ -2508,8 +2508,8 @@ export const Cards = {
     description:
       "Guaranteed critical strike when comboed with at least 2 other cards.",
     image: "23.png",
-  }),
-  "24": new Card({
+  },
+  "24": {
     id: 24,
     parts: [
       {
@@ -2528,8 +2528,8 @@ export const Cards = {
     shield: 0,
     description: "Draw a card when attacking an Aquatic, Bird, or Dawn target.",
     image: "24.png",
-  }),
-  "25": new Card({
+  },
+  "25": {
     id: 25,
     parts: [
       {
@@ -2548,8 +2548,8 @@ export const Cards = {
     shield: 35,
     description: "Always strike first if this Axie is in Last Stand.",
     image: "25.png",
-  }),
-  "26": new Card({
+  },
+  "26": {
     id: 26,
     parts: [
       {
@@ -2575,8 +2575,8 @@ export const Cards = {
     shield: 25,
     description: "Deal 150% damage if this Axie is in Last Stand.",
     image: "26.png",
-  }),
-  "27": new Card({
+  },
+  "27": {
     id: 27,
     parts: [
       {
@@ -2596,8 +2596,8 @@ export const Cards = {
     description:
       "Add Shield equal to the damage this cards deals to Plant targets.",
     image: "27.png",
-  }),
-  "28": new Card({
+  },
+  "28": {
     id: 28,
     parts: [
       {
@@ -2616,8 +2616,8 @@ export const Cards = {
     shield: 30,
     description: "Strike 3 times.",
     image: "28.png",
-  }),
-  "29": new Card({
+  },
+  "29": {
     id: 29,
     parts: [
       {
@@ -2644,8 +2644,8 @@ export const Cards = {
     description:
       "Increase crit chance by 20% if chained or comboed with a plant card.",
     image: "29.png",
-  }),
-  "30": new Card({
+  },
+  "30": {
     id: 30,
     parts: [
       {
@@ -2672,8 +2672,8 @@ export const Cards = {
     description:
       "Gain 1 energy per critical strike dealt by your team this round.",
     image: "30.png",
-  }),
-  "31": new Card({
+  },
+  "31": {
     id: 31,
     parts: [
       {
@@ -2692,8 +2692,8 @@ export const Cards = {
     shield: 85,
     description: "Add 20% shield to this Axie when played in a chain.",
     image: "31.png",
-  }),
-  "32": new Card({
+  },
+  "32": {
     id: 32,
     parts: [
       {
@@ -2719,8 +2719,8 @@ export const Cards = {
     shield: 20,
     description: "Deal 10% additional damage for each allied Bug Axie.",
     image: "32.png",
-  }),
-  "33": new Card({
+  },
+  "33": {
     id: 33,
     parts: [
       {
@@ -2739,8 +2739,8 @@ export const Cards = {
     shield: 20,
     description: "Deal 250% damage on critical strikes.",
     image: "33.png",
-  }),
-  "34": new Card({
+  },
+  "34": {
     id: 34,
     parts: [
       {
@@ -2759,8 +2759,8 @@ export const Cards = {
     shield: 50,
     description: "Apply Speed + to this Axie for 2 rounds when attacked.",
     image: "34.png",
-  }),
-  "35": new Card({
+  },
+  "35": {
     id: 35,
     parts: [
       {
@@ -2787,8 +2787,8 @@ export const Cards = {
     description:
       "Deal 120% damage when comboed with another 'Nut Cracker' card.",
     image: "35.png",
-  }),
-  "36": new Card({
+  },
+  "36": {
     id: 36,
     parts: [
       {
@@ -2807,8 +2807,8 @@ export const Cards = {
     shield: 40,
     description: "Destoy 1 of your opponent's energy.",
     image: "36.png",
-  }),
-  "37": new Card({
+  },
+  "37": {
     id: 37,
     parts: [
       {
@@ -2827,8 +2827,8 @@ export const Cards = {
     shield: 30,
     description: "Apply Lethal to target if this Axie's HP is below 30%.",
     image: "37.png",
-  }),
-  "38": new Card({
+  },
+  "38": {
     id: 38,
     parts: [
       {
@@ -2847,8 +2847,8 @@ export const Cards = {
     shield: 30,
     description: "Apply 2 Morale+ to this Axie for 2 rounds.",
     image: "38.png",
-  }),
-  "39": new Card({
+  },
+  "39": {
     id: 39,
     parts: [
       {
@@ -2874,8 +2874,8 @@ export const Cards = {
     shield: 0,
     description: "Gain 1 energy.",
     image: "39.png",
-  }),
-  "40": new Card({
+  },
+  "40": {
     id: 40,
     parts: [
       {
@@ -2895,8 +2895,8 @@ export const Cards = {
     description:
       "Steal 1 energy from your opponent when comboed with another card.",
     image: "40.png",
-  }),
-  "41": new Card({
+  },
+  "41": {
     id: 41,
     parts: [
       {
@@ -2916,8 +2916,8 @@ export const Cards = {
     description:
       "Apply Morale+ to your team for 2 rounds if this Axie attacks while in Last Stand.",
     image: "41.png",
-  }),
-  "42": new Card({
+  },
+  "42": {
     id: 42,
     parts: [
       {
@@ -2937,8 +2937,8 @@ export const Cards = {
     description:
       "Draw a card if this Axie attacks at the beginning of the round.",
     image: "42.png",
-  }),
-  "43": new Card({
+  },
+  "43": {
     id: 43,
     parts: [
       {
@@ -2958,8 +2958,8 @@ export const Cards = {
     description:
       "Deal 120% damage when comboed with another 'Nut Cracker' card.",
     image: "43.png",
-  }),
-  "44": new Card({
+  },
+  "44": {
     id: 44,
     parts: [
       {
@@ -2979,8 +2979,8 @@ export const Cards = {
     description:
       "Skip the closest target if there are 2 or more enemies remaining.",
     image: "44.png",
-  }),
-  "45": new Card({
+  },
+  "45": {
     id: 45,
     parts: [
       {
@@ -3007,8 +3007,8 @@ export const Cards = {
     description:
       "Apply Fear to target for 1 turn. If defending, apply Fear to self until next round.",
     image: "45.png",
-  }),
-  "46": new Card({
+  },
+  "46": {
     id: 46,
     parts: [
       {
@@ -3034,8 +3034,8 @@ export const Cards = {
     shield: 20,
     description: "Apply Morale- to enemy for 2 rounds.",
     image: "46.png",
-  }),
-  "47": new Card({
+  },
+  "47": {
     id: 47,
     parts: [
       {
@@ -3054,8 +3054,8 @@ export const Cards = {
     shield: 30,
     description: "Apply Jinx to target for 2 rounds.",
     image: "47.png",
-  }),
-  "48": new Card({
+  },
+  "48": {
     id: 48,
     parts: [
       {
@@ -3074,8 +3074,8 @@ export const Cards = {
     shield: 10,
     description: "Transfer all debuffs on this Axie to target.",
     image: "48.png",
-  }),
-  "49": new Card({
+  },
+  "49": {
     id: 49,
     parts: [
       {
@@ -3094,8 +3094,8 @@ export const Cards = {
     shield: 0,
     description: "Target an Aquatic class enemy if this Axie's HP is below 50%",
     image: "49.png",
-  }),
-  "50": new Card({
+  },
+  "50": {
     id: 50,
     parts: [
       {
@@ -3114,8 +3114,8 @@ export const Cards = {
     shield: 10,
     description: "Attack twice if this Axie has any debuffs.",
     image: "50.png",
-  }),
-  "51": new Card({
+  },
+  "51": {
     id: 51,
     parts: [
       {
@@ -3141,8 +3141,8 @@ export const Cards = {
     shield: 0,
     description: "Apply Aroma on this Axie until next round.",
     image: "51.png",
-  }),
-  "52": new Card({
+  },
+  "52": {
     id: 52,
     parts: [
       {
@@ -3161,8 +3161,8 @@ export const Cards = {
     shield: 40,
     description: "Apply Attack+ to this Axie.",
     image: "52.png",
-  }),
-  "53": new Card({
+  },
+  "53": {
     id: 53,
     parts: [
       {
@@ -3181,8 +3181,8 @@ export const Cards = {
     shield: 30,
     description: "Deal 120% damage when chained with another 'Trump' card.",
     image: "53.png",
-  }),
-  "54": new Card({
+  },
+  "54": {
     id: 54,
     parts: [
       {
@@ -3201,8 +3201,8 @@ export const Cards = {
     shield: 0,
     description: "Disable target's horn cards next round.",
     image: "54.png",
-  }),
-  "55": new Card({
+  },
+  "55": {
     id: 55,
     parts: [
       {
@@ -3222,8 +3222,8 @@ export const Cards = {
     description:
       "Skip the closest target if there are 2 or more enemies remaining.",
     image: "55.png",
-  }),
-  "56": new Card({
+  },
+  "56": {
     id: 56,
     parts: [
       {
@@ -3249,8 +3249,8 @@ export const Cards = {
     shield: 50,
     description: "Deal 120% damage when chained with another 'Lunge' card.",
     image: "56.png",
-  }),
-  "57": new Card({
+  },
+  "57": {
     id: 57,
     parts: [
       {
@@ -3276,8 +3276,8 @@ export const Cards = {
     shield: 0,
     description: "Apply Sleep to target.",
     image: "57.png",
-  }),
-  "58": new Card({
+  },
+  "58": {
     id: 58,
     parts: [
       {
@@ -3296,8 +3296,8 @@ export const Cards = {
     shield: 30,
     description: "Apply Attack- on target.",
     image: "58.png",
-  }),
-  "59": new Card({
+  },
+  "59": {
     id: 59,
     parts: [
       {
@@ -3316,8 +3316,8 @@ export const Cards = {
     shield: 40,
     description: "Target Bug class enemy if this Axie's HP is below 50%.",
     image: "59.png",
-  }),
-  "60": new Card({
+  },
+  "60": {
     id: 60,
     parts: [
       {
@@ -3336,8 +3336,8 @@ export const Cards = {
     shield: 0,
     description: "Target fastest enemy.",
     image: "60.png",
-  }),
-  "61": new Card({
+  },
+  "61": {
     id: 61,
     parts: [
       {
@@ -3363,8 +3363,8 @@ export const Cards = {
     shield: 20,
     description: "Deal 120% damage if this Axie attacks first.",
     image: "61.png",
-  }),
-  "62": new Card({
+  },
+  "62": {
     id: 62,
     parts: [
       {
@@ -3383,8 +3383,8 @@ export const Cards = {
     shield: 90,
     description: "Add 20% shield to this Axie for each debuff it possesses.",
     image: "62.png",
-  }),
-  "63": new Card({
+  },
+  "63": {
     id: 63,
     parts: [
       {
@@ -3403,8 +3403,8 @@ export const Cards = {
     shield: 10,
     description: "Apply 2 Attack- to this Axie.",
     image: "63.png",
-  }),
-  "64": new Card({
+  },
+  "64": {
     id: 64,
     parts: [
       {
@@ -3423,8 +3423,8 @@ export const Cards = {
     shield: 50,
     description: "Skip targets that are in Last Stand.",
     image: "64.png",
-  }),
-  "65": new Card({
+  },
+  "65": {
     id: 65,
     parts: [
       {
@@ -3450,8 +3450,8 @@ export const Cards = {
     shield: 30,
     description: "Apply Chill to target for 2 rounds.",
     image: "65.png",
-  }),
-  "66": new Card({
+  },
+  "66": {
     id: 66,
     parts: [
       {
@@ -3470,8 +3470,8 @@ export const Cards = {
     shield: 0,
     description: "Inflict 30% of this Axie's max HP to itself.",
     image: "66.png",
-  }),
-  "67": new Card({
+  },
+  "67": {
     id: 67,
     parts: [
       {
@@ -3498,8 +3498,8 @@ export const Cards = {
     description:
       "Stun attacker if this Axie’s shield breaks. Can only trigger once per round.",
     image: "67.png",
-  }),
-  "68": new Card({
+  },
+  "68": {
     id: 68,
     parts: [
       {
@@ -3525,8 +3525,8 @@ export const Cards = {
     shield: 50,
     description: "Apply poison to target when played in a chain.",
     image: "68.png",
-  }),
-  "69": new Card({
+  },
+  "69": {
     id: 69,
     parts: [
       {
@@ -3545,8 +3545,8 @@ export const Cards = {
     shield: 40,
     description: "Apply Attack- to target.",
     image: "69.png",
-  }),
-  "70": new Card({
+  },
+  "70": {
     id: 70,
     parts: [
       {
@@ -3565,8 +3565,8 @@ export const Cards = {
     shield: 50,
     description: "Deal 50% more damage when attacking Bug targets.",
     image: "70.png",
-  }),
-  "71": new Card({
+  },
+  "71": {
     id: 71,
     parts: [
       {
@@ -3585,8 +3585,8 @@ export const Cards = {
     shield: 40,
     description: "Target cannot be healed until next round.",
     image: "71.png",
-  }),
-  "72": new Card({
+  },
+  "72": {
     id: 72,
     parts: [
       {
@@ -3605,8 +3605,8 @@ export const Cards = {
     shield: 30,
     description: "Apply Fragile to target until next round.",
     image: "72.png",
-  }),
-  "73": new Card({
+  },
+  "73": {
     id: 73,
     parts: [
       {
@@ -3632,8 +3632,8 @@ export const Cards = {
     shield: 0,
     description: "Apply Speed- to target for 2 rounds.",
     image: "73.png",
-  }),
-  "74": new Card({
+  },
+  "74": {
     id: 74,
     parts: [
       {
@@ -3653,8 +3653,8 @@ export const Cards = {
     description:
       "Steal energy from your opponent when chained with another 'Bug Signal' card.",
     image: "74.png",
-  }),
-  "75": new Card({
+  },
+  "75": {
     id: 75,
     parts: [
       {
@@ -3673,8 +3673,8 @@ export const Cards = {
     shield: 50,
     description: "Apply Fear to shielded targets.",
     image: "75.png",
-  }),
-  "76": new Card({
+  },
+  "76": {
     id: 76,
     parts: [
       {
@@ -3693,8 +3693,8 @@ export const Cards = {
     shield: 0,
     description: "Deal 30% more damage to shielded targets.",
     image: "76.png",
-  }),
-  "77": new Card({
+  },
+  "77": {
     id: 77,
     parts: [
       {
@@ -3720,8 +3720,8 @@ export const Cards = {
     shield: 50,
     description: "Randomly discard 1 card from your enemy's hand.",
     image: "77.png",
-  }),
-  "78": new Card({
+  },
+  "78": {
     id: 78,
     parts: [
       {
@@ -3740,8 +3740,8 @@ export const Cards = {
     shield: 20,
     description: "Gain 1 energy when comboed with a plant card.",
     image: "78.png",
-  }),
-  "79": new Card({
+  },
+  "79": {
     id: 79,
     parts: [
       {
@@ -3767,8 +3767,8 @@ export const Cards = {
     shield: 40,
     description: "Heal this Axie by the damage inflicted with this card.",
     image: "79.png",
-  }),
-  "80": new Card({
+  },
+  "80": {
     id: 80,
     parts: [
       {
@@ -3787,8 +3787,8 @@ export const Cards = {
     shield: 10,
     description: "Randomly discard 1 card from your enemy's hand.",
     image: "80.png",
-  }),
-  "81": new Card({
+  },
+  "81": {
     id: 81,
     parts: [
       {
@@ -3814,8 +3814,8 @@ export const Cards = {
     shield: 30,
     description: "Apply Fear to target for 2 turns when played in a Chain.",
     image: "81.png",
-  }),
-  "82": new Card({
+  },
+  "82": {
     id: 82,
     parts: [
       {
@@ -3834,8 +3834,8 @@ export const Cards = {
     shield: 0,
     description: "Add 100% more damage when comboed with another card.",
     image: "82.png",
-  }),
-  "83": new Card({
+  },
+  "83": {
     id: 83,
     parts: [
       {
@@ -3861,8 +3861,8 @@ export const Cards = {
     shield: 40,
     description: "Apply Stench to enemy for 1 round.",
     image: "83.png",
-  }),
-  "84": new Card({
+  },
+  "84": {
     id: 84,
     parts: [
       {
@@ -3881,8 +3881,8 @@ export const Cards = {
     shield: 0,
     description: "Attack twice when comboed with another card.",
     image: "84.png",
-  }),
-  "85": new Card({
+  },
+  "85": {
     id: 85,
     parts: [
       {
@@ -3909,8 +3909,8 @@ export const Cards = {
     description:
       "Apply stun when struck by Aquatic or Bird class cards. Can only trigger once per round.",
     image: "85.png",
-  }),
-  "86": new Card({
+  },
+  "86": {
     id: 86,
     parts: [
       {
@@ -3929,8 +3929,8 @@ export const Cards = {
     shield: 40,
     description: "Disable target's melee cards next round.",
     image: "86.png",
-  }),
-  "87": new Card({
+  },
+  "87": {
     id: 87,
     parts: [
       {
@@ -3950,8 +3950,8 @@ export const Cards = {
     description:
       "Deal 200% damage when attacking in Last stand. Axie's Last Stand ends after it attacks.",
     image: "87.png",
-  }),
-  "88": new Card({
+  },
+  "88": {
     id: 88,
     parts: [
       {
@@ -3970,8 +3970,8 @@ export const Cards = {
     shield: 30,
     description: "Deal 130% damage to debuffed targets.",
     image: "88.png",
-  }),
-  "89": new Card({
+  },
+  "89": {
     id: 89,
     parts: [
       {
@@ -3997,8 +3997,8 @@ export const Cards = {
     shield: 80,
     description: "Target a bird if comboed with 2 or more cards.",
     image: "89.png",
-  }),
-  "90": new Card({
+  },
+  "90": {
     id: 90,
     parts: [
       {
@@ -4024,8 +4024,8 @@ export const Cards = {
     shield: 40,
     description: "Heal this Axie for 120 HP.",
     image: "90.png",
-  }),
-  "91": new Card({
+  },
+  "91": {
     id: 91,
     parts: [
       {
@@ -4044,8 +4044,8 @@ export const Cards = {
     shield: 50,
     description: "Remove all debuffs from this Axie.",
     image: "91.png",
-  }),
-  "92": new Card({
+  },
+  "92": {
     id: 92,
     parts: [
       {
@@ -4064,8 +4064,8 @@ export const Cards = {
     shield: 80,
     description: "Gain 1 energy if this Axie is struck by an Aquatic card.",
     image: "92.png",
-  }),
-  "93": new Card({
+  },
+  "93": {
     id: 93,
     parts: [
       {
@@ -4085,8 +4085,8 @@ export const Cards = {
     description:
       "Remove all debuffs from a teammate if its directly in front (same row) of this Axie.",
     image: "93.png",
-  }),
-  "94": new Card({
+  },
+  "94": {
     id: 94,
     parts: [
       {
@@ -4105,8 +4105,8 @@ export const Cards = {
     shield: 115,
     description: "Draw a card if this Axie's shield doesn't break this round.",
     image: "94.png",
-  }),
-  "95": new Card({
+  },
+  "95": {
     id: 95,
     parts: [
       {
@@ -4132,8 +4132,8 @@ export const Cards = {
     shield: 70,
     description: "Increased 20% damage when chained with another plant card.",
     image: "95.png",
-  }),
-  "96": new Card({
+  },
+  "96": {
     id: 96,
     parts: [
       {
@@ -4159,8 +4159,8 @@ export const Cards = {
     shield: 40,
     description: "Deal 120% damage if this Axie's shield breaks.",
     image: "96.png",
-  }),
-  "97": new Card({
+  },
+  "97": {
     id: 97,
     parts: [
       {
@@ -4179,8 +4179,8 @@ export const Cards = {
     shield: 40,
     description: "Heal this Axie for 120 HP.",
     image: "97.png",
-  }),
-  "98": new Card({
+  },
+  "98": {
     id: 98,
     parts: [
       {
@@ -4200,8 +4200,8 @@ export const Cards = {
     description:
       "Heal front teammate for 270 HP. If there are no front teammates, heal this Axie instead.",
     image: "98.png",
-  }),
-  "99": new Card({
+  },
+  "99": {
     id: 99,
     parts: [
       {
@@ -4227,8 +4227,8 @@ export const Cards = {
     shield: 20,
     description: "Deal 120% damage if this Axie attacks last.",
     image: "99.png",
-  }),
-  "100": new Card({
+  },
+  "100": {
     id: 100,
     parts: [
       {
@@ -4247,8 +4247,8 @@ export const Cards = {
     shield: 30,
     description: "Target the fastest enemy.",
     image: "100.png",
-  }),
-  "101": new Card({
+  },
+  "101": {
     id: 101,
     parts: [
       {
@@ -4275,8 +4275,8 @@ export const Cards = {
     description:
       "Steal 1 energy from your opponent when comboed with another card.",
     image: "101.png",
-  }),
-  "102": new Card({
+  },
+  "102": {
     id: 102,
     parts: [
       {
@@ -4302,8 +4302,8 @@ export const Cards = {
     shield: 55,
     description: "Heal this Axie by the damage this card inflicts.",
     image: "102.png",
-  }),
-  "103": new Card({
+  },
+  "103": {
     id: 103,
     parts: [
       {
@@ -4323,8 +4323,8 @@ export const Cards = {
     description:
       "Heal this Axie by the damage this card inflicts on a Plant target.",
     image: "103.png",
-  }),
-  "104": new Card({
+  },
+  "104": {
     id: 104,
     parts: [
       {
@@ -4343,8 +4343,8 @@ export const Cards = {
     shield: 40,
     description: "Heal front teammate for 190 HP.",
     image: "104.png",
-  }),
-  "105": new Card({
+  },
+  "105": {
     id: 105,
     parts: [
       {
@@ -4371,8 +4371,8 @@ export const Cards = {
     description:
       "Gain 1 energy if this Axie's shield breaks. Can only trigger once per round.",
     image: "105.png",
-  }),
-  "106": new Card({
+  },
+  "106": {
     id: 106,
     parts: [
       {
@@ -4391,8 +4391,8 @@ export const Cards = {
     shield: 30,
     description: "Draw a card if struck by a Beast, Bug, or Mech card.",
     image: "106.png",
-  }),
-  "107": new Card({
+  },
+  "107": {
     id: 107,
     parts: [
       {
@@ -4411,8 +4411,8 @@ export const Cards = {
     shield: 80,
     description: "When hit, disable the attacker's ranged cards next round.",
     image: "107.png",
-  }),
-  "108": new Card({
+  },
+  "108": {
     id: 108,
     parts: [
       {
@@ -4432,8 +4432,8 @@ export const Cards = {
     description:
       "Apply poison each time this card is used to attack or defend.",
     image: "108.png",
-  }),
-  "109": new Card({
+  },
+  "109": {
     id: 109,
     parts: [
       {
@@ -4453,8 +4453,8 @@ export const Cards = {
     description:
       "Cannot be targeted by Aquatic cards if this Axie has teammates remaining.",
     image: "109.png",
-  }),
-  "110": new Card({
+  },
+  "110": {
     id: 110,
     parts: [
       {
@@ -4473,8 +4473,8 @@ export const Cards = {
     shield: 50,
     description: "Disable target's mouth cards next round.",
     image: "110.png",
-  }),
-  "111": new Card({
+  },
+  "111": {
     id: 111,
     parts: [
       {
@@ -4500,8 +4500,8 @@ export const Cards = {
     shield: 70,
     description: "Draw a card if this Axie's shield breaks.",
     image: "111.png",
-  }),
-  "112": new Card({
+  },
+  "112": {
     id: 112,
     parts: [
       {
@@ -4521,8 +4521,8 @@ export const Cards = {
     description:
       "Target enemy with lowest shield when comboed with 2 or more cards.",
     image: "112.png",
-  }),
-  "113": new Card({
+  },
+  "113": {
     id: 113,
     parts: [
       {
@@ -4541,8 +4541,8 @@ export const Cards = {
     shield: 30,
     description: "Double shield from this card when comboed with a plant card.",
     image: "113.png",
-  }),
-  "114": new Card({
+  },
+  "114": {
     id: 114,
     parts: [
       {
@@ -4575,8 +4575,8 @@ export const Cards = {
     shield: 70,
     description: "Reflect 40% of melee damage back at attacker.",
     image: "114.png",
-  }),
-  "115": new Card({
+  },
+  "115": {
     id: 115,
     parts: [
       {
@@ -4595,8 +4595,8 @@ export const Cards = {
     shield: 135,
     description: "Add 15% of this Axie's shield to adjacent teammates.",
     image: "115.png",
-  }),
-  "116": new Card({
+  },
+  "116": {
     id: 116,
     parts: [
       {
@@ -4615,8 +4615,8 @@ export const Cards = {
     shield: 60,
     description: "Appy Speed- to target for 2 rounds.",
     image: "116.png",
-  }),
-  "117": new Card({
+  },
+  "117": {
     id: 117,
     parts: [
       {
@@ -4642,8 +4642,8 @@ export const Cards = {
     shield: 40,
     description: "Apply Stench to target until end of round.",
     image: "117.png",
-  }),
-  "118": new Card({
+  },
+  "118": {
     id: 118,
     parts: [
       {
@@ -4662,8 +4662,8 @@ export const Cards = {
     shield: 50,
     description: "Deal 120% damage when chained with another 'lunge' card.",
     image: "118.png",
-  }),
-  "119": new Card({
+  },
+  "119": {
     id: 119,
     parts: [
       {
@@ -4682,8 +4682,8 @@ export const Cards = {
     shield: 60,
     description: "Deal 130% damage if target is faster than this Axie.",
     image: "119.png",
-  }),
-  "120": new Card({
+  },
+  "120": {
     id: 120,
     parts: [
       {
@@ -4702,8 +4702,8 @@ export const Cards = {
     shield: 60,
     description: "Reflect 50% of ranged damage back at attacker.",
     image: "120.png",
-  }),
-  "121": new Card({
+  },
+  "121": {
     id: 121,
     parts: [
       {
@@ -4722,8 +4722,8 @@ export const Cards = {
     shield: 40,
     description: "Apply Speed- to attacker for 2 rounds.",
     image: "121.png",
-  }),
-  "122": new Card({
+  },
+  "122": {
     id: 122,
     parts: [
       {
@@ -4742,8 +4742,8 @@ export const Cards = {
     shield: 20,
     description: "Recover 20 shield per turn.",
     image: "122.png",
-  }),
-  "123": new Card({
+  },
+  "123": {
     id: 123,
     parts: [
       {
@@ -4769,8 +4769,8 @@ export const Cards = {
     shield: 40,
     description: "Target the furthest enemy.",
     image: "123.png",
-  }),
-  "124": new Card({
+  },
+  "124": {
     id: 124,
     parts: [
       {
@@ -4789,8 +4789,8 @@ export const Cards = {
     shield: 20,
     description: "Gain 1 energy if target is faster than this Axie.",
     image: "124.png",
-  }),
-  "125": new Card({
+  },
+  "125": {
     id: 125,
     parts: [
       {
@@ -4810,8 +4810,8 @@ export const Cards = {
     description:
       "Heal this Axie by damage inflicted with this card to Aquatic targets.",
     image: "125.png",
-  }),
-  "126": new Card({
+  },
+  "126": {
     id: 126,
     parts: [
       {
@@ -4845,8 +4845,8 @@ export const Cards = {
     description:
       "Apply Stun to enemy when comboed with at least 2 additional cards.",
     image: "126.png",
-  }),
-  "127": new Card({
+  },
+  "127": {
     id: 127,
     parts: [
       {
@@ -4872,8 +4872,8 @@ export const Cards = {
     shield: 30,
     description: "Reduce damage taken by 15% this round.",
     image: "127.png",
-  }),
-  "128": new Card({
+  },
+  "128": {
     id: 128,
     parts: [
       {
@@ -4892,8 +4892,8 @@ export const Cards = {
     shield: 60,
     description: "Generate 1 energy when attacking a buffed target.",
     image: "128.png",
-  }),
-  "129": new Card({
+  },
+  "129": {
     id: 129,
     parts: [
       {
@@ -4919,8 +4919,8 @@ export const Cards = {
     shield: 40,
     description: "Deal 150% damage after round 4.",
     image: "129.png",
-  }),
-  "130": new Card({
+  },
+  "130": {
     id: 130,
     parts: [
       {
@@ -4947,8 +4947,8 @@ export const Cards = {
     description:
       "Attacks that break this Axie’s shield cannot do additional damage. Can only trigger once per round.",
     image: "130.png",
-  }),
-  "131": new Card({
+  },
+  "131": {
     id: 131,
     parts: [
       {
@@ -4967,8 +4967,8 @@ export const Cards = {
     shield: 50,
     description: "Apply Attack- to poisoned targets.",
     image: "131.png",
-  }),
-  "132": new Card({
+  },
+  "132": {
     id: 132,
     parts: [
       {
@@ -4987,7 +4987,7 @@ export const Cards = {
     shield: 20,
     description: "Apply Poison to target.",
     image: "132.png",
-  }),
+  },
 };
 
 export const getCardsList = function () {
