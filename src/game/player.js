@@ -1,20 +1,49 @@
+import PlayerDeck from "./player-deck";
+import { checkUniqueCount } from "./utils";
 export default class Player {
+  id = 0;
   energy = 0;
   axies = [];
-  deck = [];
-  hand = [];
-  cemetery = [];
-  played = [];
   name = "";
   teamName = "";
+  deck = new PlayerDeck();
+  endedTurn = false;
   constructor() {}
 
-  setEnergy(energy){
-	if(energy <= 10 && energy >= 0)
-		this.energy = energy;
+  initialize(id, axies) {
+    if (id == 0) return;
+    this.id = id;
+    this.energy = 0;
+    this.axies = [];
+
+    if (!this.hasThreeUnqiueAxies(axies)) return;
+    if (!this.hasThreeAxiesInDifferentPositions(axies)) return;
+
+    this.axies = axies;
+    this.deck = new PlayerDeck();
+    this.deck.initialize(axies);
   }
-  addEnergy(energy){
-	let aux = this.energy + energy;
-	this.setEnergy(aux);
+
+  hasThreeUnqiueAxies(axies) {
+    return checkUniqueCount(axies, "id", 3);
+  }
+
+  hasThreeAxiesInDifferentPositions(axies) {
+    return checkUniqueCount(axies, "position", 3);
+  }
+
+  setEnergy(energy) {
+    if (energy <= 10 && energy >= 0) this.energy = energy;
+  }
+  addEnergy(energy) {
+    this.setEnergy(this.energy + energy);
+  }
+
+  shuffleDeck() {
+    this.deck.shuffleDeck();
+  }
+
+  isDead() {
+    return this.axies.filter((axie) => axie.dead).length === 3;
   }
 }

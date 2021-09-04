@@ -5,6 +5,7 @@ import {
   AxieTypeEnum,
   AxiePartType,
   MarketplaceLink,
+  Cards,
 } from "./data/data";
 export default class AxieClass {
   id = 0;
@@ -27,7 +28,10 @@ export default class AxieClass {
   cards = {};
   parts = {};
   constructor() {}
-  initialize(type, parts) {
+  initialize(id, position, type, parts) {
+    if (id === 0) return;
+    this.id = id;
+    this.position = position;
     this.setType(type);
     this.setParts(parts);
     this.maxHealth = this.getInGameHealth();
@@ -42,9 +46,14 @@ export default class AxieClass {
     return this.health * 6 + 150;
   }
   getLastStandBars() {
-    if (this.morale < 35) return 1;
-    else if (this.morale > 34 && this.morale <= 47) return 2;
-    else return 3;
+    // 0= 24
+    // 1= 27, 30? 32?
+    // 2= 33,34,35,36,37,39 40,41,43,44 47
+    // 3= 49,56,59,61
+    if (this.morale <= 24) return 0;
+    if (this.morale <= 33) return 1;
+    if (this.morale <= 47) return 2;
+    return 3;
   }
   heal(heal) {
     if (this.inLastStand || this.dead) {
@@ -60,8 +69,7 @@ export default class AxieClass {
     let newHP = this.currentHealth + (postShieldDMG < 0 ? postShieldDMG : 0);
 
     let lastStand = false;
-    if(newHP < 0)
-      lastStand = this.enterLastStand(postShieldDMG);
+    if (newHP < 0) lastStand = this.enterLastStand(postShieldDMG);
     this.setCurrentHealth(newHP);
     if (this.currentHealth <= 0) {
       if (lastStand) {
@@ -86,7 +94,7 @@ export default class AxieClass {
       this.die();
     }
   }
-  die(){
+  die() {
     this.shield = 0;
     this.currentHealth = 0;
     this.currentLastStandBars = 0;
@@ -134,6 +142,10 @@ export default class AxieClass {
       this.parts[part.type] = part;
       let stats = AxiePartBaseStats[part.axieType];
       this.addStats(stats);
+      if (part.card != null) {
+        this.cards[part.card] = Cards[part.card];
+        this.cards[part.card].owner = this.id;
+      }
     }
   }
   getMarketplaceLink() {
@@ -154,32 +166,5 @@ export default class AxieClass {
   }
   parsePartName(partName) {
     return partName.toLowerCase().replace(/ /g, "-");
-  }
-  isAquatic() {
-    return this.type === AxieTypeEnum.AQUATIC;
-  }
-  isBeast() {
-    return this.type === AxieTypeEnum.BEAST;
-  }
-  isBug() {
-    return this.type === AxieTypeEnum.BUG;
-  }
-  isBird() {
-    return this.type === AxieTypeEnum.BIRD;
-  }
-  isPlant() {
-    return this.type === AxieTypeEnum.PLANT;
-  }
-  isReptile() {
-    return this.type === AxieTypeEnum.REPTILE;
-  }
-  isMech() {
-    return this.type === AxieTypeEnum.MECH;
-  }
-  isDawn() {
-    return this.type === AxieTypeEnum.DAWN;
-  }
-  isDusk() {
-    return this.type === AxieTypeEnum.DUSK;
   }
 }

@@ -4997,3 +4997,17 @@ export const getCardsList = function () {
 export const getPartsList = function () {
   return Object.values(Parts);
 };
+
+export const getAxieTypeParts = (axieType) => {
+  let parts = [];
+  let allParts = Object.values(Parts);
+  let partTypes = Object.values(AxiePartType);
+  for (let i = 0; i < partTypes.length; i++) {
+    parts.push(
+      allParts.find(
+        (part) => part.type == partTypes[i] && part.axieType == axieType
+      )
+    );
+  }
+  return parts;
+};
