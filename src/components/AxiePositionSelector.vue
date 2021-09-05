@@ -22,7 +22,7 @@
 </template>
 <style scoped></style>
 <script>
-import { AxiePositionSelect } from "../dtos/data/data";
+import { AxiePositionSelect } from "@/game/data/data.js";
 export default {
   name: "AxiePositionSelector",
   props: {

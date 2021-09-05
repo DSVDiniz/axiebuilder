@@ -11,9 +11,6 @@ export default class Game {
     this.player2 = player2;
     this.round = 1;
   }
-  start() {
-    if (!this.player1 || !this.player2) return;
-  }
   beginRound() {
     if (this.decideWinner()) return false;
     if (this.round === 1) {

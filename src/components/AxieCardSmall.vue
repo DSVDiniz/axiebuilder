@@ -118,7 +118,7 @@
 </style>
 <script>
 import AxiePartIcon from "./icons/AxiePartIcon.vue";
-import { AxieTypeSelect ,CardAttackType} from "../dtos/data/data";
+import { AxieTypeSelect ,CardAttackType} from "@/game/data/data.js";
 export default {
   name: "AxieCard",
   components: { AxiePartIcon },

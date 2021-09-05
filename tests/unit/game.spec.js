@@ -76,7 +76,6 @@ test("After initializing, game should have two valid players", () => {
 
 test("Game shuffles deck, gives 3 energy and 6 cards on the first round to each player.", () => {
   game.initialize(player1, player2);
-  game.start();
   game.beginRound();
   expect(game.player1.energy).toBe(3);
   expect(game.player2.energy).toBe(3);
@@ -88,7 +87,6 @@ test("Game shuffles deck, gives 3 energy and 6 cards on the first round to each 
 
 test("Game gives 2 energy and 3 cards at the start of every round (after the first round) to each player", () => {
   game.initialize(player1, player2);
-  game.start();
   game.beginRound();
   game.beginChoosingPhase();
   game.endChoosingPhase();
@@ -109,8 +107,8 @@ test("Game gives 2 energy and 3 cards at the start of every round (after the fir
 
 test("Increase round after every round end.", () => {
   game.initialize(player1, player2);
-  game.start();
   expect(game.round).toBe(1);
+
   game.beginRound();
   game.beginChoosingPhase();
   game.endChoosingPhase();
@@ -124,8 +122,8 @@ test("Increase round after every round end.", () => {
 
 test("Game ends at start of the round if one of the players has no more axies alive", () => {
   game.initialize(player1, player2);
-  game.start();
   expect(game.round).toBe(1);
+  
   game.beginRound();
   game.beginChoosingPhase();
   game.endChoosingPhase();
@@ -138,14 +136,15 @@ test("Game ends at start of the round if one of the players has no more axies al
     return axie;
   });
   game.beginRound();
+  expect(game.player1.isDead()).toBeTruthy();
   expect(game.finished).toBeTruthy();
   expect(game.winner).toBeTruthy();
 });
 
 test("Game ends (as a draw) at start of the round if both players have no more axies alive", () => {
   game.initialize(player1, player2);
-  game.start();
   expect(game.round).toBe(1);
+
   game.beginRound();
   game.beginChoosingPhase();
   game.endChoosingPhase();
@@ -162,6 +161,8 @@ test("Game ends (as a draw) at start of the round if both players have no more a
     return axie;
   });
   game.beginRound();
+  expect(game.player1.isDead()).toBeTruthy();
+  expect(game.player2.isDead()).toBeTruthy();
   expect(game.finished).toBeTruthy();
   expect(game.winner).toBeFalsy()
 });

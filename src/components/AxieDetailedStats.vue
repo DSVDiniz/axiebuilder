@@ -28,7 +28,7 @@
 </template>
 <style scoped></style>
 <script>
-import { AxieTypeEnum } from "../dtos/data/data";
+import { AxieTypeEnum } from "@/game/data/data.js";
 import AxieTypeIcon from "./icons/AxieTypeIcon.vue";
 import AxieRPSTypeIcon from "./icons/AxieRPSTypeIcon.vue";
 export default {

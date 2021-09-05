@@ -123,7 +123,7 @@
 }
 </style>
 <script>
-import { AxieTypeEnum } from "../../dtos/data/data";
+import { AxieTypeEnum } from "@/game/data/data.js";
 export default {
   name: "AxieTypeIcon",
   components: {},

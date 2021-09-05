@@ -1,6 +1,42 @@
 <template>
   <v-app>
-    <router-view/>
+    <v-navigation-drawer permanent expand-on-hover absolute>
+      <v-list>
+        <v-list-item link :to="'TeamBuilder'">
+          <v-list-item-content>
+            <v-list-item-title class="text-h6">
+              Team Builder
+            </v-list-item-title>
+            <v-list-item-subtitle>Create your Axie team</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link :to="'BattleSimulator'">
+          <v-list-item-content>
+            <v-list-item-title class="text-h6">
+              Battle Simulator
+            </v-list-item-title>
+            <v-list-item-subtitle>Test out your Axies</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link :to="'CardList'">
+          <v-list-item-content>
+            <v-list-item-title class="text-h6">
+              Card List
+            </v-list-item-title>
+            <v-list-item-subtitle></v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+    <v-content>
+      <v-container>
+        <v-row>
+          <v-col>
+            <v-card> <router-view></router-view> </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-content>
   </v-app>
 </template>
 
@@ -12,17 +48,12 @@
   text-align: center;
   color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>
+
+<script>
+export default {
+  name: "App",
+  components: {
+  },
+};
+</script>

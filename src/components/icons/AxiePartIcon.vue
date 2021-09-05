@@ -20,7 +20,7 @@
 </template>
 <style scoped></style>
 <script>
-import { AxiePartType } from "../../dtos/data/data";
+import { AxiePartType } from "@/game/data/data.js";
 import AxieBackPart from "./parts/AxieBackPart.vue";
 import AxieEarPart from "./parts/AxieEarPart.vue";
 import AxieEyePart from "./parts/AxieEyePart.vue";

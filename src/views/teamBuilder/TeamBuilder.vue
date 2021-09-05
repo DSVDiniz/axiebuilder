@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-card>
     <v-tabs>
       <v-tab v-for="(axie, index) in team" :key="index + 'team_tab'">
         Axie {{index+1}} 
@@ -14,15 +14,15 @@
         </v-row>
       </v-tab-item>
     </v-tabs>
-  </v-container>
+  </v-card>
 </template>
 
 <script>
 import Axie from "../../components/Axie.vue";
 import AxieTypeIcon from '../../components/icons/AxieTypeIcon.vue';
-import AxieClass from "../../dtos/axie";
+import AxieClass from "@/game/axie";
 export default {
-  name: "TeamCreator",
+  name: "TeamBuilder",
   components: {
     Axie,
     AxieTypeIcon

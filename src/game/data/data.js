@@ -1,4 +1,13 @@
 export const MarketplaceLink = "https://marketplace.axieinfinity.com/";
+
+export const GameState = {
+  ROUND_START: 0,
+  BEGIN_CHOOSING_PHASE: 1,
+  END_CHOOSING_PHASE: 2,
+  START_BATTLE_PHASE: 3,
+  END_BATTLE_PHASE: 4,
+  END_ROUND: 5,
+};
 export const AxieTypeEnum = {
   AQUATIC: 0,
   BEAST: 1,
@@ -4990,11 +4999,11 @@ export const Cards = {
   },
 };
 
-export const getCardsList = function () {
+export const getCardsList = function() {
   return Object.values(Cards);
 };
 
-export const getPartsList = function () {
+export const getPartsList = function() {
   return Object.values(Parts);
 };
 

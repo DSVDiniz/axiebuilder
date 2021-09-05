@@ -10,7 +10,7 @@
 </template>
 <style scoped></style>
 <script>
-import { AxieBaseStats } from "../../dtos/data/data";
+import { AxieBaseStats } from "@/game/data/data.js";
 import AxieTypeIcon from "./AxieTypeIcon.vue";
 export default {
   name: "AxieRPSTypeIcon",

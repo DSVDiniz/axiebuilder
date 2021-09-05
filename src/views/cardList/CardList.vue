@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import cardListJson from "../../gameData/axie-cards";
+import {Cards} from "@/game/data/data.js";
 import AxieCard from "../../components/AxieCard.vue";
 export default {
   name: "CardList",
@@ -21,7 +21,7 @@ export default {
   },
   data() {
     return {
-      cardList: cardListJson.cardList,
+      cardList: Cards
     };
   },
   created() {},

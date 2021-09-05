@@ -14,12 +14,11 @@
 </template>
 <style scoped></style>
 <script>
-
 import AxieTypeIcon from "../components/icons/AxieTypeIcon.vue";
-import { AxieTypeSelect } from "../dtos/data/data";
+import { AxieTypeSelect } from "@/game/data/data.js";
 export default {
   name: "AxieTypeSelector",
-  components:{AxieTypeIcon,},
+  components: { AxieTypeIcon },
   props: {
     axie: { type: Object, default: () => {} },
   },
@@ -28,12 +27,12 @@ export default {
     selectedType: null,
   }),
   methods: {
-    change(val){
-      this.$emit("change",val);
-    }
+    change(val) {
+      this.$emit("change", val);
+    },
   },
-  created(){
+  created() {
     this.selectedType = this.axie.type;
-  }
+  },
 };
 </script>

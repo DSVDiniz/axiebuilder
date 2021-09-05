@@ -47,7 +47,7 @@ import {
   AxieTypeSelect,
   AxieTypeEnum,
   AxiePartType,
-} from "../dtos/data/data";
+} from "@/game/data/data.js";
 export default {
   name: "AxiePartsSelector",
   components: { AxiePartIcon },
