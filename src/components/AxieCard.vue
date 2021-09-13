@@ -1,23 +1,37 @@
 <template>
-  <div class="card">
-    <img :src="getImgUrl(card.image)" width="250" />
-    <h3 class="name">{{ card.name }}</h3>
-    <h1 class="cost">{{ card.cost }}</h1>
-    <img class="dmg-bg" src="@/assets/bg-reptile.png" width="55" />
-    <div class="dmg">
-      <h2>{{ card.dmg }}</h2>
+  <div>
+    <div v-if="showParts" class="parts mb-1">
+      <AxiePartIcon
+          :axieType="card.parts[0].axieType"
+          :partType="card.parts[0].type"
+        />
+        <v-chip class="ml-1 mr-1" label dark :color="partColor" v-for="(part, index) in card.parts" :key="index">{{ part.name }} </v-chip>
     </div>
-    <img class="shield-bg" src="@/assets/bg-reptile.png" width="55" />
-    <div class="shield">
-      <h2>{{ card.shield }}</h2>
+    <div class="card">
+      <img :src="getImgUrl(card.image)" width="250" />
+      <h3 class="name">{{ card.name }}</h3>
+      <h1 class="cost">{{ card.cost }}</h1>
+      <img class="dmg-bg" src="@/assets/bg-reptile.png" width="55" />
+      <div class="dmg">
+        <h2>{{ card.dmg }}</h2>
+      </div>
+      <img class="shield-bg" src="@/assets/bg-reptile.png" width="55" />
+      <div class="shield">
+        <h2>{{ card.shield }}</h2>
+      </div>
+      <div class="description">
+        <span>{{ card.description }}</span>
+      </div>
+      <img class="effect" src="@/assets/icons/morale-up.png" width="25" />
     </div>
-    <div class="description">
-      <span>{{ card.description }}</span>
-    </div>
-    <img class="effect" src="@/assets/icons/morale-up.png" width="25" />
+    
   </div>
 </template>
 <style scoped>
+.parts {
+  color: black;
+  display:block;
+}
 .card {
   text-align: center;
   position: relative;
@@ -52,7 +66,7 @@
   top: 3%;
 }
 .dmg {
-  width: 40px;
+  width: 42px;
   position: absolute;
   top: 25%;
   left: -1%;
@@ -74,16 +88,21 @@
 }
 </style>
 <script>
-//import AxiePartIcon from "./icons/AxiePartIcon.vue";
+import AxiePartIcon from "./icons/AxiePartIcon.vue";
+import {AxieTypeSelect} from "@/game/data/data.js";
 export default {
   name: "AxieCard",
-  //components: { AxiePartIcon },
+  components: { AxiePartIcon },
   props: {
     card: { type: Object, default: () => {} },
+    showParts: { type: Boolean, default: false },
   },
   data: () => ({}),
   computed: {
-    cardColor: function () {
+    partColor:function(){
+      return AxieTypeSelect[this.card.parts[0].axieType].color;
+    },
+    cardColor: function() {
       return {
         "color-aquatic": this.card.isAquatic(),
         "color-beast": this.card.isBeast(),

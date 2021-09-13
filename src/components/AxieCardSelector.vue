@@ -40,7 +40,7 @@
 <style scoped></style>
 <script>
 import { getCardsList, AxieTypeSelect, CardAttackType } from "@/game/data/data.js";
-import AxieCardSmall from "./AxieCardSmall.vue";
+import AxieCardSmall from "./AxieCardListItem.vue";
 import AxiePartIcon from "./icons/AxiePartIcon.vue";
 export default {
   name: "AxieCardSelector",

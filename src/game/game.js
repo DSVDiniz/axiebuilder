@@ -77,4 +77,8 @@ export default class Game {
     this.player1.deck.drawCards(amount);
     this.player2.deck.drawCards(amount);
   }
+
+  getTurnOrder(){
+    return [this.player1.axies[0],this.player2.axies[0],this.player1.axies[1],this.player2.axies[1],this.player1.axies[2],this.player1.axies[2]];
+  }
 }

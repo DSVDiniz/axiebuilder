@@ -1443,7 +1443,7 @@ export const Parts = {
     type: AxiePartType.BACK,
     axieType: AxieTypeEnum.AQUATIC,
     name: "Goldfish",
-    card: "Swift Escape",
+    card: 3,
   },
   "182": {
     id: 182,
@@ -1618,7 +1618,7 @@ export const Parts = {
     type: AxiePartType.BACK,
     axieType: AxieTypeEnum.AQUATIC,
     name: "Sponge",
-    card: "Shipwreck",
+    card: 4,
   },
   "207": {
     id: 207,
@@ -2006,15 +2006,15 @@ export const Cards = {
     parts: [
       {
         id: 185,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Hermit",
         card: 1,
       },
       {
         id: 176,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Crystal Hermit",
         card: 1,
       },
@@ -2033,8 +2033,8 @@ export const Cards = {
     parts: [
       {
         id: 171,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Blue Moon",
         card: 2,
       },
@@ -2053,8 +2053,8 @@ export const Cards = {
     parts: [
       {
         id: 181,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Goldfish",
         card: "Swift Escape",
       },
@@ -2073,8 +2073,8 @@ export const Cards = {
     parts: [
       {
         id: 206,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Sponge",
         card: "Shipwreck",
       },
@@ -2093,8 +2093,8 @@ export const Cards = {
     parts: [
       {
         id: 168,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Anemone",
         card: 5,
       },
@@ -2114,8 +2114,8 @@ export const Cards = {
     parts: [
       {
         id: 192,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Perch",
         card: 6,
       },
@@ -2135,15 +2135,15 @@ export const Cards = {
     parts: [
       {
         id: 122,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Babylonia",
         card: 7,
       },
       {
         id: 127,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Candy Babylonia",
         card: 7,
       },
@@ -2162,8 +2162,8 @@ export const Cards = {
     parts: [
       {
         id: 159,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Teal Shell",
         card: 8,
       },
@@ -2182,8 +2182,8 @@ export const Cards = {
     parts: [
       {
         id: 130,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Clamshell",
         card: 9,
       },
@@ -2203,8 +2203,8 @@ export const Cards = {
     parts: [
       {
         id: 119,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Anemone",
         card: 10,
       },
@@ -2224,8 +2224,8 @@ export const Cards = {
     parts: [
       {
         id: 146,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Oranda",
         card: 11,
       },
@@ -2244,15 +2244,15 @@ export const Cards = {
     parts: [
       {
         id: 118,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "5H04L-5T4R",
         card: 12,
       },
       {
         id: 156,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Shoal Star",
         card: 12,
       },
@@ -2272,15 +2272,15 @@ export const Cards = {
     parts: [
       {
         id: 97,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Lam",
         card: 13,
       },
       {
         id: 98,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Lam Handsome",
         card: 13,
       },
@@ -2299,8 +2299,8 @@ export const Cards = {
     parts: [
       {
         id: 84,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Catfish",
         card: 14,
       },
@@ -2319,8 +2319,8 @@ export const Cards = {
     parts: [
       {
         id: 107,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Risky Fish",
         card: 15,
       },
@@ -2340,15 +2340,15 @@ export const Cards = {
     parts: [
       {
         id: 90,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Geisha",
         card: 16,
       },
       {
         id: 105,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Piranha",
         card: 16,
       },
@@ -2367,15 +2367,15 @@ export const Cards = {
     parts: [
       {
         id: 236,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Koinobori",
         card: 17,
       },
       {
         id: 237,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Kuro Koi",
         card: 17,
       },
@@ -2395,8 +2395,8 @@ export const Cards = {
     parts: [
       {
         id: 241,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Nimo",
         card: 18,
       },
@@ -2415,8 +2415,8 @@ export const Cards = {
     parts: [
       {
         id: 255,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Tadpole",
         card: 19,
       },
@@ -2435,8 +2435,8 @@ export const Cards = {
     parts: [
       {
         id: 247,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Ranchu",
         card: 20,
       },
@@ -2455,8 +2455,8 @@ export const Cards = {
     parts: [
       {
         id: 240,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Navaga",
         card: 21,
       },
@@ -2475,8 +2475,8 @@ export const Cards = {
     parts: [
       {
         id: 251,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.AQUATIC,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.AQUATIC,
         name: "Shrimp",
         card: 22,
       },
@@ -2495,15 +2495,15 @@ export const Cards = {
     parts: [
       {
         id: 184,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BEAST,
         name: "Hasagi",
         card: 23,
       },
       {
         id: 199,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BEAST,
         name: "Ronin",
         card: 23,
       },
@@ -2523,8 +2523,8 @@ export const Cards = {
     parts: [
       {
         id: 186,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BEAST,
         name: "Hero",
         card: 24,
       },
@@ -2543,8 +2543,8 @@ export const Cards = {
     parts: [
       {
         id: 188,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BEAST,
         name: "Jaguar",
         card: 25,
       },
@@ -2563,15 +2563,15 @@ export const Cards = {
     parts: [
       {
         id: 183,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BEAST,
         name: "Hamaya",
         card: 26,
       },
       {
         id: 198,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BEAST,
         name: "Risky Beast",
         card: 26,
       },
@@ -2590,8 +2590,8 @@ export const Cards = {
     parts: [
       {
         id: 209,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BEAST,
         name: "Timber",
         card: 27,
       },
@@ -2611,8 +2611,8 @@ export const Cards = {
     parts: [
       {
         id: 179,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BEAST,
         name: "Furball",
         card: 28,
       },
@@ -2631,15 +2631,15 @@ export const Cards = {
     parts: [
       {
         id: 144,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BEAST,
         name: "Little Branch",
         card: 29,
       },
       {
         id: 165,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BEAST,
         name: "Winter Branch",
         card: 29,
       },
@@ -2659,15 +2659,15 @@ export const Cards = {
     parts: [
       {
         id: 137,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BEAST,
         name: "Imp",
         card: 30,
       },
       {
         id: 139,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BEAST,
         name: "Kendama",
         card: 30,
       },
@@ -2687,8 +2687,8 @@ export const Cards = {
     parts: [
       {
         id: 145,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BEAST,
         name: "Merry",
         card: 31,
       },
@@ -2707,15 +2707,15 @@ export const Cards = {
     parts: [
       {
         id: 151,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BEAST,
         name: "Pocky",
         card: 32,
       },
       {
         id: 161,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BEAST,
         name: "Umaibo",
         card: 32,
       },
@@ -2734,8 +2734,8 @@ export const Cards = {
     parts: [
       {
         id: 132,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BEAST,
         name: "Dual Blade",
         card: 33,
       },
@@ -2754,8 +2754,8 @@ export const Cards = {
     parts: [
       {
         id: 121,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BEAST,
         name: "Arco",
         card: 34,
       },
@@ -2774,15 +2774,15 @@ export const Cards = {
     parts: [
       {
         id: 102,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.BEAST,
         name: "Nut Cracker",
         card: 35,
       },
       {
         id: 111,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.BEAST,
         name: "Skull Cracker",
         card: 35,
       },
@@ -2802,8 +2802,8 @@ export const Cards = {
     parts: [
       {
         id: 91,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.BEAST,
         name: "Goda",
         card: 36,
       },
@@ -2822,8 +2822,8 @@ export const Cards = {
     parts: [
       {
         id: 83,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.BEAST,
         name: "Axie Kiss",
         card: 37,
       },
@@ -2842,8 +2842,8 @@ export const Cards = {
     parts: [
       {
         id: 85,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.BEAST,
         name: "Confident",
         card: 38,
       },
@@ -2862,15 +2862,15 @@ export const Cards = {
     parts: [
       {
         id: 219,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BEAST,
         name: "Cottontail",
         card: 39,
       },
       {
         id: 249,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BEAST,
         name: "Sakura Cottontail",
         card: 39,
       },
@@ -2889,8 +2889,8 @@ export const Cards = {
     parts: [
       {
         id: 248,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BEAST,
         name: "Rice",
         card: 40,
       },
@@ -2910,8 +2910,8 @@ export const Cards = {
     parts: [
       {
         id: 250,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BEAST,
         name: "Shiba",
         card: 41,
       },
@@ -2931,8 +2931,8 @@ export const Cards = {
     parts: [
       {
         id: 231,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BEAST,
         name: "Hare",
         card: 42,
       },
@@ -2952,8 +2952,8 @@ export const Cards = {
     parts: [
       {
         id: 242,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BEAST,
         name: "Nut Cracker",
         card: 43,
       },
@@ -2973,8 +2973,8 @@ export const Cards = {
     parts: [
       {
         id: 226,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BEAST,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BEAST,
         name: "Gerbil",
         card: 44,
       },
@@ -2994,15 +2994,15 @@ export const Cards = {
     parts: [
       {
         id: 169,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BIRD,
         name: "Balloon",
         card: 45,
       },
       {
         id: 207,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BIRD,
         name: "Starry Balloon",
         card: 45,
       },
@@ -3022,15 +3022,15 @@ export const Cards = {
     parts: [
       {
         id: 177,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BIRD,
         name: "Cupid",
         card: 46,
       },
       {
         id: 191,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BIRD,
         name: "Origami",
         card: 46,
       },
@@ -3049,8 +3049,8 @@ export const Cards = {
     parts: [
       {
         id: 196,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BIRD,
         name: "Raven",
         card: 47,
       },
@@ -3069,8 +3069,8 @@ export const Cards = {
     parts: [
       {
         id: 193,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BIRD,
         name: "Pigeon Post",
         card: 48,
       },
@@ -3089,8 +3089,8 @@ export const Cards = {
     parts: [
       {
         id: 189,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BIRD,
         name: "Kingfisher",
         card: 49,
       },
@@ -3109,8 +3109,8 @@ export const Cards = {
     parts: [
       {
         id: 210,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BIRD,
         name: "Tri Feather",
         card: 50,
       },
@@ -3129,15 +3129,15 @@ export const Cards = {
     parts: [
       {
         id: 133,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BIRD,
         name: "Eggshell",
         card: 51,
       },
       {
         id: 136,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BIRD,
         name: "Golden Shell",
         card: 51,
       },
@@ -3156,8 +3156,8 @@ export const Cards = {
     parts: [
       {
         id: 131,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BIRD,
         name: "Cuckoo",
         card: 52,
       },
@@ -3176,8 +3176,8 @@ export const Cards = {
     parts: [
       {
         id: 160,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BIRD,
         name: "Trump",
         card: 53,
       },
@@ -3196,8 +3196,8 @@ export const Cards = {
     parts: [
       {
         id: 140,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BIRD,
         name: "Kestrel",
         card: 54,
       },
@@ -3216,8 +3216,8 @@ export const Cards = {
     parts: [
       {
         id: 164,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BIRD,
         name: "Wing Horn",
         card: 55,
       },
@@ -3237,15 +3237,15 @@ export const Cards = {
     parts: [
       {
         id: 134,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BIRD,
         name: "Feather Spear",
         card: 56,
       },
       {
         id: 157,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BIRD,
         name: "Spruce Spear",
         card: 56,
       },
@@ -3264,15 +3264,15 @@ export const Cards = {
     parts: [
       {
         id: 101,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.BIRD,
         name: "Mr. Doubletalk",
         card: 57,
       },
       {
         id: 88,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.BIRD,
         name: "Doubletalk",
         card: 57,
       },
@@ -3291,8 +3291,8 @@ export const Cards = {
     parts: [
       {
         id: 103,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.BIRD,
         name: "Peace Maker",
         card: 58,
       },
@@ -3311,8 +3311,8 @@ export const Cards = {
     parts: [
       {
         id: 94,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.BIRD,
         name: "Hungry Bird",
         card: 59,
       },
@@ -3331,8 +3331,8 @@ export const Cards = {
     parts: [
       {
         id: 99,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.BIRD,
         name: "Little Owl",
         card: 60,
       },
@@ -3351,15 +3351,15 @@ export const Cards = {
     parts: [
       {
         id: 253,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BIRD,
         name: "Snowy Swallow",
         card: 61,
       },
       {
         id: 254,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BIRD,
         name: "Swallow",
         card: 61,
       },
@@ -3378,8 +3378,8 @@ export const Cards = {
     parts: [
       {
         id: 222,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BIRD,
         name: "Feather Fan",
         card: 62,
       },
@@ -3398,8 +3398,8 @@ export const Cards = {
     parts: [
       {
         id: 256,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BIRD,
         name: "The Last One",
         card: 63,
       },
@@ -3418,8 +3418,8 @@ export const Cards = {
     parts: [
       {
         id: 218,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BIRD,
         name: "Cloud",
         card: 64,
       },
@@ -3438,15 +3438,15 @@ export const Cards = {
     parts: [
       {
         id: 228,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BIRD,
         name: "Granma's Fan",
         card: 65,
       },
       {
         id: 243,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BIRD,
         name: "Omatsuri",
         card: 65,
       },
@@ -3465,8 +3465,8 @@ export const Cards = {
     parts: [
       {
         id: 244,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BIRD,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BIRD,
         name: "Post Fight",
         card: 66,
       },
@@ -3485,15 +3485,15 @@ export const Cards = {
     parts: [
       {
         id: 204,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BUG,
         name: "Snail Shell",
         card: 67,
       },
       {
         id: 208,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BUG,
         name: "Starry Shell",
         card: 67,
       },
@@ -3513,15 +3513,15 @@ export const Cards = {
     parts: [
       {
         id: 174,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BUG,
         name: "Candy Canes",
         card: 68,
       },
       {
         id: 180,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BUG,
         name: "Garish Worm",
         card: 68,
       },
@@ -3540,8 +3540,8 @@ export const Cards = {
     parts: [
       {
         id: 173,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BUG,
         name: "Buzz Buzz",
         card: 69,
       },
@@ -3560,8 +3560,8 @@ export const Cards = {
     parts: [
       {
         id: 201,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BUG,
         name: "Sandal",
         card: 70,
       },
@@ -3580,8 +3580,8 @@ export const Cards = {
     parts: [
       {
         id: 202,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BUG,
         name: "Scarab",
         card: 71,
       },
@@ -3600,8 +3600,8 @@ export const Cards = {
     parts: [
       {
         id: 205,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.BUG,
         name: "Spiky Wing",
         card: 72,
       },
@@ -3620,15 +3620,15 @@ export const Cards = {
     parts: [
       {
         id: 141,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BUG,
         name: "Lagging",
         card: 73,
       },
       {
         id: 142,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BUG,
         name: "Laggingggggg",
         card: 73,
       },
@@ -3647,8 +3647,8 @@ export const Cards = {
     parts: [
       {
         id: 120,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BUG,
         name: "Antenna",
         card: 74,
       },
@@ -3668,8 +3668,8 @@ export const Cards = {
     parts: [
       {
         id: 128,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BUG,
         name: "Caterpillars",
         card: 75,
       },
@@ -3688,8 +3688,8 @@ export const Cards = {
     parts: [
       {
         id: 150,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BUG,
         name: "Pliers",
         card: 76,
       },
@@ -3708,15 +3708,15 @@ export const Cards = {
     parts: [
       {
         id: 147,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BUG,
         name: "P4R451T3",
         card: 77,
       },
       {
         id: 148,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BUG,
         name: "Parasite",
         card: 77,
       },
@@ -3735,8 +3735,8 @@ export const Cards = {
     parts: [
       {
         id: 143,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.BUG,
         name: "Leaf Bug",
         card: 78,
       },
@@ -3755,15 +3755,15 @@ export const Cards = {
     parts: [
       {
         id: 89,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.BUG,
         name: "Feasting Mosquito",
         card: 79,
       },
       {
         id: 100,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.BUG,
         name: "Mosquito",
         card: 79,
       },
@@ -3782,8 +3782,8 @@ export const Cards = {
     parts: [
       {
         id: 104,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.BUG,
         name: "Pincer",
         card: 80,
       },
@@ -3802,15 +3802,15 @@ export const Cards = {
     parts: [
       {
         id: 86,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.BUG,
         name: "Cute Bunny",
         card: 81,
       },
       {
         id: 95,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.BUG,
         name: "Kawaii",
         card: 81,
       },
@@ -3829,8 +3829,8 @@ export const Cards = {
     parts: [
       {
         id: 112,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.BUG,
         name: "Square Teeth",
         card: 82,
       },
@@ -3849,15 +3849,15 @@ export const Cards = {
     parts: [
       {
         id: 215,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BUG,
         name: "Ant",
         card: 83,
       },
       {
         id: 224,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BUG,
         name: "Fire Ant",
         card: 83,
       },
@@ -3876,8 +3876,8 @@ export const Cards = {
     parts: [
       {
         id: 259,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BUG,
         name: "Twin Tail",
         card: 84,
       },
@@ -3896,15 +3896,15 @@ export const Cards = {
     parts: [
       {
         id: 225,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BUG,
         name: "Fish Snack",
         card: 85,
       },
       {
         id: 238,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BUG,
         name: "Maki",
         card: 85,
       },
@@ -3924,8 +3924,8 @@ export const Cards = {
     parts: [
       {
         id: 230,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BUG,
         name: "Gravel Ant",
         card: 86,
       },
@@ -3944,8 +3944,8 @@ export const Cards = {
     parts: [
       {
         id: 246,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BUG,
         name: "Pupae",
         card: 87,
       },
@@ -3965,8 +3965,8 @@ export const Cards = {
     parts: [
       {
         id: 257,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.BUG,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.BUG,
         name: "Thorny Caterpillar",
         card: 88,
       },
@@ -3985,15 +3985,15 @@ export const Cards = {
     parts: [
       {
         id: 212,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.PLANT,
         name: "Turnip",
         card: 89,
       },
       {
         id: 194,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.PLANT,
         name: "Pink Turnip",
         card: 89,
       },
@@ -4012,15 +4012,15 @@ export const Cards = {
     parts: [
       {
         id: 214,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.PLANT,
         name: "Yakitori",
         card: 90,
       },
       {
         id: 203,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.PLANT,
         name: "Shiitake",
         card: 90,
       },
@@ -4039,8 +4039,8 @@ export const Cards = {
     parts: [
       {
         id: 170,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.PLANT,
         name: "Bidens",
         card: 91,
       },
@@ -4059,8 +4059,8 @@ export const Cards = {
     parts: [
       {
         id: 213,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.PLANT,
         name: "Watering Can",
         card: 92,
       },
@@ -4079,8 +4079,8 @@ export const Cards = {
     parts: [
       {
         id: 190,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.PLANT,
         name: "Mint",
         card: 93,
       },
@@ -4100,8 +4100,8 @@ export const Cards = {
     parts: [
       {
         id: 195,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.PLANT,
         name: "Pumpkin",
         card: 94,
       },
@@ -4120,15 +4120,15 @@ export const Cards = {
     parts: [
       {
         id: 135,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.PLANT,
         name: "Golden Bamboo Shoot",
         card: 95,
       },
       {
         id: 123,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.PLANT,
         name: "Bamboo Shoot",
         card: 95,
       },
@@ -4147,15 +4147,15 @@ export const Cards = {
     parts: [
       {
         id: 166,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.PLANT,
         name: "Yorishiro",
         card: 96,
       },
       {
         id: 124,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.PLANT,
         name: "Beech",
         card: 96,
       },
@@ -4174,8 +4174,8 @@ export const Cards = {
     parts: [
       {
         id: 152,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.PLANT,
         name: "Rose Bud",
         card: 97,
       },
@@ -4194,8 +4194,8 @@ export const Cards = {
     parts: [
       {
         id: 158,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.PLANT,
         name: "Strawberry Shortcake",
         card: 98,
       },
@@ -4215,15 +4215,15 @@ export const Cards = {
     parts: [
       {
         id: 153,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.PLANT,
         name: "Santa's Gift",
         card: 99,
       },
       {
         id: 126,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.PLANT,
         name: "Cactus",
         card: 99,
       },
@@ -4242,8 +4242,8 @@ export const Cards = {
     parts: [
       {
         id: 163,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.PLANT,
         name: "Watermelon",
         card: 100,
       },
@@ -4262,15 +4262,15 @@ export const Cards = {
     parts: [
       {
         id: 109,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.PLANT,
         name: "Serious",
         card: 101,
       },
       {
         id: 93,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.PLANT,
         name: "Humorless",
         card: 101,
       },
@@ -4290,15 +4290,15 @@ export const Cards = {
     parts: [
       {
         id: 117,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.PLANT,
         name: "Zigzag",
         card: 102,
       },
       {
         id: 108,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.PLANT,
         name: "Rudolph",
         card: 102,
       },
@@ -4317,8 +4317,8 @@ export const Cards = {
     parts: [
       {
         id: 92,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.PLANT,
         name: "Herbivore",
         card: 103,
       },
@@ -4338,8 +4338,8 @@ export const Cards = {
     parts: [
       {
         id: 110,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.PLANT,
         name: "Silence Whisper",
         card: 104,
       },
@@ -4358,15 +4358,15 @@ export const Cards = {
     parts: [
       {
         id: 216,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.PLANT,
         name: "Carrot",
         card: 105,
       },
       {
         id: 239,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.PLANT,
         name: "Namek Carrot",
         card: 105,
       },
@@ -4386,8 +4386,8 @@ export const Cards = {
     parts: [
       {
         id: 217,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.PLANT,
         name: "Cattail",
         card: 106,
       },
@@ -4406,8 +4406,8 @@ export const Cards = {
     parts: [
       {
         id: 232,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.PLANT,
         name: "Hatsune",
         card: 107,
       },
@@ -4426,8 +4426,8 @@ export const Cards = {
     parts: [
       {
         id: 261,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.PLANT,
         name: "Yam",
         card: 108,
       },
@@ -4447,8 +4447,8 @@ export const Cards = {
     parts: [
       {
         id: 245,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.PLANT,
         name: "Potato Leaf",
         card: 109,
       },
@@ -4468,8 +4468,8 @@ export const Cards = {
     parts: [
       {
         id: 233,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.PLANT,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.PLANT,
         name: "Hot Butt",
         card: 110,
       },
@@ -4488,15 +4488,15 @@ export const Cards = {
     parts: [
       {
         id: 200,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Rugged Sail",
         card: 111,
       },
       {
         id: 172,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Bone Sail",
         card: 111,
       },
@@ -4515,8 +4515,8 @@ export const Cards = {
     parts: [
       {
         id: 211,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Tri Spikes",
         card: 112,
       },
@@ -4536,8 +4536,8 @@ export const Cards = {
     parts: [
       {
         id: 182,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Green Thorns",
         card: 113,
       },
@@ -4556,22 +4556,22 @@ export const Cards = {
     parts: [
       {
         id: 187,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Indian Star",
         card: 114,
       },
       {
         id: 178,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Frozen Bucket",
         card: 114,
       },
       {
         id: 167,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.REPTILE,
         name: "1ND14N-5T4R",
         card: 114,
       },
@@ -4590,8 +4590,8 @@ export const Cards = {
     parts: [
       {
         id: 197,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Red Ear",
         card: 115,
       },
@@ -4610,8 +4610,8 @@ export const Cards = {
     parts: [
       {
         id: 175,
-        part: AxiePartType.BACK,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.BACK,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Croc",
         card: 116,
       },
@@ -4630,15 +4630,15 @@ export const Cards = {
     parts: [
       {
         id: 162,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Unko",
         card: 117,
       },
       {
         id: 149,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Pinku Unko",
         card: 117,
       },
@@ -4657,8 +4657,8 @@ export const Cards = {
     parts: [
       {
         id: 154,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Scaly Spear",
         card: 118,
       },
@@ -4677,8 +4677,8 @@ export const Cards = {
     parts: [
       {
         id: 129,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Cerastes",
         card: 119,
       },
@@ -4697,8 +4697,8 @@ export const Cards = {
     parts: [
       {
         id: 155,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Scaly Spoon",
         card: 120,
       },
@@ -4717,8 +4717,8 @@ export const Cards = {
     parts: [
       {
         id: 138,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Incisor",
         card: 121,
       },
@@ -4737,8 +4737,8 @@ export const Cards = {
     parts: [
       {
         id: 125,
-        part: AxiePartType.HORN,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.HORN,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Bumpy",
         card: 122,
       },
@@ -4757,15 +4757,15 @@ export const Cards = {
     parts: [
       {
         id: 115,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Toothless Bite",
         card: 123,
       },
       {
         id: 116,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Venom Bite",
         card: 123,
       },
@@ -4784,8 +4784,8 @@ export const Cards = {
     parts: [
       {
         id: 96,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Kotaro",
         card: 124,
       },
@@ -4804,8 +4804,8 @@ export const Cards = {
     parts: [
       {
         id: 106,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Razor Bite",
         card: 125,
       },
@@ -4825,22 +4825,22 @@ export const Cards = {
     parts: [
       {
         id: 113,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Tiny Carrot",
         card: 126,
       },
       {
         id: 114,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Tiny Turtle",
         card: 126,
       },
       {
         id: 87,
-        part: AxiePartType.MOUTH,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.MOUTH,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Dango",
         card: 126,
       },
@@ -4860,15 +4860,15 @@ export const Cards = {
     parts: [
       {
         id: 260,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Wall Gecko",
         card: 127,
       },
       {
         id: 221,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Escaped Gecko",
         card: 127,
       },
@@ -4887,8 +4887,8 @@ export const Cards = {
     parts: [
       {
         id: 234,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Iguana",
         card: 128,
       },
@@ -4907,15 +4907,15 @@ export const Cards = {
     parts: [
       {
         id: 258,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Tiny Dino",
         card: 129,
       },
       {
         id: 223,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Fir Trunk",
         card: 129,
       },
@@ -4934,15 +4934,15 @@ export const Cards = {
     parts: [
       {
         id: 252,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Snake Jar",
         card: 130,
       },
       {
         id: 220,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.REPTILE,
         name: "December Surprise",
         card: 130,
       },
@@ -4962,8 +4962,8 @@ export const Cards = {
     parts: [
       {
         id: 227,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Gila",
         card: 131,
       },
@@ -4982,8 +4982,8 @@ export const Cards = {
     parts: [
       {
         id: 229,
-        part: AxiePartType.TAIL,
-        type: AxieTypeEnum.REPTILE,
+        type: AxiePartType.TAIL,
+        axieType: AxieTypeEnum.REPTILE,
         name: "Grass Snake",
         card: 132,
       },
