@@ -18,42 +18,58 @@
       <div class="center">
         <div class="center-grid-container">
           <div class="p1">
-            <div class="axie-left"></div>
-            <div class="axie-down-left"></div>
-            <div class="axie-down-right"></div>
-            <div class="axie-right"></div>
-            <div class="axie-up-right"></div>
-            <div class="axie-up-left"></div>
-            <div class="axie-center"></div>
+            <div
+              v-for="(axie, index) in game.player1.axies"
+              :key="'p1axie' + index"
+              :class="getAxiePositionCssClass(axie.position, false)"
+            >
+              <div class="stats-font">{{axie.currentHealth}}/{{axie.maxHealth}}</div>
+              <div class="stats-font" v-if="axie.shield>0">{{axie.shield}}</div>
+              <AxieTypeIcon :axieType="axie.type" />
+            </div>
           </div>
-          <div class="p2">
-            <div class="axie-left"></div>
-            <div class="axie-down-left"></div>
-            <div class="axie-down-right"></div>
-            <div class="axie-right"></div>
-            <div class="axie-up-right"></div>
-            <div class="axie-up-left"></div>
-            <div class="axie-center"></div>
+          <div class="p2 stats-font">
+            <div
+              v-for="(axie, index) in game.player2.axies"
+              :key="'p2axie' + index"
+              :class="getAxiePositionCssClass(axie.position, true)"
+            >
+              <div class="stats-font">{{axie.currentHealth}}/{{axie.maxHealth}}</div>
+              <div class="stats-font" v-if="axie.shield>0">{{axie.shield}}</div>
+              <AxieTypeIcon :axieType="axie.type" />
+            </div>
           </div>
         </div>
       </div>
       <div class="footer">
         <div class="footer-grid-container">
           <div class="p1-stats">
-            <div>{{game.player1.energy}}/10</div>
-            <div>{{game.player1.deck.hand.length}}</div>
-            <div>{{game.player1.deck.cards.length}}</div>
-            <div>{{game.player1.deck.cemetery.length}}</div>
+            <div>
+              <span class="small-title">Energy</span
+              >{{ game.player1.energy }}/10
+            </div>
+            <div>
+              <span class="small-title">Hand</span
+              >{{ game.player1.deck.hand.length }}
+            </div>
+            <div>
+              <span class="small-title">Deck</span
+              >{{ game.player1.deck.cards.length }}
+            </div>
+            <div>
+              <span class="small-title">Cemetery</span
+              >{{ game.player1.deck.cemetery.length }}
+            </div>
           </div>
           <div class="cards">
-            <v-row class="ml-5 mr-5 mb-5">
+            <v-row class="ml-5 mr-5 mb-5 p1-cards-background">
               <AxieCardSmall
                 :card="card"
                 v-for="(card, index) in game.player1.deck.hand"
                 :key="'p1card' + index"
               />
             </v-row>
-            <v-row class="ml-5 mr-5">
+            <v-row class="ml-5 mr-5 p2-cards-background">
               <AxieCardSmall
                 :card="card"
                 v-for="(card, index) in game.player1.deck.hand"
@@ -62,10 +78,22 @@
             </v-row>
           </div>
           <div class="p2-stats">
-            <div>{{game.player2.energy}}/10</div>
-            <div>{{game.player2.deck.hand.length}}</div>
-            <div>{{game.player2.deck.cards.length}}</div>
-            <div>{{game.player2.deck.cemetery.length}}</div>
+            <div>
+              <span class="small-title">Energy</span
+              >{{ game.player2.energy }}/10
+            </div>
+            <div>
+              <span class="small-title">Hand</span
+              >{{ game.player2.deck.hand.length }}
+            </div>
+            <div>
+              <span class="small-title">Deck</span
+              >{{ game.player2.deck.cards.length }}
+            </div>
+            <div>
+              <span class="small-title">Cemetery</span
+              >{{ game.player2.deck.cemetery.length }}
+            </div>
           </div>
         </div>
       </div>
@@ -73,6 +101,20 @@
   </v-container>
 </template>
 <style scoped>
+.p1-cards-background{
+  background-color:#cddae6;
+}
+.p2-cards-background{
+  background-color:#e6cdd1;
+}
+
+.stats-font{
+  font-size:20px !important;
+}
+.small-title {
+  font-size: 10px;
+  display: block;
+}
 .turn-order-div-p1 {
   background-color: blue;
 }
@@ -80,7 +122,7 @@
   background-color: red;
 }
 
-.axie-left {
+.LEFT {
   position: absolute;
   top: 41%;
   left: 16%;
@@ -88,7 +130,7 @@
   width: 100px;
   background-color: goldenrod;
 }
-.axie-down-left {
+.DOWN_LEFT {
   position: absolute;
   top: 63%;
   left: 30%;
@@ -96,7 +138,7 @@
   width: 100px;
   background-color: goldenrod;
 }
-.axie-down-right {
+.DOWN_RIGHT {
   position: absolute;
   top: 63%;
   left: 58%;
@@ -104,7 +146,7 @@
   width: 100px;
   background-color: goldenrod;
 }
-.axie-right {
+.RIGHT {
   position: absolute;
   top: 41%;
   left: 72%;
@@ -112,7 +154,7 @@
   width: 100px;
   background-color: goldenrod;
 }
-.axie-up-right {
+.UP_RIGHT {
   position: absolute;
   left: 58%;
   top: 19%;
@@ -120,7 +162,7 @@
   width: 100px;
   background-color: goldenrod;
 }
-.axie-up-left {
+.UP_LEFT {
   position: absolute;
   top: 19%;
   left: 30%;
@@ -128,10 +170,68 @@
   width: 100px;
   background-color: goldenrod;
 }
-.axie-center {
+.CENTER {
   position: absolute;
   top: 41%;
   left: 44%;
+  height: 100px;
+  width: 100px;
+  background-color: goldenrod;
+}
+.CENTER_M {
+  position: absolute;
+  top: 41%;
+  left: 44%;
+  height: 100px;
+  width: 100px;
+  background-color: goldenrod;
+}
+
+/* MIRROR */
+.RIGHT_M {
+  position: absolute;
+  top: 41%;
+  left: 16%;
+  height: 100px;
+  width: 100px;
+  background-color: goldenrod;
+}
+.DOWN_RIGHT_M {
+  position: absolute;
+  top: 63%;
+  left: 30%;
+  height: 100px;
+  width: 100px;
+  background-color: goldenrod;
+}
+.DOWN_LEFT_M {
+  position: absolute;
+  top: 63%;
+  left: 58%;
+  height: 100px;
+  width: 100px;
+  background-color: goldenrod;
+}
+.LEFT_M {
+  position: absolute;
+  top: 41%;
+  left: 72%;
+  height: 100px;
+  width: 100px;
+  background-color: goldenrod;
+}
+.UP_LEFT_M {
+  position: absolute;
+  left: 58%;
+  top: 19%;
+  height: 100px;
+  width: 100px;
+  background-color: goldenrod;
+}
+.UP_RIGHT_M {
+  position: absolute;
+  top: 19%;
+  left: 30%;
   height: 100px;
   width: 100px;
   background-color: goldenrod;
@@ -236,6 +336,7 @@
 <script>
 import {
   AxiePosition,
+  AxiePositionSelect,
   AxieTypeEnum,
   getAxieTypeParts,
 } from "@/game/data/data.js";
@@ -256,14 +357,19 @@ export default {
       game: new Game(),
     };
   },
-  methods: {},
+  methods: {
+    getAxiePositionCssClass(position, mirror) {
+      if (mirror) return AxiePositionSelect[position].text + "_M";
+      else return AxiePositionSelect[position].text;
+    },
+  },
   created() {
     let axieBird = new Axie();
     let axiePlant = new Axie();
     let axieBeast = new Axie();
     axieBird.initialize(
       1,
-      AxiePosition.LEFT,
+      AxiePosition.UP_LEFT,
       AxieTypeEnum.BIRD,
       getAxieTypeParts(AxieTypeEnum.BIRD),
       1
@@ -289,7 +395,7 @@ export default {
     let axieBug = new Axie();
     axieAquatic.initialize(
       4,
-      AxiePosition.LEFT,
+      AxiePosition.DOWN_LEFT,
       AxieTypeEnum.AQUATIC,
       getAxieTypeParts(AxieTypeEnum.AQUATIC),
       2

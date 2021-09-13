@@ -79,6 +79,6 @@ export default class Game {
   }
 
   getTurnOrder(){
-    return [this.player1.axies[0],this.player2.axies[0],this.player1.axies[1],this.player2.axies[1],this.player1.axies[2],this.player1.axies[2]];
+    return [this.player1.axies[0],this.player2.axies[0],this.player1.axies[1],this.player2.axies[1],this.player1.axies[2],this.player2.axies[2]];
   }
 }
