@@ -26,6 +26,14 @@
             <v-list-item-subtitle></v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item link :to="'GameInfo'">
+          <v-list-item-content>
+            <v-list-item-title class="text-h6">
+              Game Information
+            </v-list-item-title>
+            <v-list-item-subtitle></v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-main>

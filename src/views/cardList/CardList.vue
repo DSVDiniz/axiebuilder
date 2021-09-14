@@ -105,7 +105,6 @@ export default {
     AxieCard,
   },
   props: {
-    msg: String,
   },
   data() {
     return {

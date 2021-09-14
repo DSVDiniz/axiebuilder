@@ -193,42 +193,234 @@ export const AxiePartTypeSelect = [
 ];
 
 export const CardEffect = {
-  ALLY_HEAL: { value: 0, image: "ally-heal.png" ,text:"Ally Heal"},
-  AROMA: { value: 1, image: "aroma.png" ,text:"Aroma"},
-  ATTACK_DOWN: { value: 2, image: "attack-down.png" ,text:"Attack Down"},
-  ATTACK_UP: { value: 3, image: "attack-up.png" ,text:"Attack Up"},
-  CHILL: { value: 4, image: "chill.png" ,text:"Chill"},
-  CRITICAL_BLOCK: { value: 5, image: "critical-block.png" ,text:"Critical Block"},
-  DAMAGE_REFLECT: { value: 6, image: "damage-reflect.png" ,text:"Damage Reflect"},
-  DISABLE_ABLILITY: { value: 7, image: "disable-ability.png" ,text:"Disable Ablility"},
-  DISCARD: { value: 8, image: "discard.png" ,text:"Discard"},
-  DOUBLE_HIT: { value: 9, image: "double-hit.png" ,text:"Double Hit"},
-  DRAW_CARD: { value: 10, image: "draw-card.png" ,text:"Draw Card"},
-  END_LAST_STAND: { value: 11, image: "end-last-stand.png" ,text:"End Last Stand"},
-  ENERGY_DESTROY: { value: 12, image: "energy-destroy.png" ,text:"Energy Destroy"},
-  FEAR: { value: 13, image: "fear.png" ,text:"Fear"},
-  FIXED_DAMAGE: { value: 14, image: "fixed-damage.png" ,text:"Fixed Damage"},
-  FRAGILE: { value: 15, image: "fragile.png" ,text:"Fragile"},
-  GAIN_ENERGY: { value: 16, image: "gain-energy.png" ,text:"Gain Energy"},
-  HEAL_BLOCK: { value: 17, image: "heal-block.png" ,text:"Heal Block"},
-  JINX: { value: 18, image: "jinx.png" ,text:"Jinx"},
-  LETHAL: { value: 19, image: "lethal.png" ,text:"Lethal"},
-  MORALE_DOWN: { value: 20, image: "morale-down.png" ,text:"Morale Down"},
-  MORALE_UP: { value: 21, image: "morale-up.png" ,text:"Morale Up"},
-  MULTI_HIT: { value: 22, image: "multi-hit.png" ,text:"Multi Hit"},
-  POISON: { value: 23, image: "poison.png" ,text:"Poison"},
-  PRIORITIZE: { value: 24, image: "prioritize.png" ,text:"Prioritize"},
-  RAISE_DAMAGE: { value: 25, image: "raise-damage.png" ,text:"Raise Damage"},
-  RAISE_SHIELD: { value: 26, image: "raise-shield.png" ,text:"Raise Shield"},
-  REMOVE_DEBUFF: { value: 27, image: "remove-debuff.png" ,text:"Remove Debuff"},
-  SELF_HEAL: { value: 28, image: "self-heal.png" ,text:"Self Heal"},
-  SLEEP: { value: 29, image: "sleep.png" ,text:"Sleep"},
-  SPEED_DOWN: { value: 30, image: "speed-down.png" ,text:"Speed Down"},
-  SPEED_UP: { value: 31, image: "speed-up.png" ,text:"Speed Up"},
-  STENCH: { value: 32, image: "stench.png" ,text:"Stench"},
-  STRIKE_FIRST: { value: 33, image: "strike-first.png" ,text:"Strike First"},
-  STUN: { value: 34, image: "stun.png" ,text:"Stun"},
-  UNTARGETABLE: { value: 35, image: "untargetable.png" ,text:"Untargetable"},
+  ALLY_HEAL: {
+    value: 0,
+    image: "ally-heal.png",
+    text: "Ally Heal",
+    description: "Heals an allied axie",
+  },
+  AROMA: {
+    value: 1,
+    image: "aroma.png",
+    text: "Aroma",
+    description: "Target priority changes to affected Axie for the next round",
+  },
+  ATTACK_DOWN: {
+    value: 2,
+    image: "attack-down.png",
+    text: "Attack Down",
+    description: "Each attack down decreases damage by 20%",
+  },
+  ATTACK_UP: {
+    value: 3,
+    image: "attack-up.png",
+    text: "Attack Up",
+    description: "Each attack up increases damage by 20%",
+  },
+  CHILL: {
+    value: 4,
+    image: "chill.png",
+    text: "Chill",
+    description: "Affected Axie can't enter last stand",
+  },
+  CRITICAL_BLOCK: {
+    value: 5,
+    image: "critical-block.png",
+    text: "Critical Block",
+    description: "Axie cannot receive extra damage from critical strikes",
+  },
+  DAMAGE_REFLECT: {
+    value: 6,
+    image: "damage-reflect.png",
+    text: "Damage Reflect",
+    description:
+      "This axie will reflect damage, either ranged or melee depending on the card",
+  },
+  DISABLE_ABLILITY: {
+    value: 7,
+    image: "disable-ability.png",
+    text: "Disable Ablility",
+    description:
+      "Disables an specific type of card by attack type (ranged, melee, support) or part type (mouth, horn, back, tail) ",
+  },
+  DISCARD: {
+    value: 8,
+    image: "discard.png",
+    text: "Discard",
+    description: "Discards a card randomly from the affected players hand",
+  },
+  DOUBLE_HIT: {
+    value: 9,
+    image: "double-hit.png",
+    text: "Double Hit",
+    description:
+      " Does two hits. Will trigger on hit effects twice, such as poison (?)",
+  },
+  DRAW_CARD: {
+    value: 10,
+    image: "draw-card.png",
+    text: "Draw Card",
+    description: "Draw a card",
+  },
+  END_LAST_STAND: {
+    value: 11,
+    image: "end-last-stand.png",
+    text: "End Last Stand",
+    description:
+      "If this card would make the defending axie enter last stand, he doesn't. Or if he's on last stand with more than 2 bars, this card kills him.",
+  },
+  ENERGY_DESTROY: {
+    value: 12,
+    image: "energy-destroy.png",
+    text: "Energy Destroy",
+    description: "Destroys opponent energy if he has any stocked up",
+  },
+  FEAR: {
+    value: 13,
+    image: "fear.png",
+    text: "Fear",
+    description: "Axie next hit will miss",
+  },
+  FIXED_DAMAGE: {
+    value: 14,
+    image: "fixed-damage.png",
+    text: "Fixed Damage",
+    description:
+      "Does a fixed amount of damage to your axie, or in Jar Barrage's case, your axie will recieve only some amount of damage instead of full damage",
+  },
+  FRAGILE: {
+    value: 15,
+    image: "fragile.png",
+    text: "Fragile",
+    description: "Shield takes double the damage for the next incoming attack",
+  },
+  GAIN_ENERGY: {
+    value: 16,
+    image: "gain-energy.png",
+    text: "Gain Energy",
+    description: "Gain energy if you're below the maximum amount",
+  },
+  HEAL_BLOCK: {
+    value: 17,
+    image: "heal-block.png",
+    text: "Heal Block",
+    description: "Blocks any type of healing for the round on this axie",
+  },
+  JINX: {
+    value: 18,
+    image: "jinx.png",
+    text: "Jinx",
+    description: "Affected axie cannot do critical stikes",
+  },
+  LETHAL: {
+    value: 19,
+    image: "lethal.png",
+    text: "Lethal",
+    description: "Affected axie will recieve a critical strike next hit",
+  },
+  MORALE_DOWN: {
+    value: 20,
+    image: "morale-down.png",
+    text: "Morale Down",
+    description:
+      "Lowers morale stat by 20%, a low morale stat might reduce the number of last stand bars",
+  },
+  MORALE_UP: {
+    value: 21,
+    image: "morale-up.png",
+    text: "Morale Up",
+    description:
+      "Increases morale stat by 20%, a high morale stat might increase the number of last stand bars",
+  },
+  MULTI_HIT: {
+    value: 22,
+    image: "multi-hit.png",
+    text: "Multi Hit",
+    description:
+      "Does multiple hits, might trigger on hit effects multiple times(?).",
+  },
+  POISON: {
+    value: 23,
+    image: "poison.png",
+    text: "Poison",
+    description:
+      "Each poison stack will do 2 damage per turn. Ex: 1 stack = 2 dmg, 10 stacks = 20 dmg",
+  },
+  PRIORITIZE: {
+    value: 24,
+    image: "prioritize.png",
+    text: "Prioritize",
+    description: "Changes target to a specific axie",
+  },
+  RAISE_DAMAGE: {
+    value: 25,
+    image: "raise-damage.png",
+    text: "Raise Damage",
+    description: "Raises damage",
+  },
+  RAISE_SHIELD: {
+    value: 26,
+    image: "raise-shield.png",
+    text: "Raise Shield",
+    description:
+      "Raises shield, some cards raise shield per turn, such as Overgrow Keratin.",
+  },
+  REMOVE_DEBUFF: {
+    value: 27,
+    image: "remove-debuff.png",
+    text: "Remove Debuff",
+    description: "Removes debuffs from axie",
+  },
+  SELF_HEAL: {
+    value: 28,
+    image: "self-heal.png",
+    text: "Self Heal",
+    description: "Heals this axie",
+  },
+  SLEEP: {
+    value: 29,
+    image: "sleep.png",
+    text: "Sleep",
+    description:
+      "Bypasses axie shield. Sleeptalk will bypass the defending axies shield, and the next hit will also bypass defense.",
+  },
+  SPEED_DOWN: {
+    value: 30,
+    image: "speed-down.png",
+    text: "Speed Down",
+    description: "Reduces speed stat by 20%",
+  },
+  SPEED_UP: {
+    value: 31,
+    image: "speed-up.png",
+    text: "Speed Up",
+    description: "Increases speed stat by 20%",
+  },
+  STENCH: {
+    value: 32,
+    image: "stench.png",
+    text: "Stench",
+    description: "Affected axie will be ignored by attacking axies this round",
+  },
+  STRIKE_FIRST: {
+    value: 33,
+    image: "strike-first.png",
+    text: "Strike First",
+    description:
+      "This axie will strike first, if two axies attack first, the normal rules apply on them first, then on the other axies(?)",
+  },
+  STUN: {
+    value: 34,
+    image: "stun.png",
+    text: "Stun",
+    description: "Affected Axie next attack will miss",
+  },
+  UNTARGETABLE: {
+    value: 35,
+    image: "untargetable.png",
+    text: "Untargetable",
+    description: "Cannot be targeted by specific types of cards",
+  },
 };
 
 export const Parts = {
