@@ -29,7 +29,7 @@ export default class AxieClass {
   parts = {};
   owner = null;
   constructor() {}
-  initialize(id, position, type, parts,ownerId) {
+  initialize(id, position, type, parts) {
     if (id === 0) return;
     this.id = id;
     this.position = position;
@@ -42,7 +42,6 @@ export default class AxieClass {
     this.dead = false;
     this.inLastStand = false;
     this.shield = 0;
-    this.owner = ownerId;
   }
   getInGameHealth() {
     return this.health * 6 + 150;

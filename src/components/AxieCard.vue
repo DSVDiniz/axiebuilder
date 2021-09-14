@@ -2,10 +2,18 @@
   <div>
     <div v-if="showParts" class="parts mb-1">
       <AxiePartIcon
-          :axieType="card.parts[0].axieType"
-          :partType="card.parts[0].type"
-        />
-        <v-chip class="ml-1 mr-1" label dark :color="partColor" v-for="(part, index) in card.parts" :key="index">{{ part.name }} </v-chip>
+        :axieType="card.parts[0].axieType"
+        :partType="card.parts[0].type"
+      />
+      <v-chip
+        class="ml-1 mr-1"
+        label
+        dark
+        :color="partColor"
+        v-for="(part, index) in card.parts"
+        :key="index"
+        >{{ part.name }}
+      </v-chip>
     </div>
     <div class="card">
       <img :src="getImgUrl(card.image)" width="250" />
@@ -24,13 +32,12 @@
       </div>
       <img class="effect" src="@/assets/icons/morale-up.png" width="25" />
     </div>
-    
   </div>
 </template>
 <style scoped>
 .parts {
   color: black;
-  display:block;
+  display: block;
 }
 .card {
   text-align: center;
@@ -66,14 +73,14 @@
   top: 3%;
 }
 .dmg {
-  width: 42px;
+  width: 45px;
   position: absolute;
   top: 25%;
   left: -1%;
   color: red;
 }
 .shield {
-  width: 40px;
+  width: 45px;
   position: absolute;
   top: 44%;
   left: -1%;
@@ -89,7 +96,7 @@
 </style>
 <script>
 import AxiePartIcon from "./icons/AxiePartIcon.vue";
-import {AxieTypeSelect} from "@/game/data/data.js";
+import { AxieTypeSelect } from "@/game/data/data.js";
 export default {
   name: "AxieCard",
   components: { AxiePartIcon },
@@ -99,10 +106,10 @@ export default {
   },
   data: () => ({}),
   computed: {
-    partColor:function(){
+    partColor: function () {
       return AxieTypeSelect[this.card.parts[0].axieType].color;
     },
-    cardColor: function() {
+    cardColor: function () {
       return {
         "color-aquatic": this.card.isAquatic(),
         "color-beast": this.card.isBeast(),

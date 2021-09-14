@@ -3,52 +3,76 @@
     <v-row>
       <v-col>
         <v-select
-          v-model="filter.bodyPartType"
+          v-model="filter.part"
           label="Body Part Type"
           :items="bodyPartTypes"
-        ></v-select>
+          @input="changeFilter"
+          clearable
+        >
+        </v-select>
       </v-col>
       <v-col>
         <v-select
           v-model="filter.attackType"
           label="Attack Type"
           :items="attackTypes"
-        ></v-select>
+          @input="changeFilter"
+          clearable
+        >
+        </v-select>
       </v-col>
-      <v-col
-        ><v-select
-          v-model="filter.axieType"
+      <v-col>
+        <v-select
+          v-model="filter.element"
           label="Axie Type"
           :items="axieTypes"
-        ></v-select
-      ></v-col>
-      <v-col
-        ><v-select
-          v-model="filter.damage"
+          @input="changeFilter"
+          clearable
+        >
+        </v-select>
+      </v-col>
+      <v-col>
+        <v-select
+          v-model="filter.dmg"
           label="Damage"
           :items="damageList"
-        ></v-select
-      ></v-col>
-      <v-col
-        ><v-select
+          @input="changeFilter"
+          clearable
+        >
+        </v-select>
+      </v-col>
+      <v-col>
+        <v-select
           v-model="filter.shield"
           label="Shield"
           :items="shieldList"
-        ></v-select
-      ></v-col>
+          @input="changeFilter"
+          clearable
+        >
+        </v-select>
+      </v-col>
       <v-col>
         <v-select
-          v-model="filter.energy"
+          v-model="filter.cost"
           label="Energy cost"
           :items="energyCosts"
-        ></v-select>
+          @input="changeFilter"
+          clearable
+        >
+        </v-select>
       </v-col>
-      <v-col cols="12"
-        ><v-text-field v-model="filter.text" label="Search"></v-text-field
-      ></v-col>
+      <v-col cols="12">
+        <v-text-field
+          v-model="filter.text"
+          label="Search"
+          @input="changeFilter"
+          clearable
+        >
+        </v-text-field>
+      </v-col>
     </v-row>
     <v-row>
-      <v-col v-for="(card, index) in cardMap" :key="index" cols="2">
+      <v-col v-for="(card, index) in filteredCards" :key="index" cols="2">
         <AxieCard :card="card" :showParts="true"></AxieCard>
       </v-col>
     </v-row>
@@ -58,9 +82,9 @@
 <script>
 import {
   Cards,
-  AxieTypeEnum,
-  CardAttackType,
-  AxiePartType,
+  AxieTypeSelect,
+  CardAttackTypeSelect,
+  AxiePartTypeSelect,
 } from "@/game/data/data.js";
 import AxieCard from "../../components/AxieCard.vue";
 export default {
@@ -74,28 +98,56 @@ export default {
   data() {
     return {
       cardMap: Cards,
-      bodyPartTypes: Object.keys(AxiePartType),
-      attackTypes: Object.keys(CardAttackType),
-      axieTypes: Object.keys(AxieTypeEnum),
+      bodyPartTypes: AxiePartTypeSelect,
+      attackTypes: CardAttackTypeSelect,
+      axieTypes: AxieTypeSelect,
       damageList: [],
       shieldList: [],
       energyCosts: [],
       filter: {
-        bodyPartType: null,
+        part: null,
         attackType: null,
-        axieType: null,
-        damage: null,
+        element: null,
+        dmg: null,
         shield: null,
-        energy: null,
+        cost: null,
         text: null,
       },
+      filteredCards: [],
     };
   },
+  //${card.parts} = [];
+  
   methods: {
-    changeFilter() {},
+    changeFilter() {
+      const vm = this;
+      let filterArr = Object.keys(this.filter).filter(
+        (key) => this.filter[key] != null
+      );
+
+      this.filteredCards = Object.values(this.cardMap).filter((card) => {
+        let achou = true;
+        for (let i = 0; i < filterArr.length; i++) {
+          let key = filterArr[i];
+          if (key === "part") {
+            for (let j = 0; j < card["parts"].length; j++) {
+              if (card["parts"][j].type != vm.filter[key]) achou = false;
+            }
+          } else if (key === "text") {
+            let cardText = `${card.name}${card.description}`;
+            cardText = cardText.concat(card["parts"].map(part=>part.name).join()).toLowerCase();
+            achou = cardText.includes(vm.filter[key]);
+          } else {
+            if (card[key] != vm.filter[key]) achou = false;
+          }
+        }
+        return achou;
+      });
+    },
   },
   created() {
     let cardList = Object.values(this.cardMap);
+    this.filteredCards = cardList;
     let damageMap = {};
     cardList.map((card) => (damageMap[card.dmg] = card.dmg));
     this.damageList = Object.keys(damageMap);

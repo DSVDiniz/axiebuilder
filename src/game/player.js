@@ -18,8 +18,11 @@ export default class Player {
 
     if (!this.hasThreeUnqiueAxies(axies)) return;
     if (!this.hasThreeAxiesInDifferentPositions(axies)) return;
-
     this.axies = axies;
+    this.axies = this.axies.map((ax) => {
+      ax.owner = this.id;
+      return ax;
+    });
     this.deck = new PlayerDeck();
     this.deck.initialize(axies);
   }

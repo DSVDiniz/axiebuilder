@@ -168,6 +168,12 @@ export const CardAttackType = {
   SUPPORT: 2,
 };
 
+export const CardAttackTypeSelect = [
+  { text: "RANGED", value: CardAttackType.RANGED},
+  { text: "MELEE", value: CardAttackType.MELEE},
+  { text: "SUPPORT", value: CardAttackType.SUPPORT},
+];
+
 export const AxiePartType = {
   EYES: 0,
   EARS: 1,
@@ -176,6 +182,16 @@ export const AxiePartType = {
   BACK: 4,
   TAIL: 5,
 };
+
+export const AxiePartTypeSelect = [
+  { text: "EYES", value: AxiePartType.EYES},
+  { text: "EARS", value: AxiePartType.EARS},
+  { text: "MOUTH", value: AxiePartType.MOUTH},
+  { text: "HORN", value: AxiePartType.HORN},
+  { text: "BACK", value: AxiePartType.BACK},
+  { text: "TAIL", value: AxiePartType.TAIL},
+];
+
 
 export const Parts = {
   "1": {

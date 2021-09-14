@@ -23,8 +23,12 @@
               :key="'p1axie' + index"
               :class="getAxiePositionCssClass(axie.position, false)"
             >
-              <div class="stats-font">{{axie.currentHealth}}/{{axie.maxHealth}}</div>
-              <div class="stats-font" v-if="axie.shield>0">{{axie.shield}}</div>
+              <div class="stats-font">
+                {{ axie.currentHealth }}/{{ axie.maxHealth }}
+              </div>
+              <div class="stats-font" v-if="axie.shield > 0">
+                {{ axie.shield }}
+              </div>
               <AxieTypeIcon :axieType="axie.type" />
             </div>
           </div>
@@ -34,8 +38,12 @@
               :key="'p2axie' + index"
               :class="getAxiePositionCssClass(axie.position, true)"
             >
-              <div class="stats-font">{{axie.currentHealth}}/{{axie.maxHealth}}</div>
-              <div class="stats-font" v-if="axie.shield>0">{{axie.shield}}</div>
+              <div class="stats-font">
+                {{ axie.currentHealth }}/{{ axie.maxHealth }}
+              </div>
+              <div class="stats-font" v-if="axie.shield > 0">
+                {{ axie.shield }}
+              </div>
               <AxieTypeIcon :axieType="axie.type" />
             </div>
           </div>
@@ -101,15 +109,15 @@
   </v-container>
 </template>
 <style scoped>
-.p1-cards-background{
-  background-color:#cddae6;
+.p1-cards-background {
+  background-color: #cddae6;
 }
-.p2-cards-background{
-  background-color:#e6cdd1;
+.p2-cards-background {
+  background-color: #e6cdd1;
 }
 
-.stats-font{
-  font-size:20px !important;
+.stats-font {
+  font-size: 20px !important;
 }
 .small-title {
   font-size: 10px;
@@ -371,22 +379,19 @@ export default {
       1,
       AxiePosition.UP_LEFT,
       AxieTypeEnum.BIRD,
-      getAxieTypeParts(AxieTypeEnum.BIRD),
-      1
+      getAxieTypeParts(AxieTypeEnum.BIRD)
     );
     axieBeast.initialize(
       2,
       AxiePosition.CENTER,
       AxieTypeEnum.BEAST,
-      getAxieTypeParts(AxieTypeEnum.BEAST),
-      1
+      getAxieTypeParts(AxieTypeEnum.BEAST)
     );
     axiePlant.initialize(
       3,
       AxiePosition.RIGHT,
       AxieTypeEnum.PLANT,
-      getAxieTypeParts(AxieTypeEnum.PLANT),
-      1
+      getAxieTypeParts(AxieTypeEnum.PLANT)
     );
     let axiesP1 = [axiePlant, axieBeast, axieBird];
 
@@ -397,22 +402,19 @@ export default {
       4,
       AxiePosition.DOWN_LEFT,
       AxieTypeEnum.AQUATIC,
-      getAxieTypeParts(AxieTypeEnum.AQUATIC),
-      2
+      getAxieTypeParts(AxieTypeEnum.AQUATIC)
     );
     axieReptile.initialize(
       5,
       AxiePosition.CENTER,
       AxieTypeEnum.REPTILE,
-      getAxieTypeParts(AxieTypeEnum.REPTILE),
-      2
+      getAxieTypeParts(AxieTypeEnum.REPTILE)
     );
     axieBug.initialize(
       6,
       AxiePosition.RIGHT,
       AxieTypeEnum.BUG,
-      getAxieTypeParts(AxieTypeEnum.BUG),
-      2
+      getAxieTypeParts(AxieTypeEnum.BUG)
     );
     let axiesP2 = [axieAquatic, axieReptile, axieBug];
     let player1 = new Player();

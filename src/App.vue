@@ -28,7 +28,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-content>
+    <v-main>
       <v-container>
         <v-row>
           <v-col>
@@ -36,7 +36,7 @@
           </v-col>
         </v-row>
       </v-container>
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 
