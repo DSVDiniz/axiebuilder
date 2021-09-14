@@ -61,6 +61,16 @@
         >
         </v-select>
       </v-col>
+       <v-col>
+        <v-select
+          v-model="filter.effect"
+          label="Effect"
+          :items="cardEffect"
+          @input="changeFilter"
+          clearable
+        >
+        </v-select>
+      </v-col>
       <v-col cols="12">
         <v-text-field
           v-model="filter.text"
@@ -86,6 +96,7 @@ import {
   AxieTypeSelect,
   CardAttackTypeSelect,
   AxiePartTypeSelect,
+  CardEffect
 } from "@/game/data/data.js";
 import AxieCard from "../../components/AxieCard.vue";
 export default {
@@ -105,6 +116,7 @@ export default {
       damageList: [],
       shieldList: [],
       energyCosts: [],
+      cardEffect:Object.values(CardEffect),
       filter: {
         part: null,
         attackType: null,
@@ -113,6 +125,7 @@ export default {
         shield: null,
         cost: null,
         text: null,
+        effect: null,
       },
       filteredCards: [],
     };
@@ -134,6 +147,8 @@ export default {
             for (let j = 0; j < card["parts"].length; j++) {
               if (card["parts"][j].type != vm.filter[key]) achou = false;
             }
+          } else if (key === "effect") {
+            if (card[key].value != vm.filter[key]) achou = false;
           } else if (key === "text") {
             let cardText = `${card.name}${card.description}`;
             cardText = cardText.concat(card["parts"].map(part=>part.name).join()).toLowerCase();

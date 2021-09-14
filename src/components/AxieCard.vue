@@ -30,7 +30,7 @@
       <div class="description">
         <span>{{ card.description }}</span>
       </div>
-      <img class="effect" src="@/assets/icons/morale-up.png" width="25" />
+      <img class="effect" :src="getImgEffectUrl(card.effect.image)" width="25" />
     </div>
   </div>
 </template>
@@ -126,6 +126,10 @@ export default {
   methods: {
     getImgUrl(img) {
       let images = require.context("../assets/cards/", false, /\.png$/);
+      return images("./" + img);
+    },
+    getImgEffectUrl(img) {
+      let images = require.context("../assets/icons/", false, /\.png$/);
       return images("./" + img);
     },
   },

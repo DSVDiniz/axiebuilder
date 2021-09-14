@@ -169,9 +169,9 @@ export const CardAttackType = {
 };
 
 export const CardAttackTypeSelect = [
-  { text: "RANGED", value: CardAttackType.RANGED},
-  { text: "MELEE", value: CardAttackType.MELEE},
-  { text: "SUPPORT", value: CardAttackType.SUPPORT},
+  { text: "RANGED", value: CardAttackType.RANGED },
+  { text: "MELEE", value: CardAttackType.MELEE },
+  { text: "SUPPORT", value: CardAttackType.SUPPORT },
 ];
 
 export const AxiePartType = {
@@ -184,14 +184,52 @@ export const AxiePartType = {
 };
 
 export const AxiePartTypeSelect = [
-  { text: "EYES", value: AxiePartType.EYES},
-  { text: "EARS", value: AxiePartType.EARS},
-  { text: "MOUTH", value: AxiePartType.MOUTH},
-  { text: "HORN", value: AxiePartType.HORN},
-  { text: "BACK", value: AxiePartType.BACK},
-  { text: "TAIL", value: AxiePartType.TAIL},
+  { text: "EYES", value: AxiePartType.EYES },
+  { text: "EARS", value: AxiePartType.EARS },
+  { text: "MOUTH", value: AxiePartType.MOUTH },
+  { text: "HORN", value: AxiePartType.HORN },
+  { text: "BACK", value: AxiePartType.BACK },
+  { text: "TAIL", value: AxiePartType.TAIL },
 ];
 
+export const CardEffect = {
+  ALLY_HEAL: { value: 0, image: "ally-heal.png" ,text:"Ally Heal"},
+  AROMA: { value: 1, image: "aroma.png" ,text:"Aroma"},
+  ATTACK_DOWN: { value: 2, image: "attack-down.png" ,text:"Attack Down"},
+  ATTACK_UP: { value: 3, image: "attack-up.png" ,text:"Attack Up"},
+  CHILL: { value: 4, image: "chill.png" ,text:"Chill"},
+  CRITICAL_BLOCK: { value: 5, image: "critical-block.png" ,text:"Critical Block"},
+  DAMAGE_REFLECT: { value: 6, image: "damage-reflect.png" ,text:"Damage Reflect"},
+  DISABLE_ABLILITY: { value: 7, image: "disable-ability.png" ,text:"Disable Ablility"},
+  DISCARD: { value: 8, image: "discard.png" ,text:"Discard"},
+  DOUBLE_HIT: { value: 9, image: "double-hit.png" ,text:"Double Hit"},
+  DRAW_CARD: { value: 10, image: "draw-card.png" ,text:"Draw Card"},
+  END_LAST_STAND: { value: 11, image: "end-last-stand.png" ,text:"End Last Stand"},
+  ENERGY_DESTROY: { value: 12, image: "energy-destroy.png" ,text:"Energy Destroy"},
+  FEAR: { value: 13, image: "fear.png" ,text:"Fear"},
+  FIXED_DAMAGE: { value: 14, image: "fixed-damage.png" ,text:"Fixed Damage"},
+  FRAGILE: { value: 15, image: "fragile.png" ,text:"Fragile"},
+  GAIN_ENERGY: { value: 16, image: "gain-energy.png" ,text:"Gain Energy"},
+  HEAL_BLOCK: { value: 17, image: "heal-block.png" ,text:"Heal Block"},
+  JINX: { value: 18, image: "jinx.png" ,text:"Jinx"},
+  LETHAL: { value: 19, image: "lethal.png" ,text:"Lethal"},
+  MORALE_DOWN: { value: 20, image: "morale-down.png" ,text:"Morale Down"},
+  MORALE_UP: { value: 21, image: "morale-up.png" ,text:"Morale Up"},
+  MULTI_HIT: { value: 22, image: "multi-hit.png" ,text:"Multi Hit"},
+  POISON: { value: 23, image: "poison.png" ,text:"Poison"},
+  PRIORITIZE: { value: 24, image: "prioritize.png" ,text:"Prioritize"},
+  RAISE_DAMAGE: { value: 25, image: "raise-damage.png" ,text:"Raise Damage"},
+  RAISE_SHIELD: { value: 26, image: "raise-shield.png" ,text:"Raise Shield"},
+  REMOVE_DEBUFF: { value: 27, image: "remove-debuff.png" ,text:"Remove Debuff"},
+  SELF_HEAL: { value: 28, image: "self-heal.png" ,text:"Self Heal"},
+  SLEEP: { value: 29, image: "sleep.png" ,text:"Sleep"},
+  SPEED_DOWN: { value: 30, image: "speed-down.png" ,text:"Speed Down"},
+  SPEED_UP: { value: 31, image: "speed-up.png" ,text:"Speed Up"},
+  STENCH: { value: 32, image: "stench.png" ,text:"Stench"},
+  STRIKE_FIRST: { value: 33, image: "strike-first.png" ,text:"Strike First"},
+  STUN: { value: 34, image: "stun.png" ,text:"Stun"},
+  UNTARGETABLE: { value: 35, image: "untargetable.png" ,text:"Untargetable"},
+};
 
 export const Parts = {
   "1": {
@@ -2043,6 +2081,7 @@ export const Cards = {
     shield: 115,
     description: "Disable critical strikes on this Axie during this round.",
     image: "1.png",
+    effect: CardEffect.CRITICAL_BLOCK,
   },
   "2": {
     id: 2,
@@ -2063,6 +2102,7 @@ export const Cards = {
     shield: 30,
     description: "Draw a card if target is in Last Stand.",
     image: "2.png",
+    effect: CardEffect.DRAW_CARD,
   },
   "3": {
     id: 3,
@@ -2083,6 +2123,7 @@ export const Cards = {
     shield: 20,
     description: "Apply Speed+ to this Axie for 2 rounds when attacked.",
     image: "3.png",
+    effect: CardEffect.SPEED_UP,
   },
   "4": {
     id: 4,
@@ -2103,6 +2144,7 @@ export const Cards = {
     shield: 90,
     description: "Apply Attack+ to this Axie if its shield breaks.",
     image: "4.png",
+    effect: CardEffect.ATTACK_UP,
   },
   "5": {
     id: 5,
@@ -2124,6 +2166,7 @@ export const Cards = {
     description:
       "Successful attacks restore 50 HP for each Anemone part this Axie posseses.",
     image: "5.png",
+    effect: CardEffect.SELF_HEAL,
   },
   "6": {
     id: 6,
@@ -2145,6 +2188,7 @@ export const Cards = {
     description:
       "Prioritize idle target when comboed with at least 2 additional cards.",
     image: "6.png",
+    effect: CardEffect.PRIORITIZE,
   },
   "7": {
     id: 7,
@@ -2172,6 +2216,7 @@ export const Cards = {
     shield: 50,
     description: "Deal 130% damage when attacking an idle target.",
     image: "7.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "8": {
     id: 8,
@@ -2192,6 +2237,7 @@ export const Cards = {
     shield: 80,
     description: "Add 30% to this Axie's shield when attacking.",
     image: "8.png",
+    effect: CardEffect.RAISE_SHIELD,
   },
   "9": {
     id: 9,
@@ -2213,6 +2259,7 @@ export const Cards = {
     description:
       "Apply Attack+ to this Axie when attacking Beast, Bug, or Mech targets.",
     image: "9.png",
+    effect: CardEffect.ATTACK_UP,
   },
   "10": {
     id: 10,
@@ -2234,6 +2281,7 @@ export const Cards = {
     description:
       "Successful attacks restore 50 HP for each Anemone part this Axie posseses.",
     image: "10.png",
+    effect: CardEffect.SELF_HEAL,
   },
   "11": {
     id: 11,
@@ -2254,6 +2302,7 @@ export const Cards = {
     shield: 30,
     description: "End target's Last Stand.",
     image: "11.png",
+    effect: CardEffect.END_LAST_STAND,
   },
   "12": {
     id: 12,
@@ -2282,6 +2331,7 @@ export const Cards = {
     description:
       "Target cannot enter Last Stand if this card brings its HP to zero.",
     image: "12.png",
+    effect: CardEffect.END_LAST_STAND,
   },
   "13": {
     id: 13,
@@ -2309,6 +2359,7 @@ export const Cards = {
     shield: 40,
     description: "Deal 120% damage if this Axie's HP is below 50%.",
     image: "13.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "14": {
     id: 14,
@@ -2329,6 +2380,7 @@ export const Cards = {
     shield: 30,
     description: "Heal this Axie by the damage inflicted with this card.",
     image: "14.png",
+    effect: CardEffect.SELF_HEAL,
   },
   "15": {
     id: 15,
@@ -2350,6 +2402,7 @@ export const Cards = {
     description:
       "Apply Attack+ to this Axie when attacking Plant, Reptile, or Dusk targets.",
     image: "15.png",
+    effect: CardEffect.ATTACK_UP,
   },
   "16": {
     id: 16,
@@ -2377,6 +2430,7 @@ export const Cards = {
     shield: 20,
     description: "Target injured enemy if this Axie's HP is below 50%.",
     image: "16.png",
+    effect: CardEffect.PRIORITIZE,
   },
   "17": {
     id: 17,
@@ -2405,6 +2459,7 @@ export const Cards = {
     description:
       "Apply Speed+ to this Axie for 2 rounds when comboed with another Aquatic class card.",
     image: "17.png",
+    effect: CardEffect.SPEED_UP,
   },
   "18": {
     id: 18,
@@ -2425,6 +2480,7 @@ export const Cards = {
     shield: 0,
     description: "Gain 1 energy when comboed with another card.",
     image: "18.png",
+    effect: CardEffect.GAIN_ENERGY,
   },
   "19": {
     id: 19,
@@ -2445,6 +2501,7 @@ export const Cards = {
     shield: 40,
     description: "Apply Jinx to target for 2 rounds.",
     image: "19.png",
+    effect: CardEffect.JINX,
   },
   "20": {
     id: 20,
@@ -2465,6 +2522,7 @@ export const Cards = {
     shield: 30,
     description: "Apply Chill to target for 2 rounds.",
     image: "20.png",
+    effect: CardEffect.CHILL,
   },
   "21": {
     id: 21,
@@ -2485,6 +2543,7 @@ export const Cards = {
     shield: 40,
     description: "Deal 120% damage if this Axie attacks first.",
     image: "21.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "22": {
     id: 22,
@@ -2505,6 +2564,7 @@ export const Cards = {
     shield: 30,
     description: "Prioritizes furthest target",
     image: "22.png",
+    effect: CardEffect.PRIORITIZE,
   },
   "23": {
     id: 23,
@@ -2533,6 +2593,7 @@ export const Cards = {
     description:
       "Guaranteed critical strike when comboed with at least 2 other cards.",
     image: "23.png",
+    effect: CardEffect.LETHAL,
   },
   "24": {
     id: 24,
@@ -2553,6 +2614,7 @@ export const Cards = {
     shield: 0,
     description: "Draw a card when attacking an Aquatic, Bird, or Dawn target.",
     image: "24.png",
+    effect: CardEffect.DRAW_CARD,
   },
   "25": {
     id: 25,
@@ -2573,6 +2635,7 @@ export const Cards = {
     shield: 35,
     description: "Always strike first if this Axie is in Last Stand.",
     image: "25.png",
+    effect: CardEffect.STRIKE_FIRST,
   },
   "26": {
     id: 26,
@@ -2600,6 +2663,7 @@ export const Cards = {
     shield: 25,
     description: "Deal 150% damage if this Axie is in Last Stand.",
     image: "26.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "27": {
     id: 27,
@@ -2621,6 +2685,7 @@ export const Cards = {
     description:
       "Add Shield equal to the damage this cards deals to Plant targets.",
     image: "27.png",
+    effect: CardEffect.RAISE_SHIELD,
   },
   "28": {
     id: 28,
@@ -2641,6 +2706,7 @@ export const Cards = {
     shield: 30,
     description: "Strike 3 times.",
     image: "28.png",
+    effect: CardEffect.MULTI_HIT,
   },
   "29": {
     id: 29,
@@ -2669,6 +2735,7 @@ export const Cards = {
     description:
       "Increase crit chance by 20% if chained or comboed with a plant card.",
     image: "29.png",
+    effect: CardEffect.LETHAL,
   },
   "30": {
     id: 30,
@@ -2697,6 +2764,7 @@ export const Cards = {
     description:
       "Gain 1 energy per critical strike dealt by your team this round.",
     image: "30.png",
+    effect: CardEffect.GAIN_ENERGY,
   },
   "31": {
     id: 31,
@@ -2717,6 +2785,7 @@ export const Cards = {
     shield: 85,
     description: "Add 20% shield to this Axie when played in a chain.",
     image: "31.png",
+    effect: CardEffect.RAISE_SHIELD,
   },
   "32": {
     id: 32,
@@ -2744,6 +2813,7 @@ export const Cards = {
     shield: 20,
     description: "Deal 10% additional damage for each allied Bug Axie.",
     image: "32.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "33": {
     id: 33,
@@ -2764,6 +2834,7 @@ export const Cards = {
     shield: 20,
     description: "Deal 250% damage on critical strikes.",
     image: "33.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "34": {
     id: 34,
@@ -2784,6 +2855,7 @@ export const Cards = {
     shield: 50,
     description: "Apply Speed + to this Axie for 2 rounds when attacked.",
     image: "34.png",
+    effect: CardEffect.SPEED_UP,
   },
   "35": {
     id: 35,
@@ -2812,6 +2884,7 @@ export const Cards = {
     description:
       "Deal 120% damage when comboed with another 'Nut Cracker' card.",
     image: "35.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "36": {
     id: 36,
@@ -2832,6 +2905,7 @@ export const Cards = {
     shield: 40,
     description: "Destoy 1 of your opponent's energy.",
     image: "36.png",
+    effect: CardEffect.ENERGY_DESTROY,
   },
   "37": {
     id: 37,
@@ -2852,6 +2926,7 @@ export const Cards = {
     shield: 30,
     description: "Apply Lethal to target if this Axie's HP is below 30%.",
     image: "37.png",
+    effect: CardEffect.LETHAL,
   },
   "38": {
     id: 38,
@@ -2872,6 +2947,7 @@ export const Cards = {
     shield: 30,
     description: "Apply 2 Morale+ to this Axie for 2 rounds.",
     image: "38.png",
+    effect: CardEffect.MORALE_UP,
   },
   "39": {
     id: 39,
@@ -2899,6 +2975,7 @@ export const Cards = {
     shield: 0,
     description: "Gain 1 energy.",
     image: "39.png",
+    effect: CardEffect.GAIN_ENERGY,
   },
   "40": {
     id: 40,
@@ -2920,6 +2997,7 @@ export const Cards = {
     description:
       "Steal 1 energy from your opponent when comboed with another card.",
     image: "40.png",
+    effect: CardEffect.ENERGY_DESTROY,
   },
   "41": {
     id: 41,
@@ -2941,6 +3019,7 @@ export const Cards = {
     description:
       "Apply Morale+ to your team for 2 rounds if this Axie attacks while in Last Stand.",
     image: "41.png",
+    effect: CardEffect.MORALE_UP,
   },
   "42": {
     id: 42,
@@ -2962,6 +3041,7 @@ export const Cards = {
     description:
       "Draw a card if this Axie attacks at the beginning of the round.",
     image: "42.png",
+    effect: CardEffect.DRAW_CARD,
   },
   "43": {
     id: 43,
@@ -2983,6 +3063,7 @@ export const Cards = {
     description:
       "Deal 120% damage when comboed with another 'Nut Cracker' card.",
     image: "43.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "44": {
     id: 44,
@@ -3004,6 +3085,7 @@ export const Cards = {
     description:
       "Skip the closest target if there are 2 or more enemies remaining.",
     image: "44.png",
+    effect: CardEffect.PRIORITIZE,
   },
   "45": {
     id: 45,
@@ -3032,6 +3114,7 @@ export const Cards = {
     description:
       "Apply Fear to target for 1 turn. If defending, apply Fear to self until next round.",
     image: "45.png",
+    effect: CardEffect.FEAR,
   },
   "46": {
     id: 46,
@@ -3059,6 +3142,7 @@ export const Cards = {
     shield: 20,
     description: "Apply Morale- to enemy for 2 rounds.",
     image: "46.png",
+    effect: CardEffect.MORALE_DOWN,
   },
   "47": {
     id: 47,
@@ -3079,6 +3163,7 @@ export const Cards = {
     shield: 30,
     description: "Apply Jinx to target for 2 rounds.",
     image: "47.png",
+    effect: CardEffect.JINX,
   },
   "48": {
     id: 48,
@@ -3099,6 +3184,7 @@ export const Cards = {
     shield: 10,
     description: "Transfer all debuffs on this Axie to target.",
     image: "48.png",
+    effect: CardEffect.REMOVE_DEBUFF,
   },
   "49": {
     id: 49,
@@ -3119,6 +3205,7 @@ export const Cards = {
     shield: 0,
     description: "Target an Aquatic class enemy if this Axie's HP is below 50%",
     image: "49.png",
+    effect: CardEffect.PRIORITIZE,
   },
   "50": {
     id: 50,
@@ -3139,6 +3226,7 @@ export const Cards = {
     shield: 10,
     description: "Attack twice if this Axie has any debuffs.",
     image: "50.png",
+    effect: CardEffect.DOUBLE_HIT,
   },
   "51": {
     id: 51,
@@ -3166,6 +3254,7 @@ export const Cards = {
     shield: 0,
     description: "Apply Aroma on this Axie until next round.",
     image: "51.png",
+    effect: CardEffect.AROMA,
   },
   "52": {
     id: 52,
@@ -3186,6 +3275,7 @@ export const Cards = {
     shield: 40,
     description: "Apply Attack+ to this Axie.",
     image: "52.png",
+    effect: CardEffect.ATTACK_UP,
   },
   "53": {
     id: 53,
@@ -3206,6 +3296,7 @@ export const Cards = {
     shield: 30,
     description: "Deal 120% damage when chained with another 'Trump' card.",
     image: "53.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "54": {
     id: 54,
@@ -3226,6 +3317,7 @@ export const Cards = {
     shield: 0,
     description: "Disable target's horn cards next round.",
     image: "54.png",
+    effect: CardEffect.DISABLE_ABLILITY,
   },
   "55": {
     id: 55,
@@ -3247,6 +3339,7 @@ export const Cards = {
     description:
       "Skip the closest target if there are 2 or more enemies remaining.",
     image: "55.png",
+    effect: CardEffect.PRIORITIZE,
   },
   "56": {
     id: 56,
@@ -3274,6 +3367,7 @@ export const Cards = {
     shield: 50,
     description: "Deal 120% damage when chained with another 'Lunge' card.",
     image: "56.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "57": {
     id: 57,
@@ -3301,6 +3395,7 @@ export const Cards = {
     shield: 0,
     description: "Apply Sleep to target.",
     image: "57.png",
+    effect: CardEffect.SLEEP,
   },
   "58": {
     id: 58,
@@ -3321,6 +3416,7 @@ export const Cards = {
     shield: 30,
     description: "Apply Attack- on target.",
     image: "58.png",
+    effect: CardEffect.ATTACK_DOWN,
   },
   "59": {
     id: 59,
@@ -3341,6 +3437,7 @@ export const Cards = {
     shield: 40,
     description: "Target Bug class enemy if this Axie's HP is below 50%.",
     image: "59.png",
+    effect: CardEffect.PRIORITIZE,
   },
   "60": {
     id: 60,
@@ -3361,6 +3458,7 @@ export const Cards = {
     shield: 0,
     description: "Target fastest enemy.",
     image: "60.png",
+    effect: CardEffect.PRIORITIZE,
   },
   "61": {
     id: 61,
@@ -3388,6 +3486,7 @@ export const Cards = {
     shield: 20,
     description: "Deal 120% damage if this Axie attacks first.",
     image: "61.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "62": {
     id: 62,
@@ -3408,6 +3507,7 @@ export const Cards = {
     shield: 90,
     description: "Add 20% shield to this Axie for each debuff it possesses.",
     image: "62.png",
+    effect: CardEffect.RAISE_SHIELD,
   },
   "63": {
     id: 63,
@@ -3428,6 +3528,7 @@ export const Cards = {
     shield: 10,
     description: "Apply 2 Attack- to this Axie.",
     image: "63.png",
+    effect: CardEffect.ATTACK_DOWN,
   },
   "64": {
     id: 64,
@@ -3448,6 +3549,7 @@ export const Cards = {
     shield: 50,
     description: "Skip targets that are in Last Stand.",
     image: "64.png",
+    effect: CardEffect.PRIORITIZE,
   },
   "65": {
     id: 65,
@@ -3475,6 +3577,7 @@ export const Cards = {
     shield: 30,
     description: "Apply Chill to target for 2 rounds.",
     image: "65.png",
+    effect: CardEffect.CHILL,
   },
   "66": {
     id: 66,
@@ -3495,6 +3598,7 @@ export const Cards = {
     shield: 0,
     description: "Inflict 30% of this Axie's max HP to itself.",
     image: "66.png",
+    effect: CardEffect.FIXED_DAMAGE,
   },
   "67": {
     id: 67,
@@ -3523,6 +3627,7 @@ export const Cards = {
     description:
       "Stun attacker if this Axie’s shield breaks. Can only trigger once per round.",
     image: "67.png",
+    effect: CardEffect.STUN,
   },
   "68": {
     id: 68,
@@ -3550,6 +3655,7 @@ export const Cards = {
     shield: 50,
     description: "Apply poison to target when played in a chain.",
     image: "68.png",
+    effect: CardEffect.POISON,
   },
   "69": {
     id: 69,
@@ -3570,6 +3676,7 @@ export const Cards = {
     shield: 40,
     description: "Apply Attack- to target.",
     image: "69.png",
+    effect: CardEffect.ATTACK_DOWN,
   },
   "70": {
     id: 70,
@@ -3590,6 +3697,7 @@ export const Cards = {
     shield: 50,
     description: "Deal 50% more damage when attacking Bug targets.",
     image: "70.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "71": {
     id: 71,
@@ -3610,6 +3718,7 @@ export const Cards = {
     shield: 40,
     description: "Target cannot be healed until next round.",
     image: "71.png",
+    effect: CardEffect.HEAL_BLOCK,
   },
   "72": {
     id: 72,
@@ -3630,6 +3739,7 @@ export const Cards = {
     shield: 30,
     description: "Apply Fragile to target until next round.",
     image: "72.png",
+    effect: CardEffect.FRAGILE,
   },
   "73": {
     id: 73,
@@ -3657,6 +3767,7 @@ export const Cards = {
     shield: 0,
     description: "Apply Speed- to target for 2 rounds.",
     image: "73.png",
+    effect: CardEffect.SPEED_DOWN,
   },
   "74": {
     id: 74,
@@ -3678,6 +3789,7 @@ export const Cards = {
     description:
       "Steal energy from your opponent when chained with another 'Bug Signal' card.",
     image: "74.png",
+    effect: CardEffect.ENERGY_DESTROY,
   },
   "75": {
     id: 75,
@@ -3698,6 +3810,7 @@ export const Cards = {
     shield: 50,
     description: "Apply Fear to shielded targets.",
     image: "75.png",
+    effect: CardEffect.FEAR,
   },
   "76": {
     id: 76,
@@ -3718,6 +3831,7 @@ export const Cards = {
     shield: 0,
     description: "Deal 30% more damage to shielded targets.",
     image: "76.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "77": {
     id: 77,
@@ -3745,6 +3859,7 @@ export const Cards = {
     shield: 50,
     description: "Randomly discard 1 card from your enemy's hand.",
     image: "77.png",
+    effect: CardEffect.DISCARD,
   },
   "78": {
     id: 78,
@@ -3765,6 +3880,7 @@ export const Cards = {
     shield: 20,
     description: "Gain 1 energy when comboed with a plant card.",
     image: "78.png",
+    effect: CardEffect.GAIN_ENERGY,
   },
   "79": {
     id: 79,
@@ -3792,6 +3908,7 @@ export const Cards = {
     shield: 40,
     description: "Heal this Axie by the damage inflicted with this card.",
     image: "79.png",
+    effect: CardEffect.SELF_HEAL,
   },
   "80": {
     id: 80,
@@ -3812,6 +3929,7 @@ export const Cards = {
     shield: 10,
     description: "Randomly discard 1 card from your enemy's hand.",
     image: "80.png",
+    effect: CardEffect.DISCARD,
   },
   "81": {
     id: 81,
@@ -3839,6 +3957,7 @@ export const Cards = {
     shield: 30,
     description: "Apply Fear to target for 2 turns when played in a Chain.",
     image: "81.png",
+    effect: CardEffect.FEAR,
   },
   "82": {
     id: 82,
@@ -3859,6 +3978,7 @@ export const Cards = {
     shield: 0,
     description: "Add 100% more damage when comboed with another card.",
     image: "82.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "83": {
     id: 83,
@@ -3886,6 +4006,7 @@ export const Cards = {
     shield: 40,
     description: "Apply Stench to enemy for 1 round.",
     image: "83.png",
+    effect: CardEffect.STENCH,
   },
   "84": {
     id: 84,
@@ -3906,6 +4027,7 @@ export const Cards = {
     shield: 0,
     description: "Attack twice when comboed with another card.",
     image: "84.png",
+    effect: CardEffect.DOUBLE_HIT,
   },
   "85": {
     id: 85,
@@ -3934,6 +4056,7 @@ export const Cards = {
     description:
       "Apply stun when struck by Aquatic or Bird class cards. Can only trigger once per round.",
     image: "85.png",
+    effect: CardEffect.STUN,
   },
   "86": {
     id: 86,
@@ -3954,6 +4077,7 @@ export const Cards = {
     shield: 40,
     description: "Disable target's melee cards next round.",
     image: "86.png",
+    effect: CardEffect.DISABLE_ABLILITY,
   },
   "87": {
     id: 87,
@@ -3975,6 +4099,7 @@ export const Cards = {
     description:
       "Deal 200% damage when attacking in Last stand. Axie's Last Stand ends after it attacks.",
     image: "87.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "88": {
     id: 88,
@@ -3995,6 +4120,7 @@ export const Cards = {
     shield: 30,
     description: "Deal 130% damage to debuffed targets.",
     image: "88.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "89": {
     id: 89,
@@ -4022,6 +4148,7 @@ export const Cards = {
     shield: 80,
     description: "Target a bird if comboed with 2 or more cards.",
     image: "89.png",
+    effect: CardEffect.PRIORITIZE,
   },
   "90": {
     id: 90,
@@ -4049,6 +4176,7 @@ export const Cards = {
     shield: 40,
     description: "Heal this Axie for 120 HP.",
     image: "90.png",
+    effect: CardEffect.SELF_HEAL,
   },
   "91": {
     id: 91,
@@ -4069,6 +4197,7 @@ export const Cards = {
     shield: 50,
     description: "Remove all debuffs from this Axie.",
     image: "91.png",
+    effect: CardEffect.REMOVE_DEBUFF,
   },
   "92": {
     id: 92,
@@ -4089,6 +4218,7 @@ export const Cards = {
     shield: 80,
     description: "Gain 1 energy if this Axie is struck by an Aquatic card.",
     image: "92.png",
+    effect: CardEffect.GAIN_ENERGY,
   },
   "93": {
     id: 93,
@@ -4110,6 +4240,7 @@ export const Cards = {
     description:
       "Remove all debuffs from a teammate if its directly in front (same row) of this Axie.",
     image: "93.png",
+    effect: CardEffect.REMOVE_DEBUFF,
   },
   "94": {
     id: 94,
@@ -4130,6 +4261,7 @@ export const Cards = {
     shield: 115,
     description: "Draw a card if this Axie's shield doesn't break this round.",
     image: "94.png",
+    effect: CardEffect.DRAW_CARD,
   },
   "95": {
     id: 95,
@@ -4157,6 +4289,7 @@ export const Cards = {
     shield: 70,
     description: "Increased 20% damage when chained with another plant card.",
     image: "95.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "96": {
     id: 96,
@@ -4184,6 +4317,7 @@ export const Cards = {
     shield: 40,
     description: "Deal 120% damage if this Axie's shield breaks.",
     image: "96.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "97": {
     id: 97,
@@ -4204,6 +4338,7 @@ export const Cards = {
     shield: 40,
     description: "Heal this Axie for 120 HP.",
     image: "97.png",
+    effect: CardEffect.SELF_HEAL,
   },
   "98": {
     id: 98,
@@ -4225,6 +4360,7 @@ export const Cards = {
     description:
       "Heal front teammate for 270 HP. If there are no front teammates, heal this Axie instead.",
     image: "98.png",
+    effect: CardEffect.ALLY_HEAL,
   },
   "99": {
     id: 99,
@@ -4252,6 +4388,7 @@ export const Cards = {
     shield: 20,
     description: "Deal 120% damage if this Axie attacks last.",
     image: "99.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "100": {
     id: 100,
@@ -4272,6 +4409,7 @@ export const Cards = {
     shield: 30,
     description: "Target the fastest enemy.",
     image: "100.png",
+    effect: CardEffect.PRIORITIZE,
   },
   "101": {
     id: 101,
@@ -4300,6 +4438,7 @@ export const Cards = {
     description:
       "Steal 1 energy from your opponent when comboed with another card.",
     image: "101.png",
+    effect: CardEffect.ENERGY_DESTROY,
   },
   "102": {
     id: 102,
@@ -4327,6 +4466,7 @@ export const Cards = {
     shield: 55,
     description: "Heal this Axie by the damage this card inflicts.",
     image: "102.png",
+    effect: CardEffect.SELF_HEAL,
   },
   "103": {
     id: 103,
@@ -4348,6 +4488,7 @@ export const Cards = {
     description:
       "Heal this Axie by the damage this card inflicts on a Plant target.",
     image: "103.png",
+    effect: CardEffect.SELF_HEAL,
   },
   "104": {
     id: 104,
@@ -4368,6 +4509,7 @@ export const Cards = {
     shield: 40,
     description: "Heal front teammate for 190 HP.",
     image: "104.png",
+    effect: CardEffect.ALLY_HEAL,
   },
   "105": {
     id: 105,
@@ -4396,6 +4538,7 @@ export const Cards = {
     description:
       "Gain 1 energy if this Axie's shield breaks. Can only trigger once per round.",
     image: "105.png",
+    effect: CardEffect.GAIN_ENERGY,
   },
   "106": {
     id: 106,
@@ -4416,6 +4559,7 @@ export const Cards = {
     shield: 30,
     description: "Draw a card if struck by a Beast, Bug, or Mech card.",
     image: "106.png",
+    effect: CardEffect.DRAW_CARD,
   },
   "107": {
     id: 107,
@@ -4436,6 +4580,7 @@ export const Cards = {
     shield: 80,
     description: "When hit, disable the attacker's ranged cards next round.",
     image: "107.png",
+    effect: CardEffect.DISABLE_ABLILITY,
   },
   "108": {
     id: 108,
@@ -4457,6 +4602,7 @@ export const Cards = {
     description:
       "Apply poison each time this card is used to attack or defend.",
     image: "108.png",
+    effect: CardEffect.POISON,
   },
   "109": {
     id: 109,
@@ -4478,6 +4624,7 @@ export const Cards = {
     description:
       "Cannot be targeted by Aquatic cards if this Axie has teammates remaining.",
     image: "109.png",
+    effect: CardEffect.UNTARGETABLE,
   },
   "110": {
     id: 110,
@@ -4498,6 +4645,7 @@ export const Cards = {
     shield: 50,
     description: "Disable target's mouth cards next round.",
     image: "110.png",
+    effect: CardEffect.DISABLE_ABLILITY,
   },
   "111": {
     id: 111,
@@ -4525,6 +4673,7 @@ export const Cards = {
     shield: 70,
     description: "Draw a card if this Axie's shield breaks.",
     image: "111.png",
+    effect: CardEffect.DRAW_CARD,
   },
   "112": {
     id: 112,
@@ -4546,6 +4695,7 @@ export const Cards = {
     description:
       "Target enemy with lowest shield when comboed with 2 or more cards.",
     image: "112.png",
+    effect: CardEffect.PRIORITIZE,
   },
   "113": {
     id: 113,
@@ -4566,6 +4716,7 @@ export const Cards = {
     shield: 30,
     description: "Double shield from this card when comboed with a plant card.",
     image: "113.png",
+    effect: CardEffect.RAISE_SHIELD,
   },
   "114": {
     id: 114,
@@ -4600,6 +4751,7 @@ export const Cards = {
     shield: 70,
     description: "Reflect 40% of melee damage back at attacker.",
     image: "114.png",
+    effect: CardEffect.DAMAGE_REFLECT,
   },
   "115": {
     id: 115,
@@ -4620,6 +4772,7 @@ export const Cards = {
     shield: 135,
     description: "Add 15% of this Axie's shield to adjacent teammates.",
     image: "115.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "116": {
     id: 116,
@@ -4640,6 +4793,7 @@ export const Cards = {
     shield: 60,
     description: "Appy Speed- to target for 2 rounds.",
     image: "116.png",
+    effect: CardEffect.SPEED_DOWN,
   },
   "117": {
     id: 117,
@@ -4667,6 +4821,7 @@ export const Cards = {
     shield: 40,
     description: "Apply Stench to target until end of round.",
     image: "117.png",
+    effect: CardEffect.STENCH,
   },
   "118": {
     id: 118,
@@ -4687,6 +4842,7 @@ export const Cards = {
     shield: 50,
     description: "Deal 120% damage when chained with another 'lunge' card.",
     image: "118.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "119": {
     id: 119,
@@ -4707,6 +4863,7 @@ export const Cards = {
     shield: 60,
     description: "Deal 130% damage if target is faster than this Axie.",
     image: "119.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "120": {
     id: 120,
@@ -4727,6 +4884,7 @@ export const Cards = {
     shield: 60,
     description: "Reflect 50% of ranged damage back at attacker.",
     image: "120.png",
+    effect: CardEffect.DAMAGE_REFLECT,
   },
   "121": {
     id: 121,
@@ -4747,6 +4905,7 @@ export const Cards = {
     shield: 40,
     description: "Apply Speed- to attacker for 2 rounds.",
     image: "121.png",
+    effect: CardEffect.SPEED_DOWN,
   },
   "122": {
     id: 122,
@@ -4767,6 +4926,7 @@ export const Cards = {
     shield: 20,
     description: "Recover 20 shield per turn.",
     image: "122.png",
+    effect: CardEffect.RAISE_SHIELD,
   },
   "123": {
     id: 123,
@@ -4794,6 +4954,7 @@ export const Cards = {
     shield: 40,
     description: "Target the furthest enemy.",
     image: "123.png",
+    effect: CardEffect.PRIORITIZE,
   },
   "124": {
     id: 124,
@@ -4814,6 +4975,7 @@ export const Cards = {
     shield: 20,
     description: "Gain 1 energy if target is faster than this Axie.",
     image: "124.png",
+    effect: CardEffect.GAIN_ENERGY,
   },
   "125": {
     id: 125,
@@ -4835,6 +4997,7 @@ export const Cards = {
     description:
       "Heal this Axie by damage inflicted with this card to Aquatic targets.",
     image: "125.png",
+    effect: CardEffect.SELF_HEAL,
   },
   "126": {
     id: 126,
@@ -4870,6 +5033,7 @@ export const Cards = {
     description:
       "Apply Stun to enemy when comboed with at least 2 additional cards.",
     image: "126.png",
+    effect: CardEffect.STUN,
   },
   "127": {
     id: 127,
@@ -4897,6 +5061,7 @@ export const Cards = {
     shield: 30,
     description: "Reduce damage taken by 15% this round.",
     image: "127.png",
+    effect: CardEffect.RAISE_SHIELD,
   },
   "128": {
     id: 128,
@@ -4917,6 +5082,7 @@ export const Cards = {
     shield: 60,
     description: "Generate 1 energy when attacking a buffed target.",
     image: "128.png",
+    effect: CardEffect.GAIN_ENERGY,
   },
   "129": {
     id: 129,
@@ -4944,6 +5110,7 @@ export const Cards = {
     shield: 40,
     description: "Deal 150% damage after round 4.",
     image: "129.png",
+    effect: CardEffect.RAISE_DAMAGE,
   },
   "130": {
     id: 130,
@@ -4972,6 +5139,7 @@ export const Cards = {
     description:
       "Attacks that break this Axie’s shield cannot do additional damage. Can only trigger once per round.",
     image: "130.png",
+    effect: CardEffect.FIXED_DAMAGE,
   },
   "131": {
     id: 131,
@@ -4992,6 +5160,7 @@ export const Cards = {
     shield: 50,
     description: "Apply Attack- to poisoned targets.",
     image: "131.png",
+    effect: CardEffect.ATTACK_DOWN,
   },
   "132": {
     id: 132,
@@ -5012,6 +5181,7 @@ export const Cards = {
     shield: 20,
     description: "Apply Poison to target.",
     image: "132.png",
+    effect: CardEffect.POISON,
   },
 };
 
