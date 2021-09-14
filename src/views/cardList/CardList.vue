@@ -64,9 +64,10 @@
       <v-col cols="12">
         <v-text-field
           v-model="filter.text"
-          label="Search"
+          label="Card name, part name or card description"
           @input="changeFilter"
           clearable
+          placeholder="Card name, part name or card description"
         >
         </v-text-field>
       </v-col>
@@ -116,16 +117,16 @@ export default {
       filteredCards: [],
     };
   },
-  //${card.parts} = [];
-  
   methods: {
     changeFilter() {
       const vm = this;
-      let filterArr = Object.keys(this.filter).filter(
-        (key) => this.filter[key] != null
+      if(vm.filter.text === "")
+        vm.filter.text = null;
+      let filterArr = Object.keys(vm.filter).filter(
+        (key) => vm.filter[key] != null
       );
 
-      this.filteredCards = Object.values(this.cardMap).filter((card) => {
+      vm.filteredCards = Object.values(vm.cardMap).filter((card) => {
         let achou = true;
         for (let i = 0; i < filterArr.length; i++) {
           let key = filterArr[i];
