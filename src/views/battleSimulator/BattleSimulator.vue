@@ -5,13 +5,15 @@
       <div class="header">
         <div class="header-grid-container">
           <v-row class="turn-order">
-            <v-col cols="12" class="round-header">
-              Round {{ game.round }}
-            </v-col>
+            <v-col class="round-header"> Round {{ game.round }} </v-col>
             <v-col v-for="(axie, index1) in game.turnOrder" :key="index1">
-              <div v-if="axie.owner === 1" class="turn-order-div-p1" @click="removeCardsFromPlayedP1(axie.id)">
+              <div
+                v-if="axie.owner === 1"
+                class="turn-order-div-p1"
+                @click="removeCardsFromPlayedP1(axie.id)"
+              >
                 <AxieTypeIcon :axieType="axie.type" />
-                <div class="attacking-cards" >
+                <div class="attacking-cards">
                   <div
                     v-for="(card, index2) in game.getPlayedCardsFromAxie(
                       axie.id,
@@ -23,9 +25,13 @@
                   </div>
                 </div>
               </div>
-              <div v-else class="turn-order-div-p2" @click="removeCardsFromPlayedP2(axie.id)">
+              <div
+                v-else
+                class="turn-order-div-p2"
+                @click="removeCardsFromPlayedP2(axie.id)"
+              >
                 <AxieTypeIcon :axieType="axie.type" />
-                <div class="attacking-cards" >
+                <div class="attacking-cards">
                   <div
                     v-for="(card, index2) in game.getPlayedCardsFromAxie(
                       axie.id,
@@ -97,20 +103,30 @@
           </div>
           <div class="cards">
             <v-row class="ml-5 mr-5 mb-5 p1-cards-background">
-              <AxieCardSmall
-                :card="card"
-                v-for="(card, index) in getCardsInHandP1()"
-                :key="'p1card' + index"
-                @click.native="chooseCardP1(card.gameId)"
-              />
+              <div class="axie-cards"
+                v-for="(axie, index) in getCardsInHandP1()"
+                :key="'p1cardaxie' + index"
+              >
+                <AxieCardSmall
+                  :card="card"
+                  v-for="(card, index) in axie"
+                  :key="'p1card' + index"
+                  @click.native="chooseCardP1(card.gameId)"
+                />
+              </div>
             </v-row>
             <v-row class="ml-5 mr-5 p2-cards-background">
-              <AxieCardSmall
-                :card="card"
-                v-for="(card, index) in getCardsInHandP2()"
-                :key="'p2card' + index"
-                @click.native="chooseCardP2(card.gameId)"
-              />
+              <div class="axie-cards"
+                v-for="(axie, index) in getCardsInHandP2()"
+                :key="'p2cardaxie' + index"
+              >
+                <AxieCardSmall
+                  :card="card"
+                  v-for="(card, index) in axie"
+                  :key="'p2card' + index"
+                  @click.native="chooseCardP2(card.gameId)"
+                />
+              </div>
             </v-row>
           </div>
           <div class="p2-stats">
@@ -137,6 +153,10 @@
   </v-container>
 </template>
 <style scoped>
+.axie-cards{
+  display:flex;
+  margin-right: 10px;
+}
 .attacking-cards {
   display: flex;
 }
@@ -417,29 +437,35 @@ export default {
     },
     chooseCardP1(cardId) {
       this.game.chooseCard(this.game.player1.id, cardId);
-      this.$forceUpdate();
     },
     chooseCardP2(cardId) {
       this.game.chooseCard(this.game.player2.id, cardId);
-      this.$forceUpdate();
     },
     getCardsInHandP1() {
       let playedCards = this.game.player1.deck.played;
       let hand = this.game.player1.deck.hand;
-      return this.getHandsMinusPlayed(playedCards, hand);
+      let cardsInHand = this.getHandsMinusPlayedDividedByAxies(
+        playedCards,
+        hand
+      );
+      return Object.values(cardsInHand);
     },
     getCardsInHandP2() {
       let playedCards = this.game.player2.deck.played;
       let hand = this.game.player2.deck.hand;
-      return this.getHandsMinusPlayed(playedCards, hand);
+      let cardsInHand = this.getHandsMinusPlayedDividedByAxies(
+        playedCards,
+        hand
+      );
+      return Object.values(cardsInHand);
     },
-    removeCardsFromPlayedP1(axieId){
-      this.game.removeCardsFromPlayed(this.game.player1.id,axieId);
+    removeCardsFromPlayedP1(axieId) {
+      this.game.removeCardsFromPlayed(this.game.player1.id, axieId);
     },
-    removeCardsFromPlayedP2(axieId){
-      this.game.removeCardsFromPlayed(this.game.player2.id,axieId);
+    removeCardsFromPlayedP2(axieId) {
+      this.game.removeCardsFromPlayed(this.game.player2.id, axieId);
     },
-    getHandsMinusPlayed(playedCards, hand) {
+    getHandsMinusPlayedDividedByAxies(playedCards, hand) {
       let playedMap = {};
       let handMap = {};
       hand.forEach((card) => (handMap[card.gameId] = card));
@@ -450,7 +476,13 @@ export default {
           handMinusPlayed.push(hand[i]);
         }
       }
-      return handMinusPlayed;
+      let mapAxies = {};
+      for (let i = 0; i < handMinusPlayed.length; i++) {
+        let key = handMinusPlayed[i].owner;
+        if (!mapAxies[key]) mapAxies[key] = [];
+        mapAxies[key].push(handMinusPlayed[i]);
+      }
+      return mapAxies;
     },
   },
   created() {
