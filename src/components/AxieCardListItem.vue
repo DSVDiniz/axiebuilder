@@ -120,7 +120,7 @@
 import AxiePartIcon from "./icons/AxiePartIcon.vue";
 import { AxieTypeSelect ,CardAttackType} from "@/game/data/data.js";
 export default {
-  name: "AxieCard",
+  name: "AxieCardListItem",
   components: { AxiePartIcon },
   props: {
     card: { type: Object, default: () => {} },

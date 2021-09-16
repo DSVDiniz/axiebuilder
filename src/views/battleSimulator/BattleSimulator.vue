@@ -9,26 +9,33 @@
               Round {{ game.round }}
             </v-col>
             <v-col v-for="(axie, index1) in game.turnOrder" :key="index1">
-              <div v-if="axie.owner === 1" class="turn-order-div-p1">
+              <div v-if="axie.owner === 1" class="turn-order-div-p1" @click="removeCardsFromPlayedP1(axie.id)">
                 <AxieTypeIcon :axieType="axie.type" />
-                <div
-                  v-for="(card, index2) in game.getPlayedCardsFromAxie(
-                    axie.id,
-                    axie.owner
-                  )"
-                  :key="'p1hand' + index2"
-                  >C{{ card.gameId }}-</div
-                >
+                <div class="attacking-cards" >
+                  <div
+                    v-for="(card, index2) in game.getPlayedCardsFromAxie(
+                      axie.id,
+                      axie.owner
+                    )"
+                    :key="'p1hand' + index2"
+                  >
+                    <AxieCardExtraSmall :card="card" />
+                  </div>
+                </div>
               </div>
-              <div v-else class="turn-order-div-p2">
+              <div v-else class="turn-order-div-p2" @click="removeCardsFromPlayedP2(axie.id)">
                 <AxieTypeIcon :axieType="axie.type" />
-                <div
-                  v-for="(card, index2) in game.getPlayedCardsFromAxie(
-                    axie.id,
-                    axie.owner
-                  )"
-                  :key="'p2hand' + index2"
-                >C{{ card.gameId }}-</div>
+                <div class="attacking-cards" >
+                  <div
+                    v-for="(card, index2) in game.getPlayedCardsFromAxie(
+                      axie.id,
+                      axie.owner
+                    )"
+                    :key="'p2hand' + index2"
+                  >
+                    <AxieCardExtraSmall :card="card" />
+                  </div>
+                </div>
               </div>
             </v-col>
           </v-row>
@@ -130,6 +137,9 @@
   </v-container>
 </template>
 <style scoped>
+.attacking-cards {
+  display: flex;
+}
 .end-turn-button {
   position: absolute;
   width: 200px;
@@ -142,11 +152,11 @@
 }
 .p1-cards-background {
   background-color: #cddae6;
-  min-height:138px;
+  min-height: 138px;
 }
 .p2-cards-background {
   background-color: #e6cdd1;
-  min-height:138px;
+  min-height: 138px;
 }
 
 .stats-font {
@@ -386,11 +396,13 @@ import Game from "@/game/game.js";
 import Player from "@/game/player.js";
 import AxieTypeIcon from "@/components/icons/AxieTypeIcon.vue";
 import AxieCardSmall from "@/components/AxieCardSmall.vue";
+import AxieCardExtraSmall from "@/components/AxieCardExtraSmall.vue";
 export default {
   name: "BattleSimulator",
   components: {
     AxieTypeIcon,
     AxieCardSmall,
+    AxieCardExtraSmall,
   },
   props: {},
   data() {
@@ -414,26 +426,32 @@ export default {
     getCardsInHandP1() {
       let playedCards = this.game.player1.deck.played;
       let hand = this.game.player1.deck.hand;
-      return this.getHandsMinusPlayed(playedCards,hand);
+      return this.getHandsMinusPlayed(playedCards, hand);
     },
     getCardsInHandP2() {
       let playedCards = this.game.player2.deck.played;
       let hand = this.game.player2.deck.hand;
-      return this.getHandsMinusPlayed(playedCards,hand);
+      return this.getHandsMinusPlayed(playedCards, hand);
     },
-    getHandsMinusPlayed(playedCards,hand){
+    removeCardsFromPlayedP1(axieId){
+      this.game.removeCardsFromPlayed(this.game.player1.id,axieId);
+    },
+    removeCardsFromPlayedP2(axieId){
+      this.game.removeCardsFromPlayed(this.game.player2.id,axieId);
+    },
+    getHandsMinusPlayed(playedCards, hand) {
       let playedMap = {};
       let handMap = {};
-      hand.forEach(card=>handMap[card.gameId] = card);
-      playedCards.forEach(card=>playedMap[card.gameId] = card);
+      hand.forEach((card) => (handMap[card.gameId] = card));
+      playedCards.forEach((card) => (playedMap[card.gameId] = card));
       let handMinusPlayed = [];
-      for(let i=0; i<hand.length;i++){
-        if(!playedMap[hand[i].gameId]){
+      for (let i = 0; i < hand.length; i++) {
+        if (!playedMap[hand[i].gameId]) {
           handMinusPlayed.push(hand[i]);
         }
       }
       return handMinusPlayed;
-    }
+    },
   },
   created() {
     let axieBird = new Axie();

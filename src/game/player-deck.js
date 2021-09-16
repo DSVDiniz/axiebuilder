@@ -75,8 +75,8 @@ export default class PlayerDeck {
   getCardFromHand(cardId){
     return this.hand.find((card) => card.gameId === cardId);
   }
-  getCardFromPlayed(cardId){
-    return this.played.find((card) => card.gameId === cardId);
+  getCardsFromPlayed(axieId){
+    return this.played.filter((card) => card.owner === axieId);
   }
   discardPlayedCards() {
     this.cemetery = this.cemetery.concat(this.played);

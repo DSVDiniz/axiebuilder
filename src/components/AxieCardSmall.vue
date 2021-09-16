@@ -78,7 +78,7 @@
 </style>
 <script>
 export default {
-  name: "AxieCard",
+  name: "AxieCardSmall",
   components: {},
   props: {
     card: { type: Object, default: () => {} },

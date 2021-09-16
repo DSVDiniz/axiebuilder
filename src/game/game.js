@@ -132,4 +132,12 @@ export default class Game {
       this.player2.addCardToPlayed(cardId);
     }
   }
+  removeCardsFromPlayed(playerId,axieId){
+    if (this.gameState !== GameState.BEGIN_CHOOSING_PHASE) return;
+    if (this.player1.id === playerId) {
+      this.player1.removeCardsFromPlayed(axieId);
+    } else {
+      this.player2.removeCardsFromPlayed(axieId);
+    }
+  }
 }

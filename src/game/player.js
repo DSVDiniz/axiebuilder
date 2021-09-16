@@ -62,11 +62,13 @@ export default class Player {
     return (energy - cost) >= 0;
   }
 
-  removeCardFromPlayed(cardId) {
-    let card = this.deck.getCardFromPlayed(cardId);
-    if (card) {
-      this.addEnergy(card.cost);
-      this.deck.removeCardFromPlayed(card.gameId);
+  removeCardsFromPlayed(axieId) {
+    let cards = this.deck.getCardsFromPlayed(axieId);
+    if (cards) {
+      for(let i=0; i<cards.length;i++){
+        this.addEnergy(cards[i].cost);
+        this.deck.removeCardFromPlayed(cards[i].gameId);
+      }
     }
   }
 }
