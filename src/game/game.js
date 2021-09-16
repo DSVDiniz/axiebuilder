@@ -3,7 +3,7 @@ export default class Game {
   round = 0;
   player1 = null;
   player2 = null;
-  finisheds = false;
+  finished = false;
   winner = null;
   gameState = null;
   turnOrder = [];
@@ -33,16 +33,20 @@ export default class Game {
   }
   endChoosingPhase() {
     this.gameState = GameState.END_CHOOSING_PHASE;
+    return this.startBattlePhase();
   }
   startBattlePhase() {
     this.gameState = GameState.START_BATTLE_PHASE;
+    return this.endBattlePhase();
   }
   endBattlePhase() {
     this.gameState = GameState.END_BATTLE_PHASE;
+    return this.endRound();
   }
   endRound() {
     this.gameState = GameState.END_ROUND;
     this.round++;
+    return this.beginRound();
   }
 
   decideTurnOrder() {

@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <div class="end-turn-button" @click="game.endChoosingPhase()">End Turn</div>
+    <div class="end-turn-button" @click="endChoosingPhase()">End Turn</div>
     <div class="grid-container">
       <div class="header">
         <div class="header-grid-container">
@@ -484,6 +484,13 @@ export default {
       }
       return mapAxies;
     },
+    endChoosingPhase(){
+      if(this.game.endChoosingPhase()){
+        this.game.beginChoosingPhase();
+      }else{
+        //game end
+      }
+    }
   },
   created() {
     let axieBird = new Axie();
