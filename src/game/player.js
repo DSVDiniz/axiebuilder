@@ -49,4 +49,24 @@ export default class Player {
   isDead() {
     return this.axies.filter((axie) => axie.dead).length === 3;
   }
+
+  addCardToPlayed(cardId) {
+    let card = this.deck.getCardFromHand(cardId);
+    if (card && this.canPlayCard(card.cost, this.energy)) {
+      this.addEnergy(-card.cost);
+      this.deck.addCardToPlayed(card.gameId);
+    }
+  }
+
+  canPlayCard(cost, energy){
+    return (energy - cost) >= 0;
+  }
+
+  removeCardFromPlayed(cardId) {
+    let card = this.deck.getCardFromPlayed(cardId);
+    if (card) {
+      this.addEnergy(card.cost);
+      this.deck.removeCardFromPlayed(card.gameId);
+    }
+  }
 }

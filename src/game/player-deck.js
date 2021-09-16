@@ -53,9 +53,15 @@ export default class PlayerDeck {
     this.shuffleDeck();
   }
   addCardToPlayed(cardId){
-    let newCard = this.hand.filter(card=>card.gameId === cardId)[0];
+    let newCard = this.hand.find(card=>card.gameId === cardId);
     if(newCard && !this.checkAxieFourCardLimit(newCard.owner)){
       this.played.push(newCard);
+    }
+  }
+  removeCardFromPlayed(cardId){
+    let cardIndex = this.played.findIndex(card=>card.gameId === cardId);
+    if(cardIndex !== -1){
+      this.played.splice(cardIndex,1);
     }
   }
   checkAxieFourCardLimit(ownerId){
@@ -65,6 +71,12 @@ export default class PlayerDeck {
     let remainingHand = this.getRemainingHand(this.played,this.hand);
     this.hand = [...remainingHand];
     return this.played;
+  }
+  getCardFromHand(cardId){
+    return this.hand.find((card) => card.gameId === cardId);
+  }
+  getCardFromPlayed(cardId){
+    return this.played.find((card) => card.gameId === cardId);
   }
   discardPlayedCards() {
     this.cemetery = this.cemetery.concat(this.played);

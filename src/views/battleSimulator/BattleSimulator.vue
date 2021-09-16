@@ -1,15 +1,34 @@
 <template>
   <v-container>
+    <div class="end-turn-button" @click="game.endChoosingPhase()">End Turn</div>
     <div class="grid-container">
       <div class="header">
         <div class="header-grid-container">
           <v-row class="turn-order">
-            <v-col v-for="(axie, index) in game.getTurnOrder()" :key="index">
+            <v-col cols="12" class="round-header">
+              Round {{ game.round }}
+            </v-col>
+            <v-col v-for="(axie, index1) in game.turnOrder" :key="index1">
               <div v-if="axie.owner === 1" class="turn-order-div-p1">
                 <AxieTypeIcon :axieType="axie.type" />
+                <div
+                  v-for="(card, index2) in game.getPlayedCardsFromAxie(
+                    axie.id,
+                    axie.owner
+                  )"
+                  :key="'p1hand' + index2"
+                  >C{{ card.gameId }}-</div
+                >
               </div>
               <div v-else class="turn-order-div-p2">
                 <AxieTypeIcon :axieType="axie.type" />
+                <div
+                  v-for="(card, index2) in game.getPlayedCardsFromAxie(
+                    axie.id,
+                    axie.owner
+                  )"
+                  :key="'p2hand' + index2"
+                >C{{ card.gameId }}-</div>
               </div>
             </v-col>
           </v-row>
@@ -73,15 +92,17 @@
             <v-row class="ml-5 mr-5 mb-5 p1-cards-background">
               <AxieCardSmall
                 :card="card"
-                v-for="(card, index) in game.player1.deck.hand"
+                v-for="(card, index) in getCardsInHandP1()"
                 :key="'p1card' + index"
+                @click.native="chooseCardP1(card.gameId)"
               />
             </v-row>
             <v-row class="ml-5 mr-5 p2-cards-background">
               <AxieCardSmall
                 :card="card"
-                v-for="(card, index) in game.player1.deck.hand"
-                :key="'p1card' + index"
+                v-for="(card, index) in getCardsInHandP2()"
+                :key="'p2card' + index"
+                @click.native="chooseCardP2(card.gameId)"
               />
             </v-row>
           </div>
@@ -109,11 +130,23 @@
   </v-container>
 </template>
 <style scoped>
+.end-turn-button {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  z-index: 10;
+  border: 5px black solid;
+  top: 58%;
+  left: 44.5%;
+}
 .p1-cards-background {
   background-color: #cddae6;
+  min-height:138px;
 }
 .p2-cards-background {
   background-color: #e6cdd1;
+  min-height:138px;
 }
 
 .stats-font {
@@ -370,6 +403,37 @@ export default {
       if (mirror) return AxiePositionSelect[position].text + "_M";
       else return AxiePositionSelect[position].text;
     },
+    chooseCardP1(cardId) {
+      this.game.chooseCard(this.game.player1.id, cardId);
+      this.$forceUpdate();
+    },
+    chooseCardP2(cardId) {
+      this.game.chooseCard(this.game.player2.id, cardId);
+      this.$forceUpdate();
+    },
+    getCardsInHandP1() {
+      let playedCards = this.game.player1.deck.played;
+      let hand = this.game.player1.deck.hand;
+      return this.getHandsMinusPlayed(playedCards,hand);
+    },
+    getCardsInHandP2() {
+      let playedCards = this.game.player2.deck.played;
+      let hand = this.game.player2.deck.hand;
+      return this.getHandsMinusPlayed(playedCards,hand);
+    },
+    getHandsMinusPlayed(playedCards,hand){
+      let playedMap = {};
+      let handMap = {};
+      hand.forEach(card=>handMap[card.gameId] = card);
+      playedCards.forEach(card=>playedMap[card.gameId] = card);
+      let handMinusPlayed = [];
+      for(let i=0; i<hand.length;i++){
+        if(!playedMap[hand[i].gameId]){
+          handMinusPlayed.push(hand[i]);
+        }
+      }
+      return handMinusPlayed;
+    }
   },
   created() {
     let axieBird = new Axie();
@@ -429,6 +493,7 @@ export default {
     // player2 = JSON.parse(localStorage.getItem("player2"));
     this.game.initialize(player1, player2);
     this.game.beginRound();
+    this.game.beginChoosingPhase();
   },
 };
 </script>
