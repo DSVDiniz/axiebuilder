@@ -103,7 +103,8 @@
           </div>
           <div class="cards">
             <v-row class="ml-5 mr-5 mb-5 p1-cards-background">
-              <div class="axie-cards"
+              <div
+                class="axie-cards"
                 v-for="(axie, index) in getCardsInHandP1()"
                 :key="'p1cardaxie' + index"
               >
@@ -116,7 +117,8 @@
               </div>
             </v-row>
             <v-row class="ml-5 mr-5 p2-cards-background">
-              <div class="axie-cards"
+              <div
+                class="axie-cards"
                 v-for="(axie, index) in getCardsInHandP2()"
                 :key="'p2cardaxie' + index"
               >
@@ -150,11 +152,63 @@
         </div>
       </div>
     </div>
+    <v-dialog v-model="discardDialog">
+      <v-card>
+        <v-card-title class="text-h5 grey lighten-2"> Discard </v-card-title>
+        <div v-if="discardInfo.p1DiscardAmount > 0">
+          <v-card-text>
+            Player 1 discard {{ discardInfo.p1DiscardAmount }} cards
+          </v-card-text>
+          <v-row class="ml-5 mr-5 mb-5 p1-cards-background">
+            <div
+              class="axie-cards"
+              v-for="(axie, index) in getCardsInHandP1()"
+              :key="'p1cardaxie' + index"
+            >
+              <AxieCardSmall
+                :card="card"
+                v-for="(card, index) in axie"
+                :key="'p1card' + index"
+                @click.native="discardCardP2(card.gameId)"
+              />
+            </div>
+          </v-row>
+        </div>
+        <v-divider></v-divider>
+        <div v-if="discardInfo.p2DiscardAmount > 0">
+          <v-card-text>
+            Player 2 discard {{ discardInfo.p2DiscardAmount }} cards
+          </v-card-text>
+          <v-row class="ml-5 mr-5 p2-cards-background">
+            <div
+              class="axie-cards"
+              v-for="(axie, index) in getCardsInHandP2()"
+              :key="'p2cardaxie' + index"
+            >
+              <AxieCardSmall
+                :card="card"
+                v-for="(card, index) in axie"
+                :key="'p2card' + index"
+                @click.native="discardCardP2(card.gameId)"
+              />
+            </div>
+          </v-row>
+        </div>
+        <v-divider></v-divider>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="primary" text @click="discardDialog = false">
+            Accept
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 <style scoped>
-.axie-cards{
-  display:flex;
+.axie-cards {
+  display: flex;
   margin-right: 10px;
 }
 .attacking-cards {
@@ -427,6 +481,11 @@ export default {
   props: {},
   data() {
     return {
+      discardDialog: false,
+      discardInfo: {
+        p1DiscardAmount: 0,
+        p2DiscardAmount: 0,
+      },
       game: new Game(),
     };
   },
@@ -484,13 +543,20 @@ export default {
       }
       return mapAxies;
     },
-    endChoosingPhase(){
-      if(this.game.endChoosingPhase()){
-        this.game.beginChoosingPhase();
-      }else{
+    endChoosingPhase() {
+      if (this.game.endChoosingPhase()) {
+        let playersShouldDiscard = this.game.beginDiscardPhase();
+        if (playersShouldDiscard.length > 0) {
+          this.discardInfo.p1DiscardAmount = playersShouldDiscard[0];
+          this.discardInfo.p2DiscardAmount = playersShouldDiscard[1];
+          this.discardDialog = true;
+        } else {
+          this.game.beginChoosingPhase();
+        }
+      } else {
         //game end
       }
-    }
+    },
   },
   created() {
     let axieBird = new Axie();

@@ -41,7 +41,7 @@ export default class PlayerDeck {
     this.cards = this.shuffleFisherYates(this.cards);
   }
   shouldDiscard() {
-    return this.hand.length > 10 ? this.hand.length - 10 : 0;
+    return this.hand.length > 12 ? this.hand.length - 12 : 0;
   }
   drawCards(amount) {
     if (amount > this.cards.length) this.cemeteryToDeck();

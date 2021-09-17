@@ -71,4 +71,8 @@ export default class Player {
       }
     }
   }
+
+  shouldDiscard(){
+    return this.deck.shouldDiscard();
+  }
 }

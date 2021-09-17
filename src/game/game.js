@@ -28,6 +28,20 @@ export default class Game {
     }
     return true;
   }
+  beginDiscardPhase(){
+    this.gameState = GameState.BEGIN_DISCARD_PHASE;
+    let p1ShouldDiscard = this.player1.shouldDiscard();
+    let p2ShouldDiscard = this.player2.shouldDiscard();
+    if(p1ShouldDiscard || p2ShouldDiscard){
+      return [p1ShouldDiscard,p2ShouldDiscard];
+    }else{
+      return [];
+    }
+  }
+  endDiscardPhase(){
+    this.gameState = GameState.END_DISCARD_PHASE;
+    this.beginChoosingPhase();
+  }
   beginChoosingPhase() {
     this.gameState = GameState.BEGIN_CHOOSING_PHASE;
   }
