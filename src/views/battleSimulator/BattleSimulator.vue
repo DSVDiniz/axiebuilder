@@ -161,6 +161,7 @@ export default {
       this.discardDialog = false;
       this.game.discardCardsP1(discardedCards.p1Discard);
       this.game.discardCardsP2(discardedCards.p2Discard);
+      this.game.endDiscardPhase();
     },
 
     chooseCardP1(cardId) {
