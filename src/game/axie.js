@@ -64,7 +64,7 @@ export default class AxieClass {
       this.setCurrentHealth(newHP);
     }
   }
-  hurt(dmg) {
+  hurt(dmg, isBloodmoonDmg) {
     let postShieldDMG = this.shield - dmg;
     this.setShield(postShieldDMG);
     let newHP = this.currentHealth + (postShieldDMG < 0 ? postShieldDMG : 0);
@@ -73,7 +73,7 @@ export default class AxieClass {
     if (newHP < 0) lastStand = this.enterLastStand(postShieldDMG);
     this.setCurrentHealth(newHP);
     if (this.currentHealth <= 0) {
-      if (lastStand) {
+      if (lastStand && !isBloodmoonDmg) {
         this.inLastStand = true;
       } else {
         this.die();

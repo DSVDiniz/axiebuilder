@@ -102,6 +102,11 @@ export default {
       p2Discard: [],
     };
   },
+  watch: {
+    open() {
+      this.resetDiscarded();
+    }
+  },
   computed: {
     canExitDiscardDialog() {
       return (
@@ -141,11 +146,16 @@ export default {
           this.p2Discard.push(cardId);
       }
     },
+    resetDiscarded(){
+      this.p1Discard = [];
+      this.p2Discard = [];
+    }
   },
-  created() {},
+  created() {
+    this.resetDiscarded();
+  },
   mounted() {
-    this.p1Discard = [];
-    this.p2Discard = [];
+    this.resetDiscarded();
   },
 };
 </script>

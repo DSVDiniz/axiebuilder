@@ -88,15 +88,13 @@ test("Game shuffles deck, gives 3 energy and 6 cards on the first round to each 
 test("Game gives 2 energy and 3 cards at the start of every round (after the first round) to each player", () => {
   game.initialize(player1, player2);
   game.beginRound();
-  game.beginChoosingPhase();
-  game.endChoosingPhase();
-  game.startBattlePhase();
-  game.endBattlePhase();
-  game.endRound();
   expect(game.player1.energy).toBe(3);
   expect(game.player2.energy).toBe(3);
-
-  game.beginRound();
+  
+  game.beginDiscardPhase();
+  game.endDiscardPhase();
+  game.beginChoosingPhase();
+  game.endChoosingPhase();
   expect(game.player1.energy).toBe(5);
   expect(game.player2.energy).toBe(5);
   expect(game.player1.deck.hand.length).toBe(9);
@@ -109,14 +107,11 @@ test("Increase round after every round end.", () => {
   game.initialize(player1, player2);
   expect(game.round).toBe(1);
 
-  game.beginRound();
+  game.beginDiscardPhase();
+  game.endDiscardPhase();
   game.beginChoosingPhase();
   game.endChoosingPhase();
-  game.startBattlePhase();
-  game.endBattlePhase();
-  game.endRound();
-
-  game.beginRound();
+  
   expect(game.round).toBe(2);
 });
 

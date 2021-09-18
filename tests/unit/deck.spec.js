@@ -130,32 +130,32 @@ test("Drawing cards from deck should function correctly.", () => {
   previousDeckAmount = playerDeck.cards.length;
 });
 
-test("Player deck should discard cards from hand if he already has 10 cards in hand.", () => {
+test("Player deck should discard cards from hand if he already has 12 cards in hand.", () => {
   let axies = [axiePlant, axieBeast, axieBird];
   playerDeck.initialize(axies);
 
-  let drawAmount = 10;
+  let drawAmount = 12;
   playerDeck.drawCards(drawAmount);
   expect(playerDeck.hand.length).toBe(drawAmount);
   expect(playerDeck.shouldDiscard()).toBeFalsy();
   playerDeck.drawCards(1);
   expect(playerDeck.shouldDiscard()).toBeTruthy();
-  playerDeck.drawCards(10);
-  expect(playerDeck.shouldDiscard()).toBe(11);
+  playerDeck.drawCards(12);
+  expect(playerDeck.shouldDiscard()).toBe(13);
 });
 
-test("Player deck should discard cards from hand if he already has 10 cards in hand.", () => {
+test("Player deck should discard cards from hand if he already has 12 cards in hand.", () => {
   let axies = [axiePlant, axieBeast, axieBird];
   playerDeck.initialize( axies);
 
-  let drawAmount = 10;
+  let drawAmount = 12;
   playerDeck.drawCards(drawAmount);
   expect(playerDeck.hand.length).toBe(drawAmount);
   expect(playerDeck.shouldDiscard()).toBeFalsy();
   playerDeck.drawCards(1);
   expect(playerDeck.shouldDiscard()).toBeTruthy();
-  playerDeck.drawCards(10);
-  expect(playerDeck.shouldDiscard()).toBe(11);
+  playerDeck.drawCards(12);
+  expect(playerDeck.shouldDiscard()).toBe(13);
 });
 
 test("When player deck plays cards, they should be removed from hand and land on cemetery.", () => {

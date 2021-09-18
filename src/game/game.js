@@ -17,7 +17,10 @@ export default class Game {
   beginRound() {
     this.gameState = GameState.ROUND_START;
     if (this.decideWinner()) return false;
-    this.decideTurnOrder();
+    this.turnOrder = this.decideTurnOrder(
+      this.player1.axies,
+      this.player2.axies
+    );
     if (this.round === 1) {
       this.setPlayersEnergy(3);
       this.shufflePlayersDecks();
@@ -28,17 +31,17 @@ export default class Game {
     }
     return true;
   }
-  beginDiscardPhase(){
+  beginDiscardPhase() {
     this.gameState = GameState.BEGIN_DISCARD_PHASE;
     let p1ShouldDiscard = this.player1.shouldDiscard();
     let p2ShouldDiscard = this.player2.shouldDiscard();
-    if(p1ShouldDiscard || p2ShouldDiscard){
-      return [p1ShouldDiscard,p2ShouldDiscard];
-    }else{
+    if (p1ShouldDiscard || p2ShouldDiscard) {
+      return [p1ShouldDiscard, p2ShouldDiscard];
+    } else {
       return [];
     }
   }
-  endDiscardPhase(){
+  endDiscardPhase() {
     this.gameState = GameState.END_DISCARD_PHASE;
     this.beginChoosingPhase();
   }
@@ -51,7 +54,36 @@ export default class Game {
   }
   startBattlePhase() {
     this.gameState = GameState.START_BATTLE_PHASE;
+    let axiesInOrder = this.decideTurnOrder(
+      this.player1.axies,
+      this.player2.axies
+    );
+    this.applyPreEffects(); //nitro leap
+    for (let i = 0; i < axiesInOrder.length; i++) {
+      this.applyCardsPreEffecs();
+      this.chooseTarget();
+      this.inflictDamage();
+      this.applyCardsPostEffects();
+    }
+    this.applyPostEffects(axiesInOrder);
     return this.endBattlePhase();
+  }
+
+  applyPreEffects() {}
+  applyCardsPreEffecs() {}
+  chooseTarget() {}
+  inflictDamage() {}
+  applyCardsPostEffects() {}
+  applyPostEffects(axies) {
+    if (this.round >= 10) {
+      this.inflictBloodMoonDamage(axies, this.round);
+    }
+  }
+  inflictBloodMoonDamage(axies, round) {
+    let bloodmoonDMG = 30 * (round - 10) + 50;
+    for (let i = 0; i < axies.length; i++) {
+      axies[i].hurt(bloodmoonDMG,true);
+    }
   }
   endBattlePhase() {
     this.gameState = GameState.END_BATTLE_PHASE;
@@ -63,10 +95,11 @@ export default class Game {
     return this.beginRound();
   }
 
-  decideTurnOrder() {
-    this.turnOrder = [];
-    let axies = this.player1.axies.concat(this.player2.axies);
-    this.turnOrder = axies.sort((a, b) => this.compareFastest(a, b));
+  decideTurnOrder(p1Axies, p2Axies) {
+    let axies = p1Axies.concat(p2Axies);
+    return axies
+      .sort((a, b) => this.compareFastest(a, b))
+      .filter((axie) => !axie.isDead);
   }
 
   compareFastest(axie1, axie2) {
@@ -150,7 +183,7 @@ export default class Game {
       this.player2.addCardToPlayed(cardId);
     }
   }
-  removeCardsFromPlayed(playerId,axieId){
+  removeCardsFromPlayed(playerId, axieId) {
     if (this.gameState !== GameState.BEGIN_CHOOSING_PHASE) return;
     if (this.player1.id === playerId) {
       this.player1.removeCardsFromPlayed(axieId);
@@ -158,10 +191,10 @@ export default class Game {
       this.player2.removeCardsFromPlayed(axieId);
     }
   }
-  discardCardsP1(ids){
+  discardCardsP1(ids) {
     this.player1.discardCards(ids);
   }
-  discardCardsP2(ids){
+  discardCardsP2(ids) {
     this.player2.discardCards(ids);
   }
 }
