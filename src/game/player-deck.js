@@ -52,35 +52,49 @@ export default class PlayerDeck {
     this.cemetery = [];
     this.shuffleDeck();
   }
-  addCardToPlayed(cardId){
-    let newCard = this.hand.find(card=>card.gameId === cardId);
-    if(newCard && !this.checkAxieFourCardLimit(newCard.owner)){
+  addCardToPlayed(cardId) {
+    let newCard = this.hand.find((card) => card.gameId === cardId);
+    if (newCard && !this.checkAxieFourCardLimit(newCard.owner)) {
       this.played.push(newCard);
     }
   }
-  removeCardFromPlayed(cardId){
-    let cardIndex = this.played.findIndex(card=>card.gameId === cardId);
-    if(cardIndex !== -1){
-      this.played.splice(cardIndex,1);
+  removeCardFromPlayed(cardId) {
+    let cardIndex = this.played.findIndex((card) => card.gameId === cardId);
+    if (cardIndex !== -1) {
+      this.played.splice(cardIndex, 1);
     }
   }
-  checkAxieFourCardLimit(ownerId){
-    return this.played.filter(card=>card.owner === ownerId).length > 4;
+  checkAxieFourCardLimit(ownerId) {
+    return this.played.filter((card) => card.owner === ownerId).length > 4;
   }
-  playCards(){
-    let remainingHand = this.getRemainingHand(this.played,this.hand);
+  playCards() {
+    let remainingHand = this.getRemainingHand(this.played, this.hand);
     this.hand = [...remainingHand];
     return this.played;
   }
-  getCardFromHand(cardId){
+  getCardFromHand(cardId) {
     return this.hand.find((card) => card.gameId === cardId);
   }
-  getCardsFromPlayed(axieId){
+  getCardsFromPlayed(axieId) {
     return this.played.filter((card) => card.owner === axieId);
   }
   discardPlayedCards() {
     this.cemetery = this.cemetery.concat(this.played);
     this.played = [];
+  }
+  discardCards(ids) {
+    let removed = 0;
+    for (let i = this.hand.length - 1; this.hand.length - 1 > 0; i--) {
+      for (let j = 0; j < ids.length; j++) {
+        if (this.hand[i].gameId === ids[j]) {
+          this.cemetery.push(this.hand.splice(i, 1)[0]);
+          removed++;
+          break;
+        }
+      }
+      if(removed === ids.length)
+        break;
+    }
   }
   getRemainingHand(cards, playerHand) {
     let remainingHand = [];

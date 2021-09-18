@@ -135,11 +135,11 @@ export default class Game {
     this.player1.deck.drawCards(amount);
     this.player2.deck.drawCards(amount);
   }
-  getPlayedCardsFromAxie(axieId, playerId) {
+  getPlayedCards(playerId) {
     if (this.player1.id === playerId) {
-      return this.player1.deck.played.filter((card) => card.owner === axieId);
+      return this.player1.deck.played;
     } else {
-      return this.player2.deck.played.filter((card) => card.owner === axieId);
+      return this.player2.deck.played;
     }
   }
   chooseCard(playerId, cardId) {
@@ -157,5 +157,11 @@ export default class Game {
     } else {
       this.player2.removeCardsFromPlayed(axieId);
     }
+  }
+  discardCardsP1(ids){
+    this.player1.discardCards(ids);
+  }
+  discardCardsP2(ids){
+    this.player2.discardCards(ids);
   }
 }

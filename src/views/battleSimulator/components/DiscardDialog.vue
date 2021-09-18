@@ -16,7 +16,8 @@
               :card="card"
               v-for="(card, index) in axie"
               :key="'p1card' + index"
-              @click.native="addToDiscardCardP1(card.gameId)"
+              @click.native="toggleCardP1(card.gameId)"
+              :class="inDiscardListP1(card.gameId) ? 'card-disabled' : ''"
             />
           </div>
         </v-row>
@@ -36,7 +37,8 @@
               :card="card"
               v-for="(card, index) in axie"
               :key="'p2card' + index"
-              @click.native="addToDiscardCardP2(card.gameId)"
+              @click.native="toggleCardP2(card.gameId)"
+              :class="inDiscardListP2(card.gameId) ? 'card-disabled' : ''"
             />
           </div>
         </v-row>
@@ -58,6 +60,18 @@
   </v-dialog>
 </template>
 <style scoped>
+.card-disabled:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "\d7";
+  font-size: 180px;
+  color: #fff;
+  line-height: 100px;
+  text-align: center;
+}
 .axie-cards {
   display: flex;
   margin-right: 10px;
@@ -74,7 +88,7 @@
 <script>
 import AxieCardSmall from "@/components/AxieCardSmall.vue";
 export default {
-  name: "BattleSimulator",
+  name: "DiscardDialog",
   components: {
     AxieCardSmall,
   },
@@ -103,13 +117,35 @@ export default {
         p2Discard: this.p2Discard,
       });
     },
-    addToDiscardCardP1(cardId) {
-      this.p1Discard.push(cardId);
+    inDiscardListP1(cardId) {
+      return this.p1Discard.findIndex((id) => id === cardId) !== -1;
     },
-    addToDiscardCardP2(cardId) {
-      this.p2Discard.push(cardId);
+    inDiscardListP2(cardId) {
+      return this.p2Discard.findIndex((id) => id === cardId) !== -1;
+    },
+    toggleCardP1(cardId) {
+      let index = this.p1Discard.findIndex((id) => id === cardId);
+      if (index !== -1) {
+        this.p1Discard.splice(index, 1);
+      } else {
+        if (this.p1Discard.length < this.discardInfo.p1DiscardAmount)
+          this.p1Discard.push(cardId);
+      }
+    },
+    toggleCardP2(cardId) {
+      let index = this.p2Discard.findIndex((id) => id === cardId);
+      if (index !== -1) {
+        this.p2Discard.splice(index, 1);
+      } else {
+        if (this.p2Discard.length < this.discardInfo.p2DiscardAmount)
+          this.p2Discard.push(cardId);
+      }
     },
   },
   created() {},
+  mounted() {
+    this.p1Discard = [];
+    this.p2Discard = [];
+  },
 };
 </script>

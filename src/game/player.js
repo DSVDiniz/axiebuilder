@@ -75,4 +75,7 @@ export default class Player {
   shouldDiscard(){
     return this.deck.shouldDiscard();
   }
+  discardCards(ids){
+    this.deck.discardCards(ids);
+  }
 }
