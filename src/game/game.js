@@ -1,4 +1,4 @@
-import { GameState } from "./data/data.js";
+import { AxiePosition, GameState } from "./data/data.js";
 export default class Game {
   round = 0;
   player1 = null;
@@ -60,19 +60,130 @@ export default class Game {
     );
     this.applyPreEffects(); //nitro leap
     for (let i = 0; i < axiesInOrder.length; i++) {
-      this.applyCardsPreEffecs();
-      this.chooseTarget();
-      this.inflictDamage();
+      let attacker = axiesInOrder[i];
+      let cards = this.getAttackerCards(attacker);
+      let effects = this.applyCardsPreEffecs();
+      let defender = this.chooseTarget(effects, attacker);
+      this.inflictDamage(attacker, defender, cards);
       this.applyCardsPostEffects();
     }
     this.applyPostEffects(axiesInOrder);
     return this.endBattlePhase();
   }
 
+  getAttackerCards(attacker) {
+    this.player1
+  }
+
   applyPreEffects() {}
   applyCardsPreEffecs() {}
-  chooseTarget() {}
-  inflictDamage() {}
+  chooseTarget(effects, attacker) {
+    let defenders = this.getDefenders(attacker.owner);
+    if (effects && effects.length > 0) {
+      //change target effect
+    } else {
+      this.getTargetDependingOnAttackerPosition(attacker.position, defenders);
+    }
+  }
+  getDefenders(ownerId){
+    if(ownerId === this.player1.id){
+      return this.player2.axies;
+    }else{
+      return this.player1.axies;
+    }
+  }
+  getTargetDependingOnAttackerPosition(attackerPosition, defenders) {
+    if (this.isInCenterRow(attackerPosition)) {
+      return this.getCenterAttackerTarget(defenders);
+    } else {
+      return this.getTopOrBottomAttackerTarget(attackerPosition,defenders);
+    }
+  }
+  getCenterAttackerTarget(defenders){
+    let attackOrder = [
+      AxiePosition.RIGHT,
+      AxiePosition.CENTER,
+      AxiePosition.LEFT,
+    ];
+    let rightUpDownAmount = defenders.filter(
+      (axie) =>
+        axie.position === AxiePosition.UP_RIGHT ||
+        (axie.position === AxiePosition.DOWN_RIGHT && !axie.isDead)
+    );
+    let leftUpDownAmount = defenders.filter(
+      (axie) =>
+        axie.position === AxiePosition.UP_LEFT ||
+        (axie.position === AxiePosition.DOWN_LEFT && !axie.isDead)
+    );
+    for (let j = 0; j < attackOrder.length; j++) {
+      for (let i = 0; i < defenders.length; i++) {
+        if (defenders[i].isDead) continue;
+        if (defenders[i].position === attackOrder[j]) {
+          return defenders[i];
+        } else if (rightUpDownAmount.length > 0) {
+          this.chooseTargetRandomly(rightUpDownAmount);
+        } else if (leftUpDownAmount.length > 0) {
+          this.chooseTargetRandomly(leftUpDownAmount);
+        }
+      }
+    }
+  }
+  getTopOrBottomAttackerTarget(attackerPosition, defenders){
+    let attackOrder = [];
+    if (this.isInTopRow(attackerPosition)) {
+      attackOrder = [
+        AxiePosition.RIGHT,
+        AxiePosition.UP_RIGHT,
+        AxiePosition.DOWN_RIGHT,
+        AxiePosition.CENTER,
+        AxiePosition.UP_LEFT,
+        AxiePosition.DOWN_LEFT,
+        AxiePosition.LEFT,
+      ];
+    } else if (this.isInBottomRow(attackerPosition)) {
+      attackOrder = [
+        AxiePosition.RIGHT,
+        AxiePosition.DOWN_RIGHT,
+        AxiePosition.UP_RIGHT,
+        AxiePosition.CENTER,
+        AxiePosition.DOWN_LEFT,
+        AxiePosition.UP_LEFT,
+        AxiePosition.LEFT,
+      ];
+    }
+    for (let j = 0; j < attackOrder.length; j++) {
+      for (let i = 0; i < defenders.length; i++) {
+        if (defenders[i].isDead) continue;
+        if (attackOrder[j] === defenders[i].position) return defenders[i];
+      }
+    }
+  }
+  chooseTargetRandomly(axies) {
+    if (axies.length === 1) {
+      return axies[0];
+    } else {
+      return Math.random() > 0.5 ? axies[0] : axies[1];
+    }
+  }
+  isInTopRow(position) {
+    return (
+      position === AxiePosition.CENTER ||
+      position === AxiePosition.LEFT ||
+      position === AxiePosition.RIGHT
+    );
+  }
+  isInCenterRow(position) {
+    return (
+      position === AxiePosition.DOWN_LEFT ||
+      position === AxiePosition.DOWN_RIGHT
+    );
+  }
+  isInBottomRow(position) {
+    return (
+      position === AxiePosition.UP_LEFT || position === AxiePosition.UP_RIGHT
+    );
+  }
+  inflictDamage(atacker, defender, cards) {}
   applyCardsPostEffects() {}
   applyPostEffects(axies) {
     if (this.round >= 10) {
@@ -82,7 +193,7 @@ export default class Game {
   inflictBloodMoonDamage(axies, round) {
     let bloodmoonDMG = 30 * (round - 10) + 50;
     for (let i = 0; i < axies.length; i++) {
-      axies[i].hurt(bloodmoonDMG,true);
+      axies[i].hurt(bloodmoonDMG, true);
     }
   }
   endBattlePhase() {

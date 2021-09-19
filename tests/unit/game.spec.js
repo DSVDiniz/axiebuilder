@@ -121,16 +121,12 @@ test("Game ends at start of the round if one of the players has no more axies al
   
   game.beginRound();
   game.beginChoosingPhase();
-  game.endChoosingPhase();
-  game.startBattlePhase();
-  game.endBattlePhase();
-  game.endRound();
-
+  
   game.player1.axies = game.player1.axies.map((axie) => {
     axie.dead = true;
     return axie;
   });
-  game.beginRound();
+  game.endChoosingPhase();
   expect(game.player1.isDead()).toBeTruthy();
   expect(game.finished).toBeTruthy();
   expect(game.winner).toBeTruthy();
@@ -142,11 +138,6 @@ test("Game ends (as a draw) at start of the round if both players have no more a
 
   game.beginRound();
   game.beginChoosingPhase();
-  game.endChoosingPhase();
-  game.startBattlePhase();
-  game.endBattlePhase();
-  game.endRound();
-
   game.player2.axies = game.player2.axies.map((axie) => {
     axie.dead = true;
     return axie;
@@ -155,7 +146,28 @@ test("Game ends (as a draw) at start of the round if both players have no more a
     axie.dead = true;
     return axie;
   });
+  game.endChoosingPhase();
+  expect(game.player1.isDead()).toBeTruthy();
+  expect(game.player2.isDead()).toBeTruthy();
+  expect(game.finished).toBeTruthy();
+  expect(game.winner).toBeFalsy()
+});
+
+test("Game ends (as a draw) at start of the round if both players have no more axies alive", () => {
+  game.initialize(player1, player2);
+  expect(game.round).toBe(1);
+
   game.beginRound();
+  game.beginChoosingPhase();
+  game.player2.axies = game.player2.axies.map((axie) => {
+    axie.dead = true;
+    return axie;
+  });
+  game.player1.axies = game.player1.axies.map((axie) => {
+    axie.dead = true;
+    return axie;
+  });
+  game.endChoosingPhase();
   expect(game.player1.isDead()).toBeTruthy();
   expect(game.player2.isDead()).toBeTruthy();
   expect(game.finished).toBeTruthy();
