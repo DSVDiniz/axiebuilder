@@ -90,7 +90,7 @@ test("Game gives 2 energy and 3 cards at the start of every round (after the fir
   game.beginRound();
   expect(game.player1.energy).toBe(3);
   expect(game.player2.energy).toBe(3);
-  
+
   game.beginDiscardPhase();
   game.endDiscardPhase();
   game.beginChoosingPhase();
@@ -111,17 +111,17 @@ test("Increase round after every round end.", () => {
   game.endDiscardPhase();
   game.beginChoosingPhase();
   game.endChoosingPhase();
-  
+
   expect(game.round).toBe(2);
 });
 
 test("Game ends at start of the round if one of the players has no more axies alive", () => {
   game.initialize(player1, player2);
   expect(game.round).toBe(1);
-  
+
   game.beginRound();
   game.beginChoosingPhase();
-  
+
   game.player1.axies = game.player1.axies.map((axie) => {
     axie.dead = true;
     return axie;
@@ -129,7 +129,7 @@ test("Game ends at start of the round if one of the players has no more axies al
   game.endChoosingPhase();
   expect(game.player1.isDead()).toBeTruthy();
   expect(game.finished).toBeTruthy();
-  expect(game.winner).toBeTruthy();
+  expect(game.winners).toBeTruthy();
 });
 
 test("Game ends (as a draw) at start of the round if both players have no more axies alive", () => {
@@ -150,7 +150,7 @@ test("Game ends (as a draw) at start of the round if both players have no more a
   expect(game.player1.isDead()).toBeTruthy();
   expect(game.player2.isDead()).toBeTruthy();
   expect(game.finished).toBeTruthy();
-  expect(game.winner).toBeFalsy()
+  expect(game.winner).toBeFalsy();
 });
 
 test("Game ends (as a draw) at start of the round if both players have no more axies alive", () => {
@@ -171,5 +171,185 @@ test("Game ends (as a draw) at start of the round if both players have no more a
   expect(game.player1.isDead()).toBeTruthy();
   expect(game.player2.isDead()).toBeTruthy();
   expect(game.finished).toBeTruthy();
-  expect(game.winner).toBeFalsy()
+  expect(game.winner).toBeFalsy();
+});
+
+test("After round 10, players should be damaged by bloodmoon", () => {
+  game.initialize(player1, player2);
+  game.beginRound();
+  while (game.round !== 10) {
+    game.endChoosingPhase();
+  }
+  expect(game.round).toBe(10);
+  let healthValuesP1 = game.player1.axies.map((axie) => axie.currentHealth);
+  let healthValuesP2 = game.player2.axies.map((axie) => axie.currentHealth);
+  game.endChoosingPhase();
+  let healthValuesP1After = game.player1.axies.map(
+    (axie) => axie.currentHealth
+  );
+  let healthValuesP2After = game.player2.axies.map(
+    (axie) => axie.currentHealth
+  );
+  for (let i = 0; i < healthValuesP1.length; i++) {
+    expect(healthValuesP1[i]).not.toBe(healthValuesP1After[i]);
+    expect(healthValuesP2[i]).not.toBe(healthValuesP2After[i]);
+  }
+});
+
+test("Axie turn order should be calculated correctly", () => {
+  game.initialize(player1, player2);
+  expect(game.turnOrder.length).toBe(0);
+  game.beginRound();
+  expect(game.turnOrder.length).toBe(6);
+  let speeds = game.turnOrder.map((axie) => axie.speed);
+  let speedSorted = speeds.sort();
+  for (let i = 0; i < speeds.length; i++) {
+    expect(speeds[i] === speedSorted[i]).toBeTruthy();
+  }
+});
+
+test("When an axie attacks, the defending axie should be hurt", () => {
+  game.initialize(player1, player2);
+  game.beginRound();
+  game.beginChoosingPhase();
+});
+
+let expectedTopRow = [
+  AxiePosition.RIGHT,
+  AxiePosition.UP_RIGHT,
+  AxiePosition.DOWN_RIGHT,
+  AxiePosition.CENTER,
+  AxiePosition.UP_LEFT,
+  AxiePosition.DOWN_LEFT,
+  AxiePosition.LEFT,
+];
+
+let initializeAxiesForTargetingTests = (axiePositions)=>{
+  let defenders = [];
+  for (let i = 0; i < axiePositions.length; i++) {
+    let axie = new Axie();
+    axie.initialize(
+      i,
+      axiePositions[i],
+      AxieTypeEnum.BIRD,
+      getAxieTypeParts(AxieTypeEnum.BIRD)
+    );
+    defenders.push(axie);
+  }
+  for (let i = 0; i < defenders.length; i++) {
+    defenders[i].position = axiePositions[i];
+  }
+  return defenders;
+}
+
+test("Top left axies should choose their targets correctly", () => {
+  let axiePositions = Object.values(AxiePosition);
+  let defenders = initializeAxiesForTargetingTests(axiePositions);
+  for (let i = 0; i < axiePositions.length; i++) {
+    let target = game.getTargetDependingOnAttackerPosition(
+      AxiePosition.UP_LEFT,
+      defenders
+    );
+    expect(target.position).toBe(expectedTopRow[i]);
+    for (let j = 0; j < defenders.length; j++) {
+      if (defenders[j].id === target.id) {
+        defenders[j].die();
+      }
+    }
+  }
+});
+
+test("Top right axies should choose their targets correctly", () => {
+  let axiePositions = Object.values(AxiePosition);
+  let defenders = initializeAxiesForTargetingTests(axiePositions);
+  for (let i = 0; i < axiePositions.length; i++) {
+    let target = game.getTargetDependingOnAttackerPosition(
+      AxiePosition.UP_RIGHT,
+      defenders
+    );
+    expect(target.position).toBe(expectedTopRow[i]);
+    for (let j = 0; j < defenders.length; j++) {
+      if (defenders[j].id === target.id) {
+        defenders[j].die();
+      }
+    }
+  }
+});
+
+let expectedCenterRow = [
+  AxiePosition.RIGHT,
+  -1,
+  -1,
+  AxiePosition.CENTER,
+  -2,
+  -2,
+  AxiePosition.LEFT,
+];
+
+test("Center row axies should choose their targets correctly", () => {
+  let axiePositions = Object.values(AxiePosition);
+  let defenders = initializeAxiesForTargetingTests(axiePositions);
+  for (let i = 0; i < axiePositions.length; i++) {
+    let target = game.getTargetDependingOnAttackerPosition(
+      AxiePosition.UP_RIGHT,
+      defenders
+    );
+    if(expectedCenterRow[i] === -1){
+      expect(target.position == AxiePosition.DOWN_RIGHT ||target.position == AxiePosition.UP_RIGHT ).toBeTruthy();
+    }else if(expectedCenterRow[i] === -2){
+      expect(target.position == AxiePosition.DOWN_LEFT ||target.position == AxiePosition.UP_LEFT ).toBeTruthy();
+    }else{
+      expect(target.position).toBe(expectedCenterRow[i]);
+    }
+    
+    for (let j = 0; j < defenders.length; j++) {
+      if (defenders[j].id === target.id) {
+        defenders[j].die();
+      }
+    }
+  }
+});
+
+let expectedBottomRow = [
+  AxiePosition.RIGHT,
+  AxiePosition.DOWN_RIGHT,
+  AxiePosition.UP_RIGHT,
+  AxiePosition.CENTER,
+  AxiePosition.DOWN_LEFT,
+  AxiePosition.UP_LEFT,
+  AxiePosition.LEFT,
+];
+
+test("Bottom left axies should choose their targets correctly", () => {  
+  let axiePositions = Object.values(AxiePosition);
+  let defenders = initializeAxiesForTargetingTests(axiePositions);
+  for (let i = 0; i < axiePositions.length; i++) {
+    let target = game.getTargetDependingOnAttackerPosition(
+      AxiePosition.DOWN_LEFT,
+      defenders
+    );
+    expect(target.position).toBe(expectedBottomRow[i]);
+    for (let j = 0; j < defenders.length; j++) {
+      if (defenders[j].id === target.id) {
+        defenders[j].die();
+      }
+    }
+  }
+});
+
+test("Bottom right axies should choose their targets correctly", () => {
+  let axiePositions = Object.values(AxiePosition);
+  let defenders = initializeAxiesForTargetingTests(axiePositions);
+  for (let i = 0; i < axiePositions.length; i++) {
+    let target = game.getTargetDependingOnAttackerPosition(
+      AxiePosition.DOWN_RIGHT,
+      defenders
+    );
+    expect(target.position).toBe(expectedBottomRow[i]);
+    for (let j = 0; j < defenders.length; j++) {
+      if (defenders[j].id === target.id) {
+        defenders[j].die();
+      }
+    }
+  }
 });

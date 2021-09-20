@@ -52,6 +52,7 @@
       :discardInfo="discardInfo"
       v-on:close="closeDiscardDialog"
     />
+    <VictoryDialog :open="victoryDialog" :winners="winners" v-on:close="closeVictoryDialog" />
   </v-container>
 </template>
 <style scoped>
@@ -134,6 +135,7 @@ import TurnOrderHeader from "./components/TurnOrderHeader.vue";
 import BattleArea from "./components/BattleArea.vue";
 import PlayerStats from "./components/PlayerStats.vue";
 import PlayerCards from "./components/PlayerCards.vue";
+import VictoryDialog from "./components/VictoryDialog.vue";
 export default {
   name: "BattleSimulator",
   components: {
@@ -142,11 +144,14 @@ export default {
     BattleArea,
     PlayerStats,
     PlayerCards,
+    VictoryDialog,
   },
   props: {},
   data() {
     return {
       discardDialog: false,
+      victoryDialog: false,
+      winners: [],
       discardInfo: {
         p1DiscardAmount: 0,
         p2DiscardAmount: 0,
@@ -162,6 +167,9 @@ export default {
       this.game.discardCardsP1(discardedCards.p1Discard);
       this.game.discardCardsP2(discardedCards.p2Discard);
       this.game.endDiscardPhase();
+    },
+    closeVictoryDialog(){
+      this.victoryDialog = false;
     },
 
     chooseCardP1(cardId) {
@@ -214,7 +222,8 @@ export default {
       return mapAxies;
     },
     endChoosingPhase() {
-      if (this.game.endChoosingPhase()) {
+      let gameResult = this.game.endChoosingPhase();
+      if (gameResult) {
         let playersShouldDiscard = this.game.beginDiscardPhase();
         if (playersShouldDiscard.length > 0) {
           this.prepareDiscardDialogAndOpen(playersShouldDiscard);
@@ -222,8 +231,12 @@ export default {
           this.game.beginChoosingPhase();
         }
       } else {
-        //game end
+        this.openVictoryDialog(this.game.winners)
       }
+    },
+    openVictoryDialog(winners){
+      this.victoryDialog = true;
+      this.winners = winners;
     },
     prepareDiscardDialogAndOpen(playersShouldDiscard) {
       this.discardInfo.p1DiscardAmount = playersShouldDiscard[0];

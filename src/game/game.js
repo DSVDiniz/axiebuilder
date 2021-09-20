@@ -4,7 +4,7 @@ export default class Game {
   player1 = null;
   player2 = null;
   finished = false;
-  winner = null;
+  winners = null;
   gameState = null;
   turnOrder = [];
   constructor() {}
@@ -62,7 +62,7 @@ export default class Game {
     for (let i = 0; i < axiesInOrder.length; i++) {
       let attacker = axiesInOrder[i];
       let cards = this.getAttackerCards(attacker);
-      let effects = this.applyCardsPreEffecs();
+      let effects = this.applyCardsPreEffecs(cards);
       let defender = this.chooseTarget(effects, attacker);
       this.inflictDamage(attacker, defender, cards);
       this.applyCardsPostEffects();
@@ -72,7 +72,9 @@ export default class Game {
   }
 
   getAttackerCards(attacker) {
-    this.player1
+    return this.getPlayedCards(attacker.owner).filter(
+      (card) => (card.owner = attacker.id)
+    );
   }
 
   applyPreEffects() {}
@@ -85,10 +87,10 @@ export default class Game {
       this.getTargetDependingOnAttackerPosition(attacker.position, defenders);
     }
   }
-  getDefenders(ownerId){
-    if(ownerId === this.player1.id){
+  getDefenders(ownerId) {
+    if (ownerId === this.player1.id) {
       return this.player2.axies;
-    }else{
+    } else {
       return this.player1.axies;
     }
   }
@@ -96,10 +98,10 @@ export default class Game {
     if (this.isInCenterRow(attackerPosition)) {
       return this.getCenterAttackerTarget(defenders);
     } else {
-      return this.getTopOrBottomAttackerTarget(attackerPosition,defenders);
+      return this.getTopOrBottomAttackerTarget(attackerPosition, defenders);
     }
   }
-  getCenterAttackerTarget(defenders){
+  getCenterAttackerTarget(defenders) {
     let attackOrder = [
       AxiePosition.RIGHT,
       AxiePosition.CENTER,
@@ -108,16 +110,16 @@ export default class Game {
     let rightUpDownAmount = defenders.filter(
       (axie) =>
         axie.position === AxiePosition.UP_RIGHT ||
-        (axie.position === AxiePosition.DOWN_RIGHT && !axie.isDead)
+        (axie.position === AxiePosition.DOWN_RIGHT && !axie.dead)
     );
     let leftUpDownAmount = defenders.filter(
       (axie) =>
         axie.position === AxiePosition.UP_LEFT ||
-        (axie.position === AxiePosition.DOWN_LEFT && !axie.isDead)
+        (axie.position === AxiePosition.DOWN_LEFT && !axie.dead)
     );
     for (let j = 0; j < attackOrder.length; j++) {
       for (let i = 0; i < defenders.length; i++) {
-        if (defenders[i].isDead) continue;
+        if (defenders[i].dead) continue;
         if (defenders[i].position === attackOrder[j]) {
           return defenders[i];
         } else if (rightUpDownAmount.length > 0) {
@@ -128,7 +130,7 @@ export default class Game {
       }
     }
   }
-  getTopOrBottomAttackerTarget(attackerPosition, defenders){
+  getTopOrBottomAttackerTarget(attackerPosition, defenders) {
     let attackOrder = [];
     if (this.isInTopRow(attackerPosition)) {
       attackOrder = [
@@ -153,10 +155,11 @@ export default class Game {
     }
     for (let j = 0; j < attackOrder.length; j++) {
       for (let i = 0; i < defenders.length; i++) {
-        if (defenders[i].isDead) continue;
+        if (defenders[i].dead) continue;
         if (attackOrder[j] === defenders[i].position) return defenders[i];
       }
     }
+    return null;
   }
   chooseTargetRandomly(axies) {
     if (axies.length === 1) {
@@ -165,20 +168,20 @@ export default class Game {
       return Math.random() > 0.5 ? axies[0] : axies[1];
     }
   }
-  isInTopRow(position) {
+  isInCenterRow(position) {
     return (
       position === AxiePosition.CENTER ||
       position === AxiePosition.LEFT ||
       position === AxiePosition.RIGHT
     );
   }
-  isInCenterRow(position) {
+  isInBottomRow(position) {
     return (
       position === AxiePosition.DOWN_LEFT ||
       position === AxiePosition.DOWN_RIGHT
     );
   }
-  isInBottomRow(position) {
+  isInTopRow(position) {
     return (
       position === AxiePosition.UP_LEFT || position === AxiePosition.UP_RIGHT
     );
@@ -210,7 +213,7 @@ export default class Game {
     let axies = p1Axies.concat(p2Axies);
     return axies
       .sort((a, b) => this.compareFastest(a, b))
-      .filter((axie) => !axie.isDead);
+      .filter((axie) => !axie.dead);
   }
 
   compareFastest(axie1, axie2) {
@@ -247,10 +250,10 @@ export default class Game {
     if (defeatedPlayers.length === 0) {
       return false;
     } else if (defeatedPlayers.length === 1) {
-      this.winner = defeatedPlayers[0];
+      this.winners = defeatedPlayers[0];
       this.finished = true;
     } else if (defeatedPlayers.length === 2) {
-      this.winner = null;
+      this.winners = null;
       this.finished = true;
     }
     return true;
