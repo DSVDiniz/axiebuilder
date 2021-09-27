@@ -15,22 +15,26 @@
         >{{ part.name }}
       </v-chip>
     </div>
-    <div class="card">
-      <img :src="getImgUrl(card.image)" width="250" />
+    <div class="card" :style="{minWidth: cardSize,maxWidth: cardSize}" @click="select">
+      <img :src="getImgUrl(card.image)" :width="cardSize" />
       <h3 class="name">{{ card.name }}</h3>
       <h1 class="cost">{{ card.cost }}</h1>
-      <img class="dmg-bg" src="@/assets/bg-reptile.png" width="55" />
+      <img class="dmg-bg" src="@/assets/bg-reptile.png" :width="statSize" />
       <div class="dmg">
         <h2>{{ card.dmg }}</h2>
       </div>
-      <img class="shield-bg" src="@/assets/bg-reptile.png" width="55" />
+      <img class="shield-bg" src="@/assets/bg-reptile.png" :width="statSize" />
       <div class="shield">
         <h2>{{ card.shield }}</h2>
       </div>
       <div class="description">
         <span>{{ card.description }}</span>
       </div>
-      <img class="effect" :src="getImgEffectUrl(card.effect.image)" width="25" />
+      <img
+        class="effect"
+        :src="getImgEffectUrl(card.effect.image)"
+        :width="effectSize"
+      />
     </div>
   </div>
 </template>
@@ -43,8 +47,6 @@
   text-align: center;
   position: relative;
   color: white;
-  min-width: 260px;
-  max-width: 260px;
 }
 .effect {
   position: absolute;
@@ -103,6 +105,9 @@ export default {
   props: {
     card: { type: Object, default: () => {} },
     showParts: { type: Boolean, default: false },
+    cardSize: { type: Number, default: 250 },
+    statSize: { type: Number, default: 55 },
+    effectSize: { type: Number, default: 25 },
   },
   data: () => ({}),
   computed: {
@@ -124,12 +129,15 @@ export default {
     },
   },
   methods: {
+    select() {
+      this.$emit("select", this.card);
+    },
     getImgUrl(img) {
-      let images = require.context("../assets/cards/", false, /\.png$/);
+      let images = require.context("@/assets/cards/", false, /\.png$/);
       return images("./" + img);
     },
     getImgEffectUrl(img) {
-      let images = require.context("../assets/icons/", false, /\.png$/);
+      let images = require.context("@/assets/icons/", false, /\.png$/);
       return images("./" + img);
     },
   },

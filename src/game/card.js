@@ -4,7 +4,7 @@ export default class Card {
   id = 0;
   parts = [];
   attackType = CardAttackType.RANGED;
-  element = AxieTypeEnum.AQUATIC;
+  axieType = AxieTypeEnum.AQUATIC;
   name = "Card Name";
   cost = 0;
   dmg = 120;
@@ -16,7 +16,7 @@ export default class Card {
     this.id = card.id;
     this.parts = card.parts;
     this.attackType = card.attackType;
-    this.element = card.element;
+    this.axieType = card.axieType;
     this.name = card.name;
     this.cost = card.cost;
     this.dmg = card.dmg;

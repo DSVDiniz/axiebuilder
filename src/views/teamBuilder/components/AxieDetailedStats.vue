@@ -29,8 +29,8 @@
 <style scoped></style>
 <script>
 import { AxieTypeEnum } from "@/game/data/data.js";
-import AxieTypeIcon from "./icons/AxieTypeIcon.vue";
-import AxieRPSTypeIcon from "./icons/AxieRPSTypeIcon.vue";
+import AxieTypeIcon from "@/components/icons/AxieTypeIcon.vue";
+import AxieRPSTypeIcon from "@/components/icons/AxieRPSTypeIcon.vue";
 export default {
   name: "AxieDetailedStats",
   components: { AxieTypeIcon, AxieRPSTypeIcon },
@@ -69,7 +69,7 @@ export default {
       return damageList.length > 0 ? damageList.sort(this.sortDmgObj) : [];
     },
     calculateDamage(card, attackerType, opponentType, rpsBonus) {
-      let attackerTypeCardElementBonus = card.element === attackerType ? 1.1 : 1;
+      let attackerTypeCardElementBonus = card.axieType === attackerType ? 1.1 : 1;
       let dmgObj = {
         dmg: Math.floor(card.dmg * attackerTypeCardElementBonus * rpsBonus),
         opponentType: opponentType,
@@ -105,7 +105,7 @@ export default {
       return shieldList.length > 0 ? shieldList.sort() : [];
     },
     calculateShield(card, defenderType) {
-      let defenderTypeCardElementBonus = card.element === defenderType ? 1.1 : 1;
+      let defenderTypeCardElementBonus = card.axieType === defenderType ? 1.1 : 1;
       return Math.floor(card.shield * defenderTypeCardElementBonus);
     },
   },

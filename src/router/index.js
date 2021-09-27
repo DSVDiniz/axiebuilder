@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import BattleSimulator from '@/views/battleSimulator/BattleSimulator.vue'
 import TeamBuilder from '@/views/teamBuilder/TeamBuilder.vue'
-import CardList from '@/views/cardList/CardList.vue'
+import CardListPage from '@/views/cardList/CardListPage.vue'
 import GameInfo from '@/views/info/GameInfo.vue'
 
 Vue.use(VueRouter)
@@ -16,8 +16,8 @@ const routes = [
   },
   {
     path: '/cardList',
-    name: 'CardList',
-    component: CardList
+    name: 'CardListPage',
+    component: CardListPage
   },
   {
     path: '/gameInfo',

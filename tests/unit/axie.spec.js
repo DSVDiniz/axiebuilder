@@ -406,3 +406,34 @@ test("Last stand bars should be removed correctly (3)", () => {
   expect(axie.inLastStand).toBeFalsy();
   expect(axie.dead).toBeTruthy();
 });
+
+
+test("Bloodmoon damage does not trigger last stand", () => {
+  axie.initialize(
+    1,
+    AxiePosition.CENTER,
+    AxieTypeEnum.BEAST,
+    correctPartsBeast
+  );
+  axie.inflictBloodMoonDamage(axie.currentHealth + 1);
+  expect(axie.inLastStand).toBeFalsy();
+  expect(axie.dead).toBeTruthy();
+  expect(axie.currentLastStandBars).toBe(0);
+});
+
+test("Bloodmoon damage kills on last stand", () => {
+  axie.initialize(
+    1,
+    AxiePosition.CENTER,
+    AxieTypeEnum.BEAST,
+    correctPartsBeast
+  );
+  axie.hurt(axie.currentHealth + 1);
+  expect(axie.inLastStand).toBeTruthy();
+  expect(axie.dead).not.toBeTruthy();
+  expect(axie.currentLastStandBars).toBe(3);
+  axie.inflictBloodMoonDamage(1);
+  expect(axie.inLastStand).toBeFalsy();
+  expect(axie.dead).toBeTruthy();
+  expect(axie.currentLastStandBars).toBe(0);
+});

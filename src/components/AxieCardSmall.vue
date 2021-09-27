@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" @click="select">
     <img :src="getImgUrl(card.image)" width="100px" />
     <h3 class="name">{{ card.name }}</h3>
     <h1 class="cost">{{ card.cost }}</h1>
@@ -87,9 +87,12 @@ export default {
   computed: {},
   methods: {
     getImgUrl(img) {
-      let images = require.context("../assets/cards/", false, /\.png$/);
+      let images = require.context("@/assets/cards/", false, /\.png$/);
       return images("./" + img);
     },
+    select(){
+      this.$emit("select",this.card);
+    }
   },
 };
 </script>

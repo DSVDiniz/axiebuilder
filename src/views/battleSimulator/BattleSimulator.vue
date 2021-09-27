@@ -179,47 +179,16 @@ export default {
       this.game.chooseCard(this.game.player2.id, cardId);
     },
     getCardsInHandP1() {
-      let playedCards = this.game.player1.deck.played;
-      let hand = this.game.player1.deck.hand;
-      let cardsInHand = this.getHandsMinusPlayedDividedByAxies(
-        playedCards,
-        hand
-      );
-      return Object.values(cardsInHand);
+      return this.game.getCardsInHandP1();
     },
     getCardsInHandP2() {
-      let playedCards = this.game.player2.deck.played;
-      let hand = this.game.player2.deck.hand;
-      let cardsInHand = this.getHandsMinusPlayedDividedByAxies(
-        playedCards,
-        hand
-      );
-      return Object.values(cardsInHand);
+      return this.game.getCardsInHandP2();
     },
     removeCardsFromPlayedP1(axieId) {
       this.game.removeCardsFromPlayed(this.game.player1.id, axieId);
     },
     removeCardsFromPlayedP2(axieId) {
       this.game.removeCardsFromPlayed(this.game.player2.id, axieId);
-    },
-    getHandsMinusPlayedDividedByAxies(playedCards, hand) {
-      let playedMap = {};
-      let handMap = {};
-      hand.forEach((card) => (handMap[card.gameId] = card));
-      playedCards.forEach((card) => (playedMap[card.gameId] = card));
-      let handMinusPlayed = [];
-      for (let i = 0; i < hand.length; i++) {
-        if (!playedMap[hand[i].gameId]) {
-          handMinusPlayed.push(hand[i]);
-        }
-      }
-      let mapAxies = {};
-      for (let i = 0; i < handMinusPlayed.length; i++) {
-        let key = handMinusPlayed[i].owner;
-        if (!mapAxies[key]) mapAxies[key] = [];
-        mapAxies[key].push(handMinusPlayed[i]);
-      }
-      return mapAxies;
     },
     endChoosingPhase() {
       let gameResult = this.game.endChoosingPhase();

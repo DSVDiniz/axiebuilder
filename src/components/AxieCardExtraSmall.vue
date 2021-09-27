@@ -45,7 +45,7 @@ export default {
   computed: {},
   methods: {
     getImgUrl(img) {
-      let images = require.context("../assets/cards/", false, /\.png$/);
+      let images = require.context("@/assets/cards/", false, /\.png$/);
       return images("./" + img);
     },
   },

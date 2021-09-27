@@ -1,40 +1,52 @@
 <template>
-  <v-row justify="center" align="center" class="card-row">
-    <v-col cols="2">
-      <div class="energy-small">{{ card.cost }}x</div>
-      <img
-        class="energy-bg-small"
-        src="@/assets/icons/gain-energy.png"
-        width="20"
-      />
-      <div class="dmg-small">{{ card.dmg }}</div>
-      <div class="shield-small">{{ card.shield }}</div>
-      <img
-        class="effect-bg-small"
-        src="@/assets/icons/morale-up.png"
-        width="35"
-      />
-    </v-col>
-    <v-col :style="{background:cardColor}">
-      <div class="card-name-small">{{ card.name }}</div>
-      <div class="card-attack-type-small">{{ cardAttackType }}</div>
-      <div class="card-description-small">{{ card.description }}</div>
-    </v-col>
+  <v-row v-if="isPart(cardOrPart)" justify="center" align="center" class="card-row">
     <v-col :style="{background:cardColor}">
       <div
-        v-for="(part, index) in card.parts"
-        :key="card.id + index"
         class="card-parts-small"
       >
         <div class="part-icon-name-small">
           <AxiePartIcon
             class="part-icon"
-            :axieType="part.type"
-            :partType="part.part"
+            :axieType="cardOrPart.axieType"
+            :partType="cardOrPart.type"
+          />
+          <div class="part-name-small">{{ cardOrPart.name }}</div>
+        </div>
+      </div>
+    </v-col>
+  </v-row>
+  <v-row v-else justify="center" align="center" class="card-row">
+    <v-col cols="2">
+      <div class="energy-small">{{ cardOrPart.cost }}x</div>
+      <img
+        class="energy-bg-small"
+        src="@/assets/icons/gain-energy.png"
+        width="20"
+      />
+      <div class="dmg-small">{{ cardOrPart.dmg }}</div>
+      <div class="shield-small">{{ cardOrPart.shield }}</div>
+      <img class="effect" :src="getImgEffectUrl(cardOrPart.effect.image)" width="35" />
+    </v-col>
+    <v-col :style="{background:cardColor}">
+      <div class="card-name-small">{{ cardOrPart.name }}</div>
+      <div class="card-attack-type-small">{{ cardAttackType }}</div>
+      <div class="card-description-small">{{ cardOrPart.description }}</div>
+    </v-col>
+    <v-col :style="{background:cardColor}">
+      <div
+        v-for="(part, index) in cardOrPart.parts"
+        :key="cardOrPart.id + index"
+        class="card-parts-small"
+      >
+        <div class="part-icon-name-small">
+          <AxiePartIcon
+            class="part-icon"
+            :axieType="part.axieType"
+            :partType="part.type"
           />
           <div class="part-name-small">{{ part.name }}</div>
         </div>
-        <div class="part-or-small" v-if="index < card.parts.length - 1">OR</div>
+        <div class="part-or-small" v-if="index < cardOrPart.parts.length - 1">OR</div>
       </div>
     </v-col>
   </v-row>
@@ -117,28 +129,37 @@
 }
 </style>
 <script>
-import AxiePartIcon from "./icons/AxiePartIcon.vue";
+import AxiePartIcon from "@/components/icons/AxiePartIcon.vue";
 import { AxieTypeSelect ,CardAttackType} from "@/game/data/data.js";
 export default {
   name: "AxieCardListItem",
   components: { AxiePartIcon },
   props: {
-    card: { type: Object, default: () => {} },
+    cardOrPart: { type: Object, default: () => {} },
   },
   data: () => ({}),
   computed: {
     cardColor: function() {
-      return AxieTypeSelect[this.card.element].color;
+      return AxieTypeSelect[this.cardOrPart.axieType].color;
     },
     cardAttackType: function(){
-      return Object.keys(CardAttackType)[this.card.attackType];
+      return Object.keys(CardAttackType)[this.cardOrPart.attackType];
     }
   },
   methods: {
     getImgUrl(img) {
-      let images = require.context("../assets/cards/", false, /\.png$/);
+      let images = require.context("@/assets/cards/", false, /\.png$/);
       return images("./" + img);
     },
+    getImgEffectUrl(img) {
+      let images = require.context("@/assets/icons/", false, /\.png$/);
+      return images("./" + img);
+    },
+    isPart(cardOrPart){
+      return cardOrPart != null && cardOrPart.parts == null;
+    }
   },
+  created(){
+  }
 };
 </script>

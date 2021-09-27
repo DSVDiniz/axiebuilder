@@ -1,4 +1,4 @@
-import { AxiePosition, GameState } from "./data/data.js";
+import { AxiePosition, GameState,AxieBaseStats } from "./data/data.js";
 export default class Game {
   round = 0;
   player1 = null;
@@ -62,10 +62,15 @@ export default class Game {
     for (let i = 0; i < axiesInOrder.length; i++) {
       let attacker = axiesInOrder[i];
       let cards = this.getAttackerCards(attacker);
-      let effects = this.applyCardsPreEffecs(cards);
-      let defender = this.chooseTarget(effects, attacker);
-      this.inflictDamage(attacker, defender, cards);
-      this.applyCardsPostEffects();
+      for (let j = 0; j < cards.length; j++) {
+        
+        let effects = this.applyCardPreEffecs(cards[i]);
+
+        let defender = this.chooseTarget(effects, attacker);
+        this.inflictDamage(attacker, defender, cards[i]);
+
+        this.applyCardPostEffects(cards[i]);
+      }
     }
     this.applyPostEffects(axiesInOrder);
     return this.endBattlePhase();
@@ -78,7 +83,7 @@ export default class Game {
   }
 
   applyPreEffects() {}
-  applyCardsPreEffecs() {}
+  applyCardPreEffecs() {}
   chooseTarget(effects, attacker) {
     let defenders = this.getDefenders(attacker.owner);
     if (effects && effects.length > 0) {
@@ -87,6 +92,7 @@ export default class Game {
       this.getTargetDependingOnAttackerPosition(attacker.position, defenders);
     }
   }
+
   getDefenders(ownerId) {
     if (ownerId === this.player1.id) {
       return this.player2.axies;
@@ -186,17 +192,52 @@ export default class Game {
       position === AxiePosition.UP_LEFT || position === AxiePosition.UP_RIGHT
     );
   }
-  inflictDamage(atacker, defender, cards) {}
-  applyCardsPostEffects() {}
+
+  inflictDamage(attacker, defender, card) {
+    let damage = this.calculateDamageBonuses(
+      attacker.type,
+      defender.type,
+      card
+    );
+    console.log(defender.currentHealth);
+    defender.hurt(damage);
+    console.log(defender.currentHealth);
+  }
+
+  calculateDamageBonuses(attackerType, defenderType, card) {
+    let axieTypeBonus = attackerType === card.axieType ? 1.1 : 1.0;
+    let cardTypeBonus = 1.0;
+    let rpsTypeBonus = this.getRpsTypeBonus(attackerType, defenderType);
+    return axieTypeBonus * cardTypeBonus * rpsTypeBonus * card.dmg;
+  }
+  calculateDamageBonusesWithChain(attackerType, attackerSkill, defenderType, card) {
+    let axieTypeBonus = attackerType === card.axieType ? 1.1 : 1.0;
+    let cardTypeBonus = 1.0;
+    let rpsTypeBonus = this.getRpsTypeBonus(attackerType, defenderType);
+    let auxDamage = axieTypeBonus * cardTypeBonus * rpsTypeBonus * card.dmg;
+    return (auxDamage * attackerSkill) / 500 + auxDamage;
+  }
+
+  getRpsTypeBonus(attackerType, defenderType) {
+    let hasAdvantage =
+      AxieBaseStats[attackerType].adv.find(defenderType) != null;
+    let hasDisadvantage =
+      AxieBaseStats[attackerType].disadv.find(defenderType) != null;
+    return hasAdvantage ? 1.15 : hasDisadvantage ? 0.85 : 1.0;
+  }
+
+  applyCardPostEffects() {}
+
   applyPostEffects(axies) {
     if (this.round >= 10) {
       this.inflictBloodMoonDamage(axies, this.round);
     }
   }
+
   inflictBloodMoonDamage(axies, round) {
     let bloodmoonDMG = 30 * (round - 10) + 50;
     for (let i = 0; i < axies.length; i++) {
-      axies[i].hurt(bloodmoonDMG, true);
+      axies[i].inflictBloodMoonDamage(bloodmoonDMG, true);
     }
   }
   endBattlePhase() {
@@ -284,6 +325,7 @@ export default class Game {
   }
   getPlayedCards(playerId) {
     if (this.player1.id === playerId) {
+      console.log(this.player1.deck.played);
       return this.player1.deck.played;
     } else {
       return this.player2.deck.played;
@@ -310,5 +352,52 @@ export default class Game {
   }
   discardCardsP2(ids) {
     this.player2.discardCards(ids);
+  }
+  getCardsInHandP1() {
+    let playedCards = this.player1.deck.played;
+    let hand = this.player1.deck.hand;
+    let cardsInHand = this.getHandsMinusPlayed(playedCards, hand);
+    return Object.values(cardsInHand);
+  }
+  getCardsInHandP2() {
+    let playedCards = this.player2.deck.played;
+    let hand = this.player2.deck.hand;
+    let cardsInHand = this.getHandsMinusPlayed(playedCards, hand);
+    return Object.values(cardsInHand);
+  }
+  getCardsInHandDividedByAxiesP1() {
+    let playedCards = this.player1.deck.played;
+    let hand = this.player1.deck.hand;
+    let cardsInHand = this.getHandsMinusPlayedDividedByAxies(playedCards, hand);
+    return Object.values(cardsInHand);
+  }
+  getCardsInHandDividedByAxiesP2() {
+    let playedCards = this.player2.deck.played;
+    let hand = this.player2.deck.hand;
+    let cardsInHand = this.getHandsMinusPlayedDividedByAxies(playedCards, hand);
+    return Object.values(cardsInHand);
+  }
+  getHandsMinusPlayed(playedCards, hand) {
+    let playedMap = {};
+    let handMap = {};
+    hand.forEach((card) => (handMap[card.gameId] = card));
+    playedCards.forEach((card) => (playedMap[card.gameId] = card));
+    let handMinusPlayed = [];
+    for (let i = 0; i < hand.length; i++) {
+      if (!playedMap[hand[i].gameId]) {
+        handMinusPlayed.push(hand[i]);
+      }
+    }
+    return handMinusPlayed;
+  }
+  getHandsMinusPlayedDividedByAxies(playedCards, hand) {
+    let handMinusPlayed = this.getHandsMinusPlayed(playedCards,hand);
+    let mapAxies = {};
+    for (let i = 0; i < handMinusPlayed.length; i++) {
+      let key = handMinusPlayed[i].owner;
+      if (!mapAxies[key]) mapAxies[key] = [];
+      mapAxies[key].push(handMinusPlayed[i]);
+    }
+    return mapAxies;
   }
 }

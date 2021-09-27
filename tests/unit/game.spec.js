@@ -106,7 +106,7 @@ test("Game gives 2 energy and 3 cards at the start of every round (after the fir
 test("Increase round after every round end.", () => {
   game.initialize(player1, player2);
   expect(game.round).toBe(1);
-
+  game.beginRound();
   game.beginDiscardPhase();
   game.endDiscardPhase();
   game.beginChoosingPhase();
@@ -208,12 +208,6 @@ test("Axie turn order should be calculated correctly", () => {
   }
 });
 
-test("When an axie attacks, the defending axie should be hurt", () => {
-  game.initialize(player1, player2);
-  game.beginRound();
-  game.beginChoosingPhase();
-});
-
 let expectedTopRow = [
   AxiePosition.RIGHT,
   AxiePosition.UP_RIGHT,
@@ -224,7 +218,7 @@ let expectedTopRow = [
   AxiePosition.LEFT,
 ];
 
-let initializeAxiesForTargetingTests = (axiePositions)=>{
+let initializeAxiesForTargetingTests = (axiePositions) => {
   let defenders = [];
   for (let i = 0; i < axiePositions.length; i++) {
     let axie = new Axie();
@@ -240,7 +234,7 @@ let initializeAxiesForTargetingTests = (axiePositions)=>{
     defenders[i].position = axiePositions[i];
   }
   return defenders;
-}
+};
 
 test("Top left axies should choose their targets correctly", () => {
   let axiePositions = Object.values(AxiePosition);
@@ -294,14 +288,20 @@ test("Center row axies should choose their targets correctly", () => {
       AxiePosition.UP_RIGHT,
       defenders
     );
-    if(expectedCenterRow[i] === -1){
-      expect(target.position == AxiePosition.DOWN_RIGHT ||target.position == AxiePosition.UP_RIGHT ).toBeTruthy();
-    }else if(expectedCenterRow[i] === -2){
-      expect(target.position == AxiePosition.DOWN_LEFT ||target.position == AxiePosition.UP_LEFT ).toBeTruthy();
-    }else{
+    if (expectedCenterRow[i] === -1) {
+      expect(
+        target.position == AxiePosition.DOWN_RIGHT ||
+          target.position == AxiePosition.UP_RIGHT
+      ).toBeTruthy();
+    } else if (expectedCenterRow[i] === -2) {
+      expect(
+        target.position == AxiePosition.DOWN_LEFT ||
+          target.position == AxiePosition.UP_LEFT
+      ).toBeTruthy();
+    } else {
       expect(target.position).toBe(expectedCenterRow[i]);
     }
-    
+
     for (let j = 0; j < defenders.length; j++) {
       if (defenders[j].id === target.id) {
         defenders[j].die();
@@ -320,7 +320,7 @@ let expectedBottomRow = [
   AxiePosition.LEFT,
 ];
 
-test("Bottom left axies should choose their targets correctly", () => {  
+test("Bottom left axies should choose their targets correctly", () => {
   let axiePositions = Object.values(AxiePosition);
   let defenders = initializeAxiesForTargetingTests(axiePositions);
   for (let i = 0; i < axiePositions.length; i++) {
@@ -352,4 +352,46 @@ test("Bottom right axies should choose their targets correctly", () => {
       }
     }
   }
+});
+
+
+test.only("Attacking (P1) axie cards should damage defending axie (P2)", () => {
+  debugger;
+  game.initialize(player1, player2);
+  game.beginRound();
+  game.beginDiscardPhase();
+  game.endDiscardPhase();
+
+  let axieHealthP2 = game.player2.axies.reduce((acc,axieCurr) => {return acc +axieCurr.currentHealth},0);
+  let cardsInHand = game.getCardsInHandP1();
+  for(let i=0; i<cardsInHand.length;i++){
+    if(cardsInHand[i].dmg > 0)
+      game.chooseCard(game.player1.id,cardsInHand[i].id);
+  }
+  game.endChoosingPhase();
+
+  let axieHealthP2After = game.player2.axies.reduce((acc,axieCurr) => {return acc +axieCurr.currentHealth},0);
+  console.log(axieHealthP2);
+  console.log(axieHealthP2After);
+  expect(axieHealthP2).not.toBe(axieHealthP2After);
+});
+
+test("Attacking (P2) axie cards should damage defending axie (P1)", () => {
+  game.initialize(player1, player2);
+  game.beginRound();
+  game.beginDiscardPhase();
+  game.endDiscardPhase();
+
+  let axieHealthP1 = game.player1.axies.reduce((acc,axieCurr) => {return acc +axieCurr.currentHealth},0);
+  let cardsInHand = game.getCardsInHandP2();
+  for(let i=0; i<cardsInHand.length;i++){
+    if(cardsInHand.dmg > 0)
+      game.chooseCardP2(cardsInHand[i]);
+  }
+  game.endChoosingPhase();
+
+  let axieHealthP1After = game.player1.axies.reduce((acc,axieCurr) => {return acc +axieCurr.currentHealth},0);
+  console.log(axieHealthP1);
+  console.log(axieHealthP1After);
+  expect(axieHealthP1).not.toBe(axieHealthP1After);
 });

@@ -14,7 +14,7 @@
 </template>
 <style scoped></style>
 <script>
-import AxieTypeIcon from "../components/icons/AxieTypeIcon.vue";
+import AxieTypeIcon from "@/components/icons/AxieTypeIcon.vue";
 import { AxieTypeSelect } from "@/game/data/data.js";
 export default {
   name: "AxieTypeSelector",

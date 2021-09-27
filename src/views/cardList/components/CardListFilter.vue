@@ -1,78 +1,86 @@
 <template>
   <v-container>
     <v-row>
-      <v-col>
+      <v-col class="no-padding-top-bottom">
         <v-select
           v-model="filter.part"
           label="Body Part Type"
           :items="bodyPartTypes"
           @input="changeFilter"
           clearable
+          dense
         >
         </v-select>
       </v-col>
-      <v-col>
+      <v-col class="no-padding-top-bottom">
         <v-select
           v-model="filter.attackType"
           label="Attack Type"
           :items="attackTypes"
           @input="changeFilter"
           clearable
+          dense
         >
         </v-select>
       </v-col>
-      <v-col>
+      <v-col class="no-padding-top-bottom">
         <v-select
-          v-model="filter.element"
+          v-model="filter.axieType"
           label="Axie Type"
           :items="axieTypes"
           @input="changeFilter"
           clearable
+          dense
         >
         </v-select>
       </v-col>
-      <v-col>
+      <v-col class="no-padding-top-bottom">
         <v-select
           v-model="filter.dmg"
           label="Damage"
           :items="damageList"
           @input="changeFilter"
           clearable
+          dense
         >
         </v-select>
       </v-col>
-      <v-col>
+      <v-col class="no-padding-top-bottom">
         <v-select
           v-model="filter.shield"
           label="Shield"
           :items="shieldList"
           @input="changeFilter"
           clearable
+          dense
         >
         </v-select>
       </v-col>
-      <v-col>
+      <v-col class="no-padding-top-bottom">
         <v-select
           v-model="filter.cost"
           label="Energy cost"
           :items="energyCosts"
           @input="changeFilter"
           clearable
+          dense
         >
         </v-select>
       </v-col>
-       <v-col>
+      <v-col class="no-padding-top-bottom">
         <v-select
           v-model="filter.effect"
           label="Effect"
           :items="cardEffect"
           @input="changeFilter"
           clearable
+          dense
         >
         </v-select>
       </v-col>
-      <v-col cols="12">
+      <v-col cols="12" class="no-padding-top-bottom">
         <v-text-field
+        dense
           v-model="filter.text"
           label="Card name, part name or card description"
           @input="changeFilter"
@@ -82,30 +90,24 @@
         </v-text-field>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col v-for="(card, index) in filteredCards" :key="index" cols="2">
-        <AxieCard :card="card" :showParts="true"></AxieCard>
-      </v-col>
-    </v-row>
   </v-container>
 </template>
-
+<style scoped>
+.no-padding-top-bottom{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+</style>
 <script>
 import {
   Cards,
   AxieTypeSelect,
   CardAttackTypeSelect,
   AxiePartTypeSelect,
-  CardEffect
+  CardEffect,
 } from "@/game/data/data.js";
-import AxieCard from "../../components/AxieCard.vue";
 export default {
-  name: "CardList",
-  components: {
-    AxieCard,
-  },
-  props: {
-  },
+  name: "CardListFilter",
   data() {
     return {
       cardMap: Cards,
@@ -115,49 +117,24 @@ export default {
       damageList: [],
       shieldList: [],
       energyCosts: [],
-      cardEffect:Object.values(CardEffect),
+      cardEffect: Object.values(CardEffect),
       filter: {
         part: null,
         attackType: null,
-        element: null,
+        axieType: null,
         dmg: null,
         shield: null,
         cost: null,
         text: null,
         effect: null,
       },
-      filteredCards: [],
     };
   },
   methods: {
     changeFilter() {
       const vm = this;
-      if(vm.filter.text === "")
-        vm.filter.text = null;
-      let filterArr = Object.keys(vm.filter).filter(
-        (key) => vm.filter[key] != null
-      );
-
-      vm.filteredCards = Object.values(vm.cardMap).filter((card) => {
-        let achou = true;
-        for (let i = 0; i < filterArr.length; i++) {
-          let key = filterArr[i];
-          if (key === "part") {
-            for (let j = 0; j < card["parts"].length; j++) {
-              if (card["parts"][j].type != vm.filter[key]) achou = false;
-            }
-          } else if (key === "effect") {
-            if (card[key].value != vm.filter[key]) achou = false;
-          } else if (key === "text") {
-            let cardText = `${card.name}${card.description}`;
-            cardText = cardText.concat(card["parts"].map(part=>part.name).join()).toLowerCase();
-            achou = cardText.includes(vm.filter[key]);
-          } else {
-            if (card[key] != vm.filter[key]) achou = false;
-          }
-        }
-        return achou;
-      });
+      if (vm.filter.text === "") vm.filter.text = null;
+      this.$emit("filterChange", this.filter);
     },
   },
   created() {

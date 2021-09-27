@@ -26,7 +26,7 @@ test("Card data should be valid", () => {
     let hasId = card.id != null;
     let hasParts = card.parts != null;
     let hasAttackType = card.attackType != null;
-    let hasElement = card.element != null;
+    let hasAxieType = card.axieType != null;
     let hasName = card.name != null;
     let hasCost = card.cost != null;
     let hasDmg = card.dmg != null;
@@ -37,7 +37,7 @@ test("Card data should be valid", () => {
       hasId &&
       hasParts &&
       hasAttackType &&
-      hasElement &&
+      hasAxieType &&
       hasName &&
       hasCost &&
       hasDmg &&

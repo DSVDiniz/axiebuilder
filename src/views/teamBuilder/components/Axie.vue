@@ -6,9 +6,10 @@
           <v-text-field
             label="Marketplace link"
             v-model="internalAxie.marketplaceLink"
-          ></v-text-field
-        ></v-col>
-        <v-col><AxieDetailedStats :axie="internalAxie"/></v-col>
+          >
+          </v-text-field>
+        </v-col>
+        <v-col><AxieDetailedStats :axie="internalAxie" /> </v-col>
         <v-col>
           <AxieTypeSelector :axie="internalAxie" v-on:change="changeAxieType" />
           <AxieAttributes :axie="internalAxie" />
@@ -19,8 +20,20 @@
         </v-col>
       </v-row>
       <v-row>
-        <AxieCardSelector :axie="internalAxie" v-on:change="changeCards" />
-        <AxiePartsSelector :axie="internalAxie" v-on:change="changeParts" />
+        <v-col>
+          <v-btn
+            color="primary"
+            width="100%"
+            @click="openCardsAndPartsDialog()"
+          >
+            Choose Parts/Cards
+          </v-btn>
+          <PartAndCardChooserDialog
+            :open="partAndCardChooserDialog"
+            v-on:accept="acceptCardsAndParts"
+            v-on:cancel="closePartAndCardChooserDialog"
+          />
+        </v-col>
       </v-row>
       <v-row>
         <v-col
@@ -38,34 +51,37 @@
 import AxieTypeSelector from "./AxieTypeSelector";
 import AxieAttributes from "./AxieAttributes";
 import AxiePositionSelector from "./AxiePositionSelector";
-import AxieCardSelector from "./AxieCardSelector";
-import AxiePartsSelector from "./AxiePartsSelector.vue";
-import AxieCard from "./AxieCard.vue";
+import AxieCard from "@/components/AxieCard.vue";
 import AxieDetailedStats from "./AxieDetailedStats.vue";
+import PartAndCardChooserDialog from "./PartAndCardChooserDialog.vue";
 export default {
   name: "Axie",
   components: {
     AxieTypeSelector,
     AxieAttributes,
     AxiePositionSelector,
-    AxieCardSelector,
-    AxiePartsSelector,
     AxieCard,
     AxieDetailedStats,
+    PartAndCardChooserDialog,
   },
   props: { axie: { type: Object, default: () => {} } },
-  data: () => ({ internalAxie: null }),
+  data: () => ({ internalAxie: null, partAndCardChooserDialog: false }),
   methods: {
+    acceptCardsAndParts(){
+      this.partAndCardChooserDialog = false;
+    },
+    openCardsAndPartsDialog() {
+      this.partAndCardChooserDialog = true;
+    },
+    closePartAndCardChooserDialog(){
+      this.partAndCardChooserDialog = false;
+    },
     changeAxieType(val) {
       this.internalAxie.setType(val);
       this.change();
     },
     changeParts(parts) {
       this.internalAxie.setParts(parts);
-      this.change();
-    },
-    changeCards(cards) {
-      this.internalAxie.setCards(cards);
       this.change();
     },
     changeAxiePosition(position) {

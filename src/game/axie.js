@@ -64,7 +64,7 @@ export default class AxieClass {
       this.setCurrentHealth(newHP);
     }
   }
-  hurt(dmg, isBloodmoonDmg) {
+  hurt(dmg) {
     let postShieldDMG = this.shield - dmg;
     this.setShield(postShieldDMG);
     let newHP = this.currentHealth + (postShieldDMG < 0 ? postShieldDMG : 0);
@@ -73,11 +73,18 @@ export default class AxieClass {
     if (newHP < 0) lastStand = this.enterLastStand(postShieldDMG);
     this.setCurrentHealth(newHP);
     if (this.currentHealth <= 0) {
-      if (lastStand && !isBloodmoonDmg) {
+      if (lastStand) {
         this.inLastStand = true;
       } else {
         this.die();
       }
+    }
+  }
+  inflictBloodMoonDamage(dmg) {
+    let newHP = this.currentHealth - dmg;
+    this.setCurrentHealth(newHP);
+    if (this.currentHealth <= 0) {
+        this.die();
     }
   }
   setShield(amount) {
@@ -104,17 +111,6 @@ export default class AxieClass {
   }
   enterLastStand(dmg) {
     return -dmg - this.currentHealth < (this.currentHealth * this.morale) / 100;
-  }
-  getRpsBonus(opponentType) {
-    if (opponentType === this.type) return 1;
-    if (this.getRPSAdvantage().includes(opponentType)) return 1.15;
-    else return 0.85;
-  }
-  getRPSAdvantage() {
-    return AxieBaseStats[this.type].adv;
-  }
-  getRPSDisadvantage() {
-    return AxieBaseStats[this.type].disadv;
   }
   setPosition(position) {
     this.position = position;
