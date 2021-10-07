@@ -1,4 +1,8 @@
-import { AxiePartType, getCardsList, getPartsList } from "../../src/game/data/data.js";
+import {
+  AxiePartType,
+  getCardsList,
+  getPartsList,
+} from "../../src/game/data/data.js";
 
 let parts;
 let cards;
@@ -44,9 +48,9 @@ test("Card data should be valid", () => {
       hasShield &&
       hasDescription &&
       hasImage;
-	if(isCorrect === false){
-		console.log(card);
-	}
+    if (isCorrect === false) {
+      console.log(card);
+    }
     expect(isCorrect).toBeTruthy();
   }
 });

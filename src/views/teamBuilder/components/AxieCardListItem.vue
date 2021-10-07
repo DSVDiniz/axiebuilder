@@ -1,9 +1,12 @@
 <template>
-  <v-row v-if="isPart(cardOrPart)" justify="center" align="center" class="card-row">
-    <v-col :style="{background:cardColor}">
-      <div
-        class="card-parts-small"
-      >
+  <v-row
+    v-if="isPart(cardOrPart)"
+    justify="center"
+    align="center"
+    class="card-row"
+  >
+    <v-col :style="{ background: cardColor }">
+      <div class="card-parts-small">
         <div class="part-icon-name-small">
           <AxiePartIcon
             class="part-icon"
@@ -25,14 +28,18 @@
       />
       <div class="dmg-small">{{ cardOrPart.dmg }}</div>
       <div class="shield-small">{{ cardOrPart.shield }}</div>
-      <img class="effect" :src="getImgEffectUrl(cardOrPart.effect.image)" width="35" />
+      <img
+        class="effect"
+        :src="getImgEffectUrl(cardOrPart.effect.image)"
+        width="35"
+      />
     </v-col>
-    <v-col :style="{background:cardColor}">
+    <v-col :style="{ background: cardColor }">
       <div class="card-name-small">{{ cardOrPart.name }}</div>
       <div class="card-attack-type-small">{{ cardAttackType }}</div>
       <div class="card-description-small">{{ cardOrPart.description }}</div>
     </v-col>
-    <v-col :style="{background:cardColor}">
+    <v-col :style="{ background: cardColor }">
       <div
         v-for="(part, index) in cardOrPart.parts"
         :key="cardOrPart.id + index"
@@ -46,7 +53,9 @@
           />
           <div class="part-name-small">{{ part.name }}</div>
         </div>
-        <div class="part-or-small" v-if="index < cardOrPart.parts.length - 1">OR</div>
+        <div class="part-or-small" v-if="index < cardOrPart.parts.length - 1">
+          OR
+        </div>
       </div>
     </v-col>
   </v-row>
@@ -121,7 +130,7 @@
 .part-icon {
   float: left;
 }
-.card-attack-type-small{
+.card-attack-type-small {
   text-align: left;
   font-style: italic;
   font-size: small;
@@ -130,7 +139,7 @@
 </style>
 <script>
 import AxiePartIcon from "@/components/icons/AxiePartIcon.vue";
-import { AxieTypeSelect ,CardAttackType} from "@/game/data/data.js";
+import { AxieTypeSelect, CardAttackType } from "@/game/data/data.js";
 export default {
   name: "AxieCardListItem",
   components: { AxiePartIcon },
@@ -139,12 +148,12 @@ export default {
   },
   data: () => ({}),
   computed: {
-    cardColor: function() {
+    cardColor: function () {
       return AxieTypeSelect[this.cardOrPart.axieType].color;
     },
-    cardAttackType: function(){
+    cardAttackType: function () {
       return Object.keys(CardAttackType)[this.cardOrPart.attackType];
-    }
+    },
   },
   methods: {
     getImgUrl(img) {
@@ -155,11 +164,10 @@ export default {
       let images = require.context("@/assets/icons/", false, /\.png$/);
       return images("./" + img);
     },
-    isPart(cardOrPart){
+    isPart(cardOrPart) {
       return cardOrPart != null && cardOrPart.parts == null;
-    }
+    },
   },
-  created(){
-  }
+  created() {},
 };
 </script>

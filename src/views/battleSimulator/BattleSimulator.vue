@@ -52,7 +52,11 @@
       :discardInfo="discardInfo"
       v-on:close="closeDiscardDialog"
     />
-    <VictoryDialog :open="victoryDialog" :winners="winners" v-on:close="closeVictoryDialog" />
+    <VictoryDialog
+      :open="victoryDialog"
+      :winners="winners"
+      v-on:close="closeVictoryDialog"
+    />
   </v-container>
 </template>
 <style scoped>
@@ -168,7 +172,7 @@ export default {
       this.game.discardCardsP2(discardedCards.p2Discard);
       this.game.endDiscardPhase();
     },
-    closeVictoryDialog(){
+    closeVictoryDialog() {
       this.victoryDialog = false;
     },
 
@@ -200,10 +204,10 @@ export default {
           this.game.beginChoosingPhase();
         }
       } else {
-        this.openVictoryDialog(this.game.winners)
+        this.openVictoryDialog(this.game.winners);
       }
     },
-    openVictoryDialog(winners){
+    openVictoryDialog(winners) {
       this.victoryDialog = true;
       this.winners = winners;
     },

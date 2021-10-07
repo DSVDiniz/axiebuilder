@@ -1,6 +1,6 @@
 import { CardAttackType, AxieTypeEnum } from "./data/data";
 export default class Card {
-  gameId =0;
+  gameId = 0;
   id = 0;
   parts = [];
   attackType = CardAttackType.RANGED;

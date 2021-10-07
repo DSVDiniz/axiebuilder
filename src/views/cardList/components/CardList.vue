@@ -1,13 +1,11 @@
 <template>
   <v-row>
-    <v-col v-for="(card, index) in filteredCards" :key="index" cols="2">
+    <v-col v-for="(card, index) in filteredCards" :key="index">
       <AxieCard
         :card="card"
         :showParts="true"
         v-on:select="selectCard"
-        :cardSize="cardSize"
-        :statSize="statSize"
-        :effectSize="effectSize"
+        :size="'medium'"
       />
     </v-col>
   </v-row>

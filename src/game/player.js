@@ -58,24 +58,24 @@ export default class Player {
     }
   }
 
-  canPlayCard(cost, energy){
-    return (energy - cost) >= 0;
+  canPlayCard(cost, energy) {
+    return energy - cost >= 0;
   }
 
   removeCardsFromPlayed(axieId) {
     let cards = this.deck.getCardsFromPlayed(axieId);
     if (cards) {
-      for(let i=0; i<cards.length;i++){
+      for (let i = 0; i < cards.length; i++) {
         this.addEnergy(cards[i].cost);
         this.deck.removeCardFromPlayed(cards[i].gameId);
       }
     }
   }
 
-  shouldDiscard(){
+  shouldDiscard() {
     return this.deck.shouldDiscard();
   }
-  discardCards(ids){
+  discardCards(ids) {
     this.deck.discardCards(ids);
   }
 }

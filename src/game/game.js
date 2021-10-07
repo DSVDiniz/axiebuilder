@@ -1,4 +1,4 @@
-import { AxiePosition, GameState,AxieBaseStats } from "./data/data.js";
+import { AxiePosition, GameState, AxieBaseStats } from "./data/data.js";
 export default class Game {
   round = 0;
   player1 = null;
@@ -63,7 +63,6 @@ export default class Game {
       let attacker = axiesInOrder[i];
       let cards = this.getAttackerCards(attacker);
       for (let j = 0; j < cards.length; j++) {
-        
         let effects = this.applyCardPreEffecs(cards[i]);
 
         let defender = this.chooseTarget(effects, attacker);
@@ -210,7 +209,12 @@ export default class Game {
     let rpsTypeBonus = this.getRpsTypeBonus(attackerType, defenderType);
     return axieTypeBonus * cardTypeBonus * rpsTypeBonus * card.dmg;
   }
-  calculateDamageBonusesWithChain(attackerType, attackerSkill, defenderType, card) {
+  calculateDamageBonusesWithChain(
+    attackerType,
+    attackerSkill,
+    defenderType,
+    card
+  ) {
     let axieTypeBonus = attackerType === card.axieType ? 1.1 : 1.0;
     let cardTypeBonus = 1.0;
     let rpsTypeBonus = this.getRpsTypeBonus(attackerType, defenderType);
@@ -391,7 +395,7 @@ export default class Game {
     return handMinusPlayed;
   }
   getHandsMinusPlayedDividedByAxies(playedCards, hand) {
-    let handMinusPlayed = this.getHandsMinusPlayed(playedCards,hand);
+    let handMinusPlayed = this.getHandsMinusPlayed(playedCards, hand);
     let mapAxies = {};
     for (let i = 0; i < handMinusPlayed.length; i++) {
       let key = handMinusPlayed[i].owner;

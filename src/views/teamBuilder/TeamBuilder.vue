@@ -20,10 +20,7 @@
 </template>
 
 <script>
-import {
-  AxiePosition,
-  AxieTypeEnum,
-} from "@/game/data/data";
+import { AxiePosition, AxieTypeEnum } from "@/game/data/data";
 import Axie from "./components/Axie.vue";
 import AxieTypeIcon from "@/components/icons/AxieTypeIcon.vue";
 import AxieClass from "@/game/axie";
@@ -46,26 +43,11 @@ export default {
   },
   created() {
     let axie1 = new AxieClass();
-    axie1.initialize(
-      0,
-      AxiePosition.CENTER,
-      AxieTypeEnum.AQUATIC,
-      []
-    );
+    axie1.initialize(0, AxiePosition.CENTER, AxieTypeEnum.AQUATIC, []);
     let axie2 = new AxieClass();
-    axie2.initialize(
-      1,
-      AxiePosition.CENTER,
-      AxieTypeEnum.AQUATIC,
-      []
-    );
+    axie2.initialize(1, AxiePosition.CENTER, AxieTypeEnum.AQUATIC, []);
     let axie3 = new AxieClass();
-    axie3.initialize(
-      2,
-      AxiePosition.CENTER,
-      AxieTypeEnum.AQUATIC,
-      []
-    );
+    axie3.initialize(2, AxiePosition.CENTER, AxieTypeEnum.AQUATIC, []);
     this.team.push(axie1);
     this.team.push(axie2);
     this.team.push(axie3);

@@ -62,7 +62,6 @@ export default {
       return this.partType == AxiePartType.EARS;
     },
   },
-  created(){
-  }
+  created() {},
 };
 </script>

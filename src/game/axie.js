@@ -84,7 +84,7 @@ export default class AxieClass {
     let newHP = this.currentHealth - dmg;
     this.setCurrentHealth(newHP);
     if (this.currentHealth <= 0) {
-        this.die();
+      this.die();
     }
   }
   setShield(amount) {

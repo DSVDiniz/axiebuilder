@@ -3,11 +3,29 @@
     <v-col cols="12">Health:{{ axie.getInGameHealth() }}</v-col>
     <v-col cols="12">
       DMG:
-      {{ this.getMinDamage(this.axie) ? this.getMinDamage(this.axie).dmg : "0" }}
-      <AxieTypeIcon style="display: contents" :axieType=" this.getMinDamage(this.axie) ?  this.getMinDamage(this.axie).opponentType : 0" />
+      {{
+        this.getMinDamage(this.axie) ? this.getMinDamage(this.axie).dmg : "0"
+      }}
+      <AxieTypeIcon
+        style="display: contents"
+        :axieType="
+          this.getMinDamage(this.axie)
+            ? this.getMinDamage(this.axie).opponentType
+            : 0
+        "
+      />
       -
-      {{ this.getMaxDamage(this.axie) ? this.getMaxDamage(this.axie).dmg : "0" }}
-      <AxieTypeIcon style="display: contents" :axieType="this.getMaxDamage(this.axie) ? this.getMaxDamage(this.axie).opponentType : 0" />
+      {{
+        this.getMaxDamage(this.axie) ? this.getMaxDamage(this.axie).dmg : "0"
+      }}
+      <AxieTypeIcon
+        style="display: contents"
+        :axieType="
+          this.getMaxDamage(this.axie)
+            ? this.getMaxDamage(this.axie).opponentType
+            : 0
+        "
+      />
     </v-col>
     <v-col cols="12">
       DEF:
@@ -18,11 +36,11 @@
     <v-col cols="12">Last stand bars:{{ axie.getLastStandBars() }}</v-col>
     <v-col cols="12">
       Advantage:
-      <AxieRPSTypeIcon :axieType="axie.type" :advantage="true"/>
+      <AxieRPSTypeIcon :axieType="axie.type" :advantage="true" />
     </v-col>
     <v-col cols="12">
       Disadvantage:
-      <AxieRPSTypeIcon :axieType="axie.type" :advantage="false"/>
+      <AxieRPSTypeIcon :axieType="axie.type" :advantage="false" />
     </v-col>
   </v-row>
 </template>
@@ -37,8 +55,7 @@ export default {
   props: {
     axie: { type: Object, default: () => {} },
   },
-  data: () => ({
-  }),
+  data: () => ({}),
   computed: {},
   methods: {
     getMaxDamage(axie) {
@@ -69,7 +86,8 @@ export default {
       return damageList.length > 0 ? damageList.sort(this.sortDmgObj) : [];
     },
     calculateDamage(card, attackerType, opponentType, rpsBonus) {
-      let attackerTypeCardElementBonus = card.axieType === attackerType ? 1.1 : 1;
+      let attackerTypeCardElementBonus =
+        card.axieType === attackerType ? 1.1 : 1;
       let dmgObj = {
         dmg: Math.floor(card.dmg * attackerTypeCardElementBonus * rpsBonus),
         opponentType: opponentType,
@@ -81,7 +99,6 @@ export default {
       else if (objA.dmg > objB.dmg) return -1;
       else return 0;
     },
-
 
     getMaxShield(axie) {
       return this.calculatePossibleShieldList(axie)[0];
@@ -95,17 +112,13 @@ export default {
       let shieldList = [];
       for (let i = 0; i < cardList.length; i++) {
         let card = cardList[i];
-        shieldList.push(
-          this.calculateShield(
-            card,
-            axie.type
-          )
-        );
+        shieldList.push(this.calculateShield(card, axie.type));
       }
       return shieldList.length > 0 ? shieldList.sort() : [];
     },
     calculateShield(card, defenderType) {
-      let defenderTypeCardElementBonus = card.axieType === defenderType ? 1.1 : 1;
+      let defenderTypeCardElementBonus =
+        card.axieType === defenderType ? 1.1 : 1;
       return Math.floor(card.shield * defenderTypeCardElementBonus);
     },
   },

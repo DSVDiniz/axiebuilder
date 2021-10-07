@@ -67,13 +67,13 @@ export default {
   props: { axie: { type: Object, default: () => {} } },
   data: () => ({ internalAxie: null, partAndCardChooserDialog: false }),
   methods: {
-    acceptCardsAndParts(){
+    acceptCardsAndParts() {
       this.partAndCardChooserDialog = false;
     },
     openCardsAndPartsDialog() {
       this.partAndCardChooserDialog = true;
     },
-    closePartAndCardChooserDialog(){
+    closePartAndCardChooserDialog() {
       this.partAndCardChooserDialog = false;
     },
     changeAxieType(val) {

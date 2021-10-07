@@ -90,9 +90,9 @@ export default {
       let images = require.context("@/assets/cards/", false, /\.png$/);
       return images("./" + img);
     },
-    select(){
-      this.$emit("select",this.card);
-    }
+    select() {
+      this.$emit("select", this.card);
+    },
   },
 };
 </script>

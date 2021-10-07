@@ -2,8 +2,8 @@ export const MarketplaceLink = "https://marketplace.axieinfinity.com/";
 
 export const GameState = {
   ROUND_START: 0,
-  BEGIN_DISCARD_PHASE:1,
-  END_DISCARD_PHASE:2,
+  BEGIN_DISCARD_PHASE: 1,
+  END_DISCARD_PHASE: 2,
   BEGIN_CHOOSING_PHASE: 3,
   END_CHOOSING_PHASE: 4,
   START_BATTLE_PHASE: 5,

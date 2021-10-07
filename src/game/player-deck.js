@@ -92,8 +92,7 @@ export default class PlayerDeck {
           break;
         }
       }
-      if(removed === ids.length)
-        break;
+      if (removed === ids.length) break;
     }
   }
   getRemainingHand(cards, playerHand) {

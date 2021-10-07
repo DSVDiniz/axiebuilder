@@ -30,7 +30,7 @@ export default {
   },
   data: () => ({
     positions: AxiePositionSelect,
-    selectedPosition: 3
+    selectedPosition: 3,
   }),
   methods: {
     getColSize(index) {
@@ -44,12 +44,12 @@ export default {
     hasMarginRight(index) {
       return index == 1 || index == 6 ? "32%" : "0%";
     },
-    change(val){
-      this.$emit("change",val);
-    }
+    change(val) {
+      this.$emit("change", val);
+    },
   },
-  created(){
+  created() {
     this.selectedPosition = this.axie.position;
-  }
+  },
 };
 </script>

@@ -3,7 +3,7 @@ import Axie from "../../src/game/axie.js";
 import {
   AxieTypeEnum,
   AxiePosition,
-  getAxieTypeParts
+  getAxieTypeParts,
 } from "../../src/game/data/data.js";
 let player;
 let axieBird;
@@ -118,4 +118,3 @@ test("Can't play cards if you don't have energy.", () => {
   let playedCards = player.deck.playCards();
   expect(playedCards.length).toBe(0);
 });
-

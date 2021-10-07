@@ -65,7 +65,7 @@ test("After initialization, player deck should have 24 cards in his deck, 8 card
 
 test("After initialization, player deck should have 24 cards in his deck, each with an unique gameId", () => {
   let axies = [axiePlant, axieBeast, axieBird];
-  playerDeck.initialize( axies);
+  playerDeck.initialize(axies);
 
   let ids = {};
   for (let i = 0; i < playerDeck.cards.length; i++) {
@@ -146,7 +146,7 @@ test("Player deck should discard cards from hand if he already has 12 cards in h
 
 test("Player deck should discard cards from hand if he already has 12 cards in hand.", () => {
   let axies = [axiePlant, axieBeast, axieBird];
-  playerDeck.initialize( axies);
+  playerDeck.initialize(axies);
 
   let drawAmount = 12;
   playerDeck.drawCards(drawAmount);
@@ -216,8 +216,10 @@ test("Axie can only play a maximum of four cards", () => {
   let axies = [axiePlant, axieBeast, axieBird];
   playerDeck.initialize(axies);
   playerDeck.drawCards(24);
-  let cardsToPlay = playerDeck.hand.filter(card=>card.owner === axiePlant.id).map(card=> card.gameId);
-  for(let i=0; i<cardsToPlay.length;i++){
+  let cardsToPlay = playerDeck.hand
+    .filter((card) => card.owner === axiePlant.id)
+    .map((card) => card.gameId);
+  for (let i = 0; i < cardsToPlay.length; i++) {
     playerDeck.addCardToPlayed(cardsToPlay[i].gameId);
   }
   let playedCards = playerDeck.playCards();

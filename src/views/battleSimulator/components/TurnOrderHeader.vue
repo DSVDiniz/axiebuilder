@@ -1,47 +1,47 @@
 <template>
-<div class="header-grid-container">
-  <v-row class="turn-order">
-    <v-col class="round-header"> Round {{ round }} </v-col>
-    <v-col v-for="(axie, index1) in turnOrder" :key="index1">
-      <div
-        v-if="axie.owner === 1"
-        class="turn-order-div-p1"
-        @click="removeCardsFromPlayedP1(axie.id)"
-      >
-        <AxieTypeIcon :axieType="axie.type" />
-        <div class="attacking-cards">
-          <div
-            v-for="(card, index2) in getPlayedCardsFromAxieP1(
-              axie.id,
-              axie.owner
-            )"
-            :key="'p1hand' + index2"
-          >
-            <AxieCardExtraSmall :card="card" />
+  <div class="header-grid-container">
+    <v-row class="turn-order">
+      <v-col class="round-header"> Round {{ round }} </v-col>
+      <v-col v-for="(axie, index1) in turnOrder" :key="index1">
+        <div
+          v-if="axie.owner === 1"
+          class="turn-order-div-p1"
+          @click="removeCardsFromPlayedP1(axie.id)"
+        >
+          <AxieTypeIcon :axieType="axie.type" />
+          <div class="attacking-cards">
+            <div
+              v-for="(card, index2) in getPlayedCardsFromAxieP1(
+                axie.id,
+                axie.owner
+              )"
+              :key="'p1hand' + index2"
+            >
+              <AxieCardExtraSmall :card="card" />
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        v-else
-        class="turn-order-div-p2"
-        @click="removeCardsFromPlayedP2(axie.id)"
-      >
-        <AxieTypeIcon :axieType="axie.type" />
-        <div class="attacking-cards">
-          <div
-            v-for="(card, index2) in getPlayedCardsFromAxieP2(
-              axie.id,
-              axie.owner
-            )"
-            :key="'p2hand' + index2"
-          >
-            <AxieCardExtraSmall :card="card" />
+        <div
+          v-else
+          class="turn-order-div-p2"
+          @click="removeCardsFromPlayedP2(axie.id)"
+        >
+          <AxieTypeIcon :axieType="axie.type" />
+          <div class="attacking-cards">
+            <div
+              v-for="(card, index2) in getPlayedCardsFromAxieP2(
+                axie.id,
+                axie.owner
+              )"
+              :key="'p2hand' + index2"
+            >
+              <AxieCardExtraSmall :card="card" />
+            </div>
           </div>
         </div>
-      </div>
-    </v-col>
-  </v-row>
-</div>
+      </v-col>
+    </v-row>
+  </div>
 </template>
 <style scoped>
 .attacking-cards {

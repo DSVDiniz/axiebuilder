@@ -407,7 +407,6 @@ test("Last stand bars should be removed correctly (3)", () => {
   expect(axie.dead).toBeTruthy();
 });
 
-
 test("Bloodmoon damage does not trigger last stand", () => {
   axie.initialize(
     1,

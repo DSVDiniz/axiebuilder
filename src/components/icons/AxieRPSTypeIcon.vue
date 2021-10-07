@@ -1,7 +1,7 @@
 <template>
   <div>
     <AxieTypeIcon
-      style="display: contents;"
+      style="display: contents"
       v-for="(type, index) in getGroupTypes"
       :axieType="type"
       :key="index"

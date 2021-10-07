@@ -20,9 +20,7 @@
         </v-list-item>
         <v-list-item link :to="'CardList'">
           <v-list-item-content>
-            <v-list-item-title class="text-h6">
-              Card List
-            </v-list-item-title>
+            <v-list-item-title class="text-h6"> Card List </v-list-item-title>
             <v-list-item-subtitle></v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
@@ -61,7 +59,6 @@
 <script>
 export default {
   name: "App",
-  components: {
-  },
+  components: {},
 };
 </script>

@@ -105,7 +105,7 @@ export default {
   watch: {
     open() {
       this.resetDiscarded();
-    }
+    },
   },
   computed: {
     canExitDiscardDialog() {
@@ -146,10 +146,10 @@ export default {
           this.p2Discard.push(cardId);
       }
     },
-    resetDiscarded(){
+    resetDiscarded() {
       this.p1Discard = [];
       this.p2Discard = [];
-    }
+    },
   },
   created() {
     this.resetDiscarded();

@@ -2,11 +2,15 @@
   <v-container>
     <v-row v-for="(effect, index) in cardEffects" :key="index">
       <v-col class="effect">
-		<v-chip>
-		<img class="effect-image" :src="getImgEffectUrl(effect.image)" width="25" />
-        <div class="effect-title">{{ effect.text }}</div>
-		</v-chip>
-		<div class="effect-description">{{ effect.description }}</div>
+        <v-chip>
+          <img
+            class="effect-image"
+            :src="getImgEffectUrl(effect.image)"
+            width="25"
+          />
+          <div class="effect-title">{{ effect.text }}</div>
+        </v-chip>
+        <div class="effect-description">{{ effect.description }}</div>
       </v-col>
     </v-row>
   </v-container>
@@ -21,8 +25,8 @@
 }
 .effect-description {
 }
-.effect-image{
-	float:left;
+.effect-image {
+  float: left;
 }
 </style>
 <script>

@@ -80,7 +80,7 @@
       </v-col>
       <v-col cols="12" class="no-padding-top-bottom">
         <v-text-field
-        dense
+          dense
           v-model="filter.text"
           label="Card name, part name or card description"
           @input="changeFilter"
@@ -93,7 +93,7 @@
   </v-container>
 </template>
 <style scoped>
-.no-padding-top-bottom{
+.no-padding-top-bottom {
   padding-top: 0px;
   padding-bottom: 0px;
 }
