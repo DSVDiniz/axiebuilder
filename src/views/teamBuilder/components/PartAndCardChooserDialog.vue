@@ -13,6 +13,7 @@
           :cardSize="250"
           :statSize="55"
           :effectSize="25"
+          :filterOnSelect="true"
           v-on:selectCard="selectCard"
         />
       </v-card-text>

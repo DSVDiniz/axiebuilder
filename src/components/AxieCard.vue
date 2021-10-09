@@ -38,8 +38,8 @@
           class="cost"
           :style="{
             fontSize: currentCardDimension.cost.fontSize,
-            top: currentCardDimension.cost.top,
-            left: currentCardDimension.cost.left,
+            marginLeft: currentCardDimension.cost.marginLeft,
+            marginTop: currentCardDimension.cost.marginTop,
           }"
         >
           {{ card.cost }}
@@ -48,8 +48,8 @@
           class="name"
           :style="{
             fontSize: currentCardDimension.title.fontSize,
-            top: currentCardDimension.title.top,
-            left: currentCardDimension.title.left,
+            marginTop: currentCardDimension.title.marginTop,
+            marginLeft: currentCardDimension.title.marginLeft,
           }"
         >
           {{ card.name }}
@@ -62,6 +62,8 @@
             fontSize: currentCardDimension.atkDef.fontSize,
             top: currentCardDimension.atkDef.top1,
             left: currentCardDimension.atkDef.left1,
+            width: currentCardDimension.atkDef.width,
+            height: currentCardDimension.atkDef.height,
           }"
         >
           <div>{{ card.dmg }}</div>
@@ -72,6 +74,8 @@
             fontSize: currentCardDimension.atkDef.fontSize,
             top: currentCardDimension.atkDef.top2,
             left: currentCardDimension.atkDef.left2,
+            width: currentCardDimension.atkDef.width,
+            height: currentCardDimension.atkDef.height,
           }"
         >
           <div>{{ card.shield }}</div>
@@ -91,7 +95,11 @@
         <img
           class="effect"
           :src="getImgEffectUrl(card.effect.image)"
-          :width="currentCardDimension.icon.size"
+          :style="{
+            width: currentCardDimension.icon.size,
+            left: currentCardDimension.icon.left,
+            top: currentCardDimension.icon.top,
+          }"
         />
       </div>
     </div>
@@ -117,8 +125,6 @@
 }
 .effect {
   position: absolute;
-  top: 29%;
-  left: 5%;
 }
 .card-container {
   display: grid;
@@ -137,23 +143,15 @@
 }
 .cost {
   float: left;
-  margin-left: 10%;
-  margin-top: 9%;
 }
 .name {
   float: left;
-  margin-top: 9%;
-  margin-left: 11%;
 }
 .dmg {
   position: absolute;
   color: red;
-  top: 10%;
-  left: -7%;
   background-image: url("../assets/bg-reptile.png");
   background-size: contain;
-  width: 57px;
-  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,12 +159,8 @@
 .shield {
   position: absolute;
   color: green;
-  top: 50%;
-  left: -7%;
   background-image: url("../assets/bg-reptile.png");
   background-size: contain;
-  width: 57px;
-  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -186,34 +180,36 @@ export default {
   data: () => ({
     cardDimensions: {
       small: {
-        width: 0,
-        height: 0,
+        width: "100px",
+        height: "150px",
         icon: {
-          size: 0,
-          top: 0,
-          left: 0,
+          size: "20px",
+          top: "29%",
+          left: "5%",
         },
         title: {
-          fontSize: 0,
-          top: 0,
-          left: 0,
+          fontSize: "15px",
+          marginTop: "7%",
+          marginLeft: "11%",
         },
         cost: {
-          fontSize: 0,
-          top: 0,
-          left: 0,
+          fontSize: "30px",
+          marginLeft: "10%",
+          marginTop: "7%",
         },
         description: {
-          fontSize: 0,
-          top: 0,
+          fontSize: "12px",
+          top: "-20%",
           left: 0,
         },
         atkDef: {
-          fontSize: 0,
-          top1: 0,
-          left1: 0,
-          top2: 0,
-          left2: 0,
+          fontSize: "20px",
+          height: "50px",
+          width: "42px",
+          top1: "0%",
+          left1: "-7%",
+          top2: "40%",
+          left2: "-7%",
         },
       },
       medium: {
@@ -226,25 +222,27 @@ export default {
         },
         title: {
           fontSize: "15px",
-          top: 0,
-          left: 0,
+          marginTop: "7%",
+          marginLeft: "11%",
         },
         cost: {
           fontSize: "30px",
-          top: 0,
-          left: 0,
+          marginLeft: "10%",
+          marginTop: "7%",
         },
         description: {
           fontSize: "12px",
-          top: 0,
+          top: "-20%",
           left: 0,
         },
         atkDef: {
           fontSize: "20px",
-          top1: 0,
-          left1: 0,
-          top2: 0,
-          left2: 0,
+          height: "50px",
+          width: "42px",
+          top1: "0%",
+          left1: "-7%",
+          top2: "40%",
+          left2: "-7%",
         },
       },
       big: {
@@ -256,14 +254,14 @@ export default {
           left: "5%",
         },
         title: {
-          fontSize: "40px",
-          top: 0,
-          left: 0,
+          fontSize: "20px",
+          marginTop: "9%",
+          marginLeft: "11%",
         },
         cost: {
-          fontSize: "20px",
-          top: 0,
-          left: 0,
+          fontSize: "45px",
+          marginLeft: "10%",
+          marginTop: "9%",
         },
         description: {
           fontSize: "15px",
@@ -272,22 +270,16 @@ export default {
         },
         atkDef: {
           fontSize: "23px",
-          top1: 0,
-          left1: 0,
-          top2: 0,
-          left2: 0,
+          height: "64px",
+          width: "57px",
+          top1: "0%",
+          left1: "-7%",
+          top2: "40%",
+          left2: "-7%",
         },
       },
     },
-    currentCardDimension: {
-      width: 300,
-      height: 400,
-      iconSize: 25,
-      titleFontSize: 40,
-      costFontSize: 20,
-      descriptionFontSize: 15,
-      atkDefFontSize: 23,
-    },
+    currentCardDimension: {},
   }),
   computed: {
     partColor: function () {
