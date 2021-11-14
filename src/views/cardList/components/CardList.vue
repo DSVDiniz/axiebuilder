@@ -24,7 +24,6 @@ export default {
     cardSize: { type: Number, default: 250 },
     statSize: { type: Number, default: 55 },
     effectSize: { type: Number, default: 25 },
-    filterOnSelect: { type: Boolean, default: false },
   },
   watch: {
     filter: {

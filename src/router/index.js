@@ -3,6 +3,8 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import BattleSimulator from "@/views/battleSimulator/BattleSimulator.vue";
 import TeamBuilder from "@/views/teamBuilder/TeamBuilder.vue";
+import AxieBuilder from "@/views/teamBuilder/AxieBuilder.vue";
+import AxieChooser from "@/views/teamBuilder/AxieChooser.vue";
 import CardListPage from "@/views/cardList/CardListPage.vue";
 import GameInfo from "@/views/info/GameInfo.vue";
 
@@ -13,6 +15,18 @@ const routes = [
     path: "/teamBuilder",
     name: "TeamBuilder",
     component: TeamBuilder,
+  },
+  {
+    path: "/teamBuilder/axieChooser/:teamId?",
+    name: "AxieChooser",
+    props: true,
+    component: AxieChooser,
+  },
+  {
+    path: "/teamBuilder/axieBuilder/:id?",
+    name: "AxieBuilder",
+    props: true,
+    component: AxieBuilder,
   },
   {
     path: "/cardList",

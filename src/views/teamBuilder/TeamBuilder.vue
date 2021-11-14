@@ -1,57 +1,101 @@
 <template>
   <v-card>
     <v-container>
-      <v-tabs>
-        <v-tab v-for="(axie, index) in team" :key="index + 'team_tab'">
-          Axie {{ index + 1 }}
-          <AxieTypeIcon :axieType="axie.type" />
-        </v-tab>
-
-        <v-tab-item v-for="(axie, index) in team" :key="index + 'team'">
+      <v-row>
+        <v-col cols="6">
+          <div class="title">
+            Teams
+            <v-btn :disabled="!hasAxies" :to="'/teamBuilder/axieChooser/'">
+              + New Team
+            </v-btn>
+          </div>
           <v-row>
-            <v-col>
-              <Axie :axie="axie" v-on:change="change"></Axie>
+            <v-col
+              cols="12"
+              v-for="(team, index1) in teams"
+              :key="'team' + index1"
+            >
+              <v-card
+                class="team-card"
+                :to="'/teamBuilder/axieChooser/' + index1"
+              >
+                <v-row>
+                  <v-col
+                    v-for="(axie, index2) in team"
+                    :key="'axie' + index2 + '-team' + index1"
+                  >
+                    {{ axie.name }}
+                    <AxieTypeIcon :axieType="axie.type" />
+                  </v-col>
+                </v-row>
+              </v-card>
             </v-col>
           </v-row>
-        </v-tab-item>
-      </v-tabs>
+        </v-col>
+        <v-col cols="6">
+          <div class="title">
+            Axies <v-btn :to="'/teamBuilder/axieBuilder/'"> + New Axie</v-btn>
+          </div>
+          <v-row>
+            <v-col v-for="(axie, index) in axies" :key="'axie-team' + index">
+              <v-card
+                class="axie-card"
+                :to="'/teamBuilder/axieBuilder/' + axie.id"
+              >
+                {{ axie.name }}
+                <AxieTypeIcon :axieType="axie.type" />
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
     </v-container>
   </v-card>
 </template>
-
+<style scoped>
+.title {
+  margin-bottom: 10px;
+}
+.axie-card {
+  display: flex;
+  height: 200px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+}
+.team-card {
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+</style>
 <script>
-import { AxiePosition, AxieTypeEnum } from "@/game/data/data";
-import Axie from "./components/Axie.vue";
 import AxieTypeIcon from "@/components/icons/AxieTypeIcon.vue";
-import AxieClass from "@/game/axie";
+import teamStore from "./store/teamStore.js";
 export default {
   name: "TeamBuilder",
+  store: teamStore,
   components: {
-    Axie,
     AxieTypeIcon,
   },
-  props: {
-    team: { type: Array, default: () => [] },
-  },
+  props: {},
   data() {
     return {};
   },
-  methods: {
-    change(axie) {
-      this.team[axie.id] = axie;
+  computed: {
+    teams() {
+      return this.$store.state.teams;
+    },
+    axies() {
+      return this.$store.state.axies;
+    },
+    hasAxies() {
+      return this.$store.state.axies.length > 0;
     },
   },
-  created() {
-    let axie1 = new AxieClass();
-    axie1.initialize(0, AxiePosition.CENTER, AxieTypeEnum.AQUATIC, []);
-    let axie2 = new AxieClass();
-    axie2.initialize(1, AxiePosition.CENTER, AxieTypeEnum.AQUATIC, []);
-    let axie3 = new AxieClass();
-    axie3.initialize(2, AxiePosition.CENTER, AxieTypeEnum.AQUATIC, []);
-    this.team.push(axie1);
-    this.team.push(axie2);
-    this.team.push(axie3);
-  },
+  methods: {},
+  created() {},
 };
 </script>
 

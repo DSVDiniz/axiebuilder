@@ -9,6 +9,7 @@ import {
 } from "./data/data";
 export default class AxieClass {
   id = 0;
+  name = "";
   type = AxieTypeEnum.AQUATIC;
   dead = false;
   maxHealth = 0;
@@ -132,6 +133,12 @@ export default class AxieClass {
     let attributes = AxieBaseStats[type];
     this.resetStats();
     this.addStats(attributes);
+    let currentParts = Object.values(this.parts);
+    for (let part of currentParts) {
+      this.parts[part.type] = part;
+      let stats = AxiePartBaseStats[part.axieType];
+      this.addStats(stats);
+    }
   }
   setParts(partsList) {
     this.parts = {};
@@ -163,5 +170,25 @@ export default class AxieClass {
   }
   parsePartName(partName) {
     return partName.toLowerCase().replace(/ /g, "-");
+  }
+  isValid() {
+    return (
+      this.id >= 0 &&
+      this.type >= AxieTypeEnum.AQUATIC &&
+      this.type <= AxieTypeEnum.REPTILE &&
+      this.maxHealth >= 0 &&
+      this.currentHealth >= 0 &&
+      this.shield >= 0 &&
+      this.maxLastStandBars >= 0 &&
+      this.currentLastStandBars >= 0 &&
+      this.health >= 0 &&
+      this.speed >= 0 &&
+      this.morale >= 0 &&
+      this.skill >= 0 &&
+      this.position >= AxiePosition.UP_LEFT &&
+      this.position <= AxiePosition.DOWN_RIGHT &&
+      Object.values(this.cards).length === 4 &&
+      Object.values(this.parts).length === 6
+    );
   }
 }

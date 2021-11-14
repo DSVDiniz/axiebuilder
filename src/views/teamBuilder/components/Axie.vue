@@ -2,44 +2,36 @@
   <v-card>
     <v-container>
       <v-row>
-        <v-col cols="12">
+        <v-col><AxieDetailedStats :axie="axie" /> </v-col>
+        <v-col>
+          <v-text-field label="Axie name" v-model="axie.name"> </v-text-field>
           <v-text-field
-            label="Marketplace link"
-            v-model="internalAxie.marketplaceLink"
+            label="Marketplace search link"
+            v-model="axie.marketplaceLink"
           >
           </v-text-field>
-        </v-col>
-        <v-col><AxieDetailedStats :axie="internalAxie" /> </v-col>
-        <v-col>
-          <AxieTypeSelector :axie="internalAxie" v-on:change="changeAxieType" />
-          <AxieAttributes :axie="internalAxie" />
-          <AxiePositionSelector
-            :axie="internalAxie"
-            v-on:change="changeAxiePosition"
+          <AxieTypeSelector
+            :axieType="axie.type"
+            v-on:change="changeAxieType"
           />
+          <AxieAttributes :axie="axie" />
         </v-col>
       </v-row>
       <v-row>
         <v-col>
-          <v-btn
-            color="primary"
-            width="100%"
-            @click="openCardsAndPartsDialog()"
-          >
+          <v-btn color="primary" width="100%" @click="openCardsAndPartsDialog">
             Choose Parts/Cards
           </v-btn>
           <PartAndCardChooserDialog
+            :axie="axie"
             :open="partAndCardChooserDialog"
-            v-on:accept="acceptCardsAndParts"
             v-on:cancel="closePartAndCardChooserDialog"
+            v-on:accept="setAxieParts"
           />
         </v-col>
       </v-row>
       <v-row>
-        <v-col
-          v-for="(card, index) in internalAxie.cards"
-          :key="internalAxie.id + '-' + index"
-        >
+        <v-col v-for="(card, index) in axie.cards" :key="axie.id + '-' + index">
           <AxieCard :card="card" />
         </v-col>
       </v-row>
@@ -50,7 +42,7 @@
 <script>
 import AxieTypeSelector from "./AxieTypeSelector";
 import AxieAttributes from "./AxieAttributes";
-import AxiePositionSelector from "./AxiePositionSelector";
+import teamStore from "../store/teamStore.js";
 import AxieCard from "@/components/AxieCard.vue";
 import AxieDetailedStats from "./AxieDetailedStats.vue";
 import PartAndCardChooserDialog from "./PartAndCardChooserDialog.vue";
@@ -59,17 +51,14 @@ export default {
   components: {
     AxieTypeSelector,
     AxieAttributes,
-    AxiePositionSelector,
     AxieCard,
     AxieDetailedStats,
     PartAndCardChooserDialog,
   },
-  props: { axie: { type: Object, default: () => {} } },
-  data: () => ({ internalAxie: null, partAndCardChooserDialog: false }),
+  store: teamStore,
+  props: { axie: { type: Object, default: null } },
+  data: () => ({ partAndCardChooserDialog: false }),
   methods: {
-    acceptCardsAndParts() {
-      this.partAndCardChooserDialog = false;
-    },
     openCardsAndPartsDialog() {
       this.partAndCardChooserDialog = true;
     },
@@ -77,23 +66,20 @@ export default {
       this.partAndCardChooserDialog = false;
     },
     changeAxieType(val) {
-      this.internalAxie.setType(val);
+      this.axie.setType(val);
       this.change();
     },
-    changeParts(parts) {
-      this.internalAxie.setParts(parts);
-      this.change();
-    },
-    changeAxiePosition(position) {
-      this.internalAxie.setPosition(position);
+    setAxieParts(cards, eyesPart, earsPart) {
+      let parts = cards.map((card) => card.parts[0]);
+      parts.push(eyesPart, earsPart);
+      this.axie.setParts(parts);
+      this.closePartAndCardChooserDialog();
       this.change();
     },
     change() {
-      this.$emit("change", this.internalAxie);
+      this.$emit("change", this.axie);
     },
   },
-  created() {
-    this.internalAxie = this.axie;
-  },
+  created() {},
 };
 </script>

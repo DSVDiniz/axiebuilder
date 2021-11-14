@@ -26,7 +26,8 @@ import { AxiePositionSelect } from "@/game/data/data.js";
 export default {
   name: "AxiePositionSelector",
   props: {
-    axie: { type: Object, default: () => {} },
+    position: { type: Number, default: 0 },
+    axieIndex: { type: Number, default: 0 },
   },
   data: () => ({
     positions: AxiePositionSelect,
@@ -45,11 +46,14 @@ export default {
       return index == 1 || index == 6 ? "32%" : "0%";
     },
     change(val) {
-      this.$emit("change", val);
+      this.$emit("change", val, this.axieIndex);
     },
   },
+  mounted() {
+    this.selectedPosition = this.position;
+  },
   created() {
-    this.selectedPosition = this.axie.position;
+    this.selectedPosition = this.position;
   },
 };
 </script>

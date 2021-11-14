@@ -1,7 +1,12 @@
 <template>
   <v-container>
     <v-row>
-      <v-select :items="types" v-model="selectedType" v-on:change="change">
+      <v-select
+        :items="types"
+        v-model="selectedType"
+        v-on:change="change"
+        label="Axie Type"
+      >
         <template slot="selection" slot-scope="data">
           <AxieTypeIcon :axieType="data.item.value" />{{ data.item.text }}
         </template>
@@ -20,7 +25,7 @@ export default {
   name: "AxieTypeSelector",
   components: { AxieTypeIcon },
   props: {
-    axie: { type: Object, default: () => {} },
+    axieType: { type: Number, default: null },
   },
   data: () => ({
     types: AxieTypeSelect,
@@ -32,7 +37,8 @@ export default {
     },
   },
   created() {
-    this.selectedType = this.axie.type;
+    debugger;
+    this.selectedType = this.axieType;
   },
 };
 </script>
